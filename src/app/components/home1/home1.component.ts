@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { faQuoteLeft, faStar as faStar1 } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faStar as faStar1, faMapMarkerAlt, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons'
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import * as $ from 'jquery';
@@ -13,7 +13,7 @@ export class Home1Component implements OnInit {
 
   strings =  ['Apartment', 'Plaza','House'];
   recentWorkOptions: OwlOptions = { 
-    margin : -650,
+    margin : 0,
     stagePadding: 0,   
     autoplay : true,
     loop: true,
@@ -29,13 +29,13 @@ export class Home1Component implements OnInit {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 1
       },
       940: {
-        items: 4
+        items: 6
       }
     },
     nav: false    
@@ -71,7 +71,7 @@ export class Home1Component implements OnInit {
   }
 
   clientsOptions: OwlOptions = { 
-    margin : 10,
+    margin : 0,
     stagePadding: 0,   
     autoplay : true,
     loop: true,
@@ -84,13 +84,13 @@ export class Home1Component implements OnInit {
     //navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive: {
       0: {
-        items: 1
+        items: 2
       },
       400: {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
         items: 5
@@ -244,6 +244,10 @@ export class Home1Component implements OnInit {
   faQuoteLeft = faQuoteLeft;
   faStar1 = faStar1;
   faStar2 = faStar2;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faEnvelope = faEnvelope;
+  faPhoneAlt = faPhoneAlt;
+  
   dogbtnActive : any ;
   cowbtnActive : any ;
   humanbtnActive : any;
