@@ -1,0 +1,108 @@
+<div class="container-fluid">
+    <section class="image" style="background-image: url(../../../assets/images/bg-home-1.jpg)">
+    </section>
+    <section class="heading">
+      <h3>Interior Design For </h3>
+      <div class="typewriter-container">
+        <h3><ngtypewriter [StringList]='strings' [speed]='1000'></ngtypewriter></h3>
+      </div>        
+    </section>
+    <section class="text">
+      <p>Our Experience Ensures That Your Projects Will Be Done Right And With The <br> Upmost Professionalism.</p>  
+    </section>
+    <section class="buttons">
+      <button type="button" class="btn btn-dark">Read More</button>
+      <button type="button" class="btn btn-danger ">Contact Us</button>
+    </section>
+    <div class="recently portfolio bg-white-3">
+      <div class="recently-text">
+        <div class="recently-text-empty">
+        </div>
+        <div class="recently-text-p">
+          <p>RECENTLY <br> WORKS</p>
+        </div>
+      </div>       
+      <div class="cards-carousel">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of slidesStore" >
+              <ng-template carouselSlide [id]="slide.id">
+                <div class="card carousel-cards">
+                  <a class="recent-16">
+                    <div [ngStyle]="{'background-image': 'url(' + slide.src + ')'}"
+                      class="recent-img16 img-fluid img-center"></div>
+                    <div  class="recent-content"></div>
+                    <div class="recent-details">
+                      <div class="recent-title">{{ slide.title }}</div>
+                      <div class="recent-price">{{ slide.amount }}</div>
+                      <div class="house-details">
+                        {{ slide.spec1 }} <span> | </span> {{ slide.spec2 }} <span> | </span> {{ slide.area }}
+                      </div>                 
+                    </div>
+                    <div class="view-proper">View Details</div>
+                  </a>                
+                </div>            
+              </ng-template>        
+            </ng-container>
+        </owl-carousel-o>
+      </div>      
+    </div> 
+
+    <div class="info-help">
+      
+    </div>
+
+
+    <div class="latest-news">
+      <div class="recently-text">
+          <div class="recently-text-empty">
+          </div>
+          <div class="recently-text-p">
+              <p>LATEST <br> NEWS</p>
+          </div>
+      </div>
+      <div class="latest-news-cards">
+          <div class="latest-news-cards1">
+              <div class="card latest-news-card">
+                  <div class="card-header latest-news-card-img">
+                      <img src="../../../assets/images/ln-1.jpg" class="news-img" alt="...">
+                  </div>                    
+                  <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+              </div>
+              <div class="card latest-news-card">
+                  <div class="card-header latest-news-card-img">
+                      <img src="../../../assets/images/ln-2.jpg" class="news-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="latest-news-cards2">
+              <div class="card latest-news-card">
+                  <div class="card-header latest-news-card-img">
+                      <img src="../../../assets/images/ln-3.jpg" class="news-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+              </div>
+              <div class="card latest-news-card">
+                  <div class="card-header latest-news-card-img">
+                      <img src="../../../assets/images/ln-4.jpg" class="news-img" alt="...">
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+           
+       
+</div>
+
+
+

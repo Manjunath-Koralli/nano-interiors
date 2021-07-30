@@ -1,0 +1,404 @@
+<div class="container-fluid">
+    <div class="parallax-search overlay home-1">
+    </div>
+    <div class="flex-div heading">
+      <h3>Interior Design For </h3>
+      <div class="typewriter-container">
+        <h3><ngtypewriter [StringList]='strings' [speed]='1000'></ngtypewriter></h3>
+      </div>        
+    </div>
+    <div class="flex-div text">
+      <p>Our Experience Ensures That Your Projects Will Be Done Right And With The <br> Upmost Professionalism.</p>  
+    </div>
+    <div class="flex-button buttons">
+      <button type="button" class="btn btn-lg btn-dark button-margin">Read More</button>
+      <button type="button" class="btn btn-lg btn-danger button-margin">Contact Us</button>
+    </div>
+    <div class="recently bg-white-3">
+        <div class="recently-text">
+            <div class="recently-text-empty">
+            </div>
+            <div class="recently-text-p">
+                <p>RECENTLY <br> WORKS</p>
+            </div>
+        </div>       
+        <div class="cards-carousel">
+            <owl-carousel-o [options]="recentWorkOptions">
+                <ng-container *ngFor="let slide of slidesStore" >
+                <ng-template carouselSlide [id]="slide.id">
+                    <div class="card carousel-cards">
+                    <a class="recent-16">
+                        <div [ngStyle]="{'background-image': 'url(' + slide.src + ')'}"
+                        class="recent-img16 img-fluid img-center"></div>
+                        <div  class="recent-content"></div>
+                        <div class="recent-details">
+                        <div class="recent-title">{{ slide.title }}</div>
+                        <div class="recent-price">{{ slide.amount }}</div>
+                        <div class="house-details">
+                            {{ slide.spec1 }} <span> | </span> {{ slide.spec2 }} <span> | </span> {{ slide.area }}
+                        </div>                 
+                        </div>
+                        <div class="view-proper">View Details</div>
+                    </a>                
+                    </div>            
+                </ng-template>        
+                </ng-container>
+            </owl-carousel-o>
+        </div>      
+    </div> 
+
+    <div class="info-help">
+        <div class="flex-text">
+            <h2>Why Choose Us</h2>
+            <p>We offer perfect interior services</p>  
+        </div>
+    </div>
+
+    <div class="featured-boxes-area">
+        <div class="card single-featured-box">
+            <div class="icon">
+                <img src="../../../assets/images/i-5.svg" class="card-img-top" alt="..." width="85" height="85">
+            </div>        
+            <h3 class="mt-5">Interior for Home</h3>    
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="read-more-btn">Read More</a>
+        </div>
+        <div class="card single-featured-box">
+            <div class="icon">
+                <img src="../../../assets/images/i-6.svg" class="card-img-top" alt="..." width="85" height="85">
+            </div>
+            <h3 class="mt-5">Interior for Home</h3>    
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="read-more-btn">Read More</a>
+        </div>
+        <div class="card single-featured-box">
+            <div class="icon">
+                <img src="../../../assets/images/i-7.svg" class="card-img-top" alt="..." width="85" height="85">
+            </div>
+            <h3 class="mt-5">Interior for Home</h3>    
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="read-more-btn">Read More</a>
+        </div>
+        <div class="card single-featured-box">
+            <div class="icon">
+                <img src="../../../assets/images/i-8.svg" class="card-img-top" alt="..." width="85" height="85">
+            </div>
+            <h3 class="mt-5">Interior for Home</h3>    
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="read-more-btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="portfolio">
+        <div class="portfolio-text">
+          <div class="portfolio-text-empty">
+          </div>
+          <div class="portfolio-text-p">
+            <p>LATEST <br> PROJECTS</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="filteredList">
+        <button class="btn filteredListBtn active" #allFilter (click)="show('all')">Show All</button>
+        <button class="btn filteredListBtn" #dogFilter (click)="show('residential')">Residential</button> 
+        <button class="btn filteredListBtn" #cowFilter (click)="show('commercial')">Commercial</button> 
+        <button class="btn filteredListBtn" #humanFilter (click)="show('office')">Office</button> 
+    </div>
+    <div class="portfolio-gallery">
+        <div class="all" *ngIf="all">
+            <div class="first-all">
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-1.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>                    
+                </div>
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-2.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-3.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-4.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-5.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-6.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf = "residential" class="residential">
+            <div class="first-all">
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-1.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-5.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-6.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>                
+            </div>            
+        </div>        
+        <div *ngIf = "commercial" class="commercial">
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>                    
+                    <img src="../../../assets/images/proj-4.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    
+                    <img src="../../../assets/images/proj-2.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-3.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf = "office" class="office">
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-4.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-2.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="../../../assets/images/proj-1.jpg" class="card-image">
+                    <div class="social-icons fadeIn-bottom">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view-all">
+        <button class="btn view-all-btn" type="button">VIEW ALL</button>
+    </div>
+
+    <div class="living-room">
+        <div class="card living-room-card">
+            <div class="card-body">
+                <h3 class="card-title living-room-title">Living room design</h3>
+                <h5 class="card-subtitle living-room-price mt-3">Price: $400</h5>
+                <p class="card-text living-room-text">We Help you design the best places and offer near you. 
+                    Bring to the table win-win survival strategies 
+                    to ensure proactive domination going forward.
+                </p>
+                <button type="button" class="btn btn-lg btn-dark">Get Started</button>              
+            </div>
+          </div>
+    </div>
+
+    <div class="last-section">
+        <div class="recently-text">
+            <div class="recently-text-empty">
+            </div>
+            <div class="recently-text-p">
+                <p>HAPPY <br> CUSTOMERS</p>
+            </div>
+        </div>
+
+        <div class="testimonials-cards-carousel">
+            <owl-carousel-o [options]="customerOptions">
+                <ng-container *ngFor="let slide of customerStore" >
+                <ng-template carouselSlide [id]="slide.id">
+                    <div class="card testimonials-carousel-cards">
+                        <div class="card-header testimonials-card-header">
+                            <h5 class="testimonials-card-header-item">{{ slide.name }}</h5>                            
+                            <div class="card_img testimonials-card-img testimonials-card-header-item"> 
+                              <img src="{{ slide.src }}" alt="user-image">
+                            </div>
+                            <p class="testimonials-cards-p testimonials-card-header-item">{{ slide.location }}</p>
+                            <div class="testimonials-card-header-item-icon" *ngIf = "slide.rating == '5'">
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            </div>   
+                            <div class="testimonials-card-header-item-icon" *ngIf = "slide.rating == '4'">
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            </div>  
+                            <div class="testimonials-card-header-item-icon" *ngIf = "slide.rating == '3'">
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            </div>  
+                            <div class="testimonials-card-header-item-icon" *ngIf = "slide.rating == '2'">
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            </div>
+                            <div class="testimonials-card-header-item-icon" *ngIf = "slide.rating == '1'">
+                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            </div>                      
+                        </div>
+                        <div class="card-body testimonials-card-body">
+                            <fa-icon [icon]="faQuoteLeft" class="fa-1x icons"></fa-icon>                          
+                            <p class="card-text testimonials-cards-p">
+                              <i>{{ slide.feedback }}</i>
+                            </p>
+                        </div>
+                    </div>            
+                </ng-template>        
+                </ng-container>
+            </owl-carousel-o>
+        </div> 
+
+        <div class="clients-carousel">
+            <owl-carousel-o [options]="clientsOptions">
+                <ng-container *ngFor="let slide of clientStore" >
+                <ng-template carouselSlide [id]="slide.id">
+                    <div class="clients-carousel-cards">    
+                        <img src="{{ slide.src }}" alt="user-image">
+                    </div>            
+                </ng-template>        
+                </ng-container>
+            </owl-carousel-o>
+        </div>        
+    </div>
+
+    <div class="footer">
+        <div class="footer-cards">
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <img src="assets/images/logo-1.png" width="140" height="60" >
+                </div>
+                <div class="card-body">
+                    <p class="card-text footer-cards-p">
+                        We are a team of professional, energetic <br>
+                        individuals with talented designers and experienced <br>
+                        managers avaliable to guide our clients through the <br>
+                        flawless and timely execution of any Interior Design
+                        <br>project with completing successful 1000+ Stunning Projects.
+                    </p>
+                    <p class="card-text contacts-cards-p">Falt 201, Hebbal, Bangalore</p>
+                    <p class="card-text contacts-cards-p">+324 123 45 978</p>
+                    <p class="card-text contacts-cards-p">Support@Mailus.Com</p>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Navigation</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body">        
+                    <div class="use-links">
+                        <div class="first-link-part footer-cards-p">
+                            <div class="each-link-first"><p>Concept Design</p></div>
+                            <div class="each-link"><p>Project Designs</p></div>
+                            <div class="each-link"><p>Make Overs</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                        </div>
+                        <div class="second-link-part footer-cards-p">
+                            <div class="each-link-first"><p>Concept Design</p></div>
+                            <div class="each-link"><p>Project Designs</p></div>
+                            <div class="each-link"><p>Make Overs</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                        </div>      
+                      </div>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Contact Us</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body"> 
+                    <p class="card-text footer-cards-p">
+                      <input class="footer-input" type="tel" placeholder="Phone num">
+                    </p>       
+                    <p class="card-text footer-cards-p">
+                        <input class="footer-input" type="text" placeholder="Your Email">
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <button type="submit" class="btn footer-btn">Submit</button>
+                    </p>
+                    <p class="card-text footer-cards-p">*Contact us and get latest news and updates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="below-footer"></div>   
+       
+</div>
+
+
+
