@@ -1,8 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { faQuoteLeft, faStar as faStar1, faMapMarkerAlt, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons'
+import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons';
+import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import * as $ from 'jquery';
+
+
 
 @Component({
   selector: 'app-home1',
@@ -247,6 +250,13 @@ export class Home1Component implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
   faEnvelope = faEnvelope;
   faPhoneAlt = faPhoneAlt;
+
+  faInstagram = faInstagram;
+  faInstagramSquare = faInstagramSquare;
+  faPhoneSquareAlt = faPhoneSquareAlt;
+  faWhatsapp = faWhatsapp;
+  faWhatsappSquare = faWhatsappSquare;
+  //faPhoneAlt = faPhoneAlt;
   
   dogbtnActive : any ;
   cowbtnActive : any ;
