@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top navigation-bar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" 
       aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -30,3 +30,17 @@
 <div class="page-container">
   <router-outlet></router-outlet>
 </div>
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <fa-icon [icon]="faInstagram" class="fa-2x footer-cards-icon"></fa-icon>
+    </a>
+    <a class="navbar-brand" href="#">
+      <fa-icon [icon]="faPhoneSquareAlt" class="fa-2x footer-cards-icon"></fa-icon>
+    </a>
+    <a class="navbar-brand" href="#">
+      <fa-icon [icon]="faWhatsapp" class="fa-2x footer-cards-icon"></fa-icon>
+    </a>
+  </div>
+</nav>
