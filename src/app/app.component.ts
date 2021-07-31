@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
-import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneSquareAlt,faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-root',
@@ -14,4 +14,5 @@ export class AppComponent {
   faPhoneSquareAlt = faPhoneSquareAlt;
   faWhatsapp = faWhatsapp;
   faWhatsappSquare = faWhatsappSquare;
+  faPhoneAlt = faPhoneAlt;
 }
