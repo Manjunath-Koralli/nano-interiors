@@ -19,9 +19,9 @@
     margin-right:10px;
 }
 
-// .fixed-bottom  {
-//     display: none;
-// }
+.fixed-bottom  {
+    display: none;
+}
 
 @media (max-width: 800px) {
     .navbar-brand {
@@ -35,12 +35,12 @@
     .fixed-bottom {
         display: flex;
         align-items: center;
-        height: 50px;
-        display: block;
+        justify-content: center;
+        background-color: #00a2eb;        
     }
-
     .footer-cards-icon {
-        padding: 10px;
+        margin-left: 20px;   
+        margin-right: 20px;
     }
 }
   
