@@ -340,12 +340,12 @@
                 </div>
                 <div class="card-body each-card-body">
                     <p class="card-text footer-cards-p each-card-body-p">
-                        <span> We are a team of professional, energetic </span>
-                        <span> individuals with talented designers and </span>
-                        <span> experienced managers avaliable to guide  </span>
-                        <span> our clients through the flawless and timely  </span>
-                        <span> execution of any Interior Design project  </span>
-                        <span> with completing successful 1000+ Projects. </span>
+                        <span> We are a team of professional, </span>
+                        <span> energetic individuals with </span>
+                        <span> talented designers avaliable to </span>
+                        <span> guide our clients through the </span>
+                        <span> flawless and timely execution  </span>
+                        <span> of any Interior Design project. </span>                      
                     </p>
                     <p class="card-text footer-cards-p">
                         <fa-icon [icon]="faMapMarkerAlt" class="fa-xs footer-cards-icon"></fa-icon> Falt 201, Hebbal, Bangalore
@@ -356,6 +356,19 @@
                     <p class="card-text footer-cards-p">
                         <fa-icon [icon]="faPhoneAlt" class="fa-xs footer-cards-icon"></fa-icon> Support@Mailus.Com
                     </p>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Location</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body each-card-body">
+                    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+                        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                            (dragEnd)="markerDragEnd($event)"></agm-marker>
+                    </agm-map>                    
                 </div>
             </div>
             <div class="card each-card">
@@ -405,7 +418,7 @@
         </div>
     </div>
     <div class="below-footer"></div>  
-    <br> 
+    <br>
 </div>
 <nav class="navbar fixed-bottom navbar-light">
     <div class="bottomnav-cards-icon">

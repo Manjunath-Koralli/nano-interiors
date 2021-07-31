@@ -575,8 +575,8 @@
 
 .footer {
     margin-top: 100px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .footer-cards {
@@ -648,11 +648,16 @@
 
 .below-footer {
     background: url('../../../assets/images/bg-white-3.png') 0 0 repeat !important;
-    height: 50px;       
+    height: 100px;       
 } 
 
 .fixed-bottom  {
     display: none;
+}
+
+agm-map{
+    height: 300px;
+    width : 300px;
 }
 
 @media (max-width: 800px) { 
@@ -829,8 +834,13 @@
         //text-align: left;
     }
 
+    agm-map{
+        height: 300px;
+        width : 270px;
+    }
+
     .below-footer {
-        background: url('../../../assets/images/bg-white-3.png') 0 0 repeat !important;
+        // background: url('../../../assets/images/bg-white-3.png') 0 0 repeat !important;
         height: 100px;       
     } 
 

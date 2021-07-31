@@ -14,7 +14,7 @@ import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { Home1Component } from './components/home1/home1.component';
 import { IonicModule } from '@ionic/angular';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +33,10 @@ import { IonicModule } from '@ionic/angular';
     CarouselModule,
     FontAwesomeModule,
     IonicModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCzMH_xDGDdyRlyGEZzUzF3NLwOkC5_CkQ',
+      libraries: ['places']
+    })
   
   ],
   providers: [],
