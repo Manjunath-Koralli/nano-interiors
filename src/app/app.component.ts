@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
@@ -10,6 +10,8 @@ import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
 export class AppComponent {
   title = 'nano-interiors1';
   faInstagram = faInstagram;
+  faInstagramSquare = faInstagramSquare;
   faPhoneSquareAlt = faPhoneSquareAlt;
   faWhatsapp = faWhatsapp;
+  faWhatsappSquare = faWhatsappSquare;
 }
