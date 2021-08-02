@@ -7,7 +7,8 @@
 
 .parallax-search.home-1 {
     position: relative;
-    background: url('../../../assets/images/bg-home-1.jpg') no-repeat top;
+    // background: url('../../../assets/images/bg-home-1.jpg') no-repeat top;
+    background: url('../../../assets/images/final-images/hall-view.png') no-repeat top;
     background-size: 100% 100%;
     background-attachment: fixed !important;
     height: 80vh;
@@ -844,24 +845,27 @@ agm-map{
         height: 100px;       
     } 
 
-    .footer-cards-icon {
-        margin-right: 10px;
-    }
+    // .footer-cards-icon {
+    //     margin-right: 10px;
+    // }
 
     .fixed-bottom {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 70px;
-        background-color: #f8a000;      
+        //background-color: #f8a000;  
+        background-color: white;    
+        
     }
     .bottomnav-cards-icon {  
-        margin-left: 20px;   
-        margin-right: 20px;
+        margin-left: 25px;   
+        margin-right: 25px;
     }
 
     .navbar-brand > fa-icon {
-        color: #00a2eb
+        //color: #00a2eb
+        color: #f87800;        
     }
     
 }
