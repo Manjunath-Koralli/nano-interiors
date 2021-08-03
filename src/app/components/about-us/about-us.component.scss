@@ -1,0 +1,78 @@
+.container-fluid {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.parallax-search.home-1 {
+    position: relative;
+    // background: url('../../../assets/images/bg-home-1.jpg') no-repeat top;
+    background: url('../../../assets/images/final-images/HALL-VIEW-2.png') no-repeat top;
+    background-size: 100% 100%;
+    background-attachment: fixed !important;
+    height: 80vh;
+    z-index: -1;  
+    //opacity: 0.8;    
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {    
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    //z-index: -1;
+    transform: scale(1.0);
+    margin-top: -300px;
+}
+
+.who-we-are {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.who-we-are-text {
+    margin-left: 20px;
+}
+
+.who-we-are-text-1-empty {
+    width: 140px;
+    height: 5px;
+    background-color: red;
+    border-radius: 1px;
+    margin-top: -15px;
+    margin-left: 60px;
+}
+
+.who-we-are-text-2 {
+    margin-top: 25px;
+}
+
+.team-text {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    padding-top: 10vh;
+}
+
+.team-text-empty {
+    width: 10px;
+    height: 45px;
+    background-color: red;
+    border-radius: 3px;
+}
+
+.team-text-p {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
