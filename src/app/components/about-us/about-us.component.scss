@@ -266,12 +266,18 @@
 }
 
 .footer {
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
+    // margin-top: 100px;
+    // margin-left: 100px;
+    // margin-right: 100px;
+    //background: #303441;
+    background: #212529 !important;
 }
 
 .footer-cards {
+    //margin-top: 100px;
+    padding-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -279,11 +285,14 @@
 .each-card {
     border: 0px;
     margin: 10px;
+    background: #212529 !important;
+    color: rgba(245, 255, 255, 0.8);
 }
 
 .each-card-header {
     border: 0px;
-    background-color: white;
+    //background-color: white;
+    background: #212529 !important;
 }
 // .each-card-body {
 //     display: flex;
@@ -411,14 +420,18 @@ agm-map{
         text-align: center;
     }
 
-    .footer {
-        margin-top: 100px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+    // .footer {
+    //     margin-top: 100px;
+    //     margin-left: 0px;
+    //     margin-right: 0px;
+    // }
 
     .footer-cards {
         flex-direction: column;
+        padding-top: 50px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .each-card {
