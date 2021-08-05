@@ -1,0 +1,344 @@
+.container-fluid {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.parallax-search.home-1 {
+    position: relative;
+    // background: url('../../../assets/images/bg-home-1.jpg') no-repeat top;
+    background: url('../../../assets/images/final-images/TV-HALL.png') no-repeat top;
+    background-size: 100% 100%;
+    background-attachment: fixed !important;
+    height: 80vh;
+    z-index: -1;  
+    //opacity: 0.8;    
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {    
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    //z-index: -1;
+    transform: scale(1.0);
+    margin-top: -300px;
+}
+
+.filteredList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.filteredListBtn {
+    margin-right: 5px;
+}
+
+.active {
+    color: white;
+    background-color: red;
+} 
+
+.portfolio-gallery {
+    margin-top: 50px;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-all,
+.second-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.first-all-img,
+.second-all-img {
+    position: relative;
+    margin: 10px;
+}
+
+.first-all-img .content-overlay,
+.second-all-img .content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 73.5%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.first-all-img img,
+.second-all-img img {
+    width: 100%;
+    height: auto;    
+}
+
+.first-all-img .card-image,
+.second-all-img .card-image {
+    transition: all 0.3s ease-out;
+}
+
+// .social-icons {  
+//     color: white;
+//     position: absolute;
+//     text-align: center;
+//     padding-left: 1em;
+//     padding-right: 1em;
+//     width: 100%;
+//     top: 50%;
+//     left: 50%;
+//     opacity: 0;
+//     -webkit-transform: translate(-50%, -50%);
+//     -moz-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     -webkit-transition: all 0.3s ease-in-out 0s;
+//     -moz-transition: all 0.3s ease-in-out 0s;
+//     transition: all 0.3s ease-in-out 0s;
+// }
+
+.first-all-img:hover .content-overlay,
+.second-all-img:hover .content-overlay{
+    opacity: 1;
+}
+
+.fadeIn-bottom{
+    top: 60%;
+}
+
+.proj-info {
+    text-align: center;
+}
+
+.proj-empty {
+    // width: 10px;
+    height: 5px;
+    background-color:grey;
+    border-radius: 0px;
+    opacity: 0.8;
+}
+
+// .first-all-img:hover .social-icons,
+// .second-all-img:hover .social-icons {
+//     cursor: pointer;
+//     top: 50%;
+//     left: 50%;
+//     opacity: 1;
+// }
+
+.footer {
+    margin-top: 100px;
+    // margin-left: 100px;
+    // margin-right: 100px;
+    //background: #303441;
+    background: #212529 !important;
+}
+
+.footer-cards {
+    //margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.each-card {
+    border: 0px;
+    margin: 10px;
+    background: #212529 !important;
+    color: rgba(245, 255, 255, 0.8);
+}
+
+.each-card-header {
+    border: 0px;
+    //background-color: white;
+    background: #212529 !important;
+}
+// .each-card-body {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.each-card-body-p > span{
+    display: block;
+}
+
+.footer-text-empty {
+    width: 50px;
+    height: 5px;
+    background-color: red;
+}
+
+.use-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-link-part {
+    margin-right: 15px;
+}
+// .second-link-part {
+//     margin-right: 10px;
+// }
+
+.each-link-first {
+    border-bottom: 1px black dashed;
+}
+.each-link {
+    margin-top: 10px;
+    border-bottom: 1px black dashed;
+}
+
+.footer-input {
+    height: 40px;
+    width: 250px;
+}
+
+.footer-btn {
+    background-color: red;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-size: 16px;
+    border-radius:0px;
+}
+
+.footer-cards-icon {
+    margin-right: 10px;
+}
+
+agm-map{
+    height: 300px;
+    width : 300px;
+}
+
+.fixed-bottom  {
+    display: none;
+}
+
+@media (max-width: 800px) { 
+    .parallax-search.home-1 {
+        //background: url('../../../assets/images/final-images/tv-unit.png') no-repeat top;
+        background-attachment: scroll;
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .flex-div {
+        flex-direction: column;
+    }
+
+    .heading {    
+        font-weight: bold;
+        font-size: 30px;
+        transform: scale(1);
+        margin-top: -175px;
+    }
+    
+    .filteredList {
+        margin-top: 200px;
+        flex-wrap: wrap;
+    }
+
+    .first-all,
+    .second-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .first-all-img,
+    .second-all-img {
+        position: relative;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .first-all-img .content-overlay,
+    .second-all-img .content-overlay {
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        height: 72%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    // .footer {
+    //     margin-top: 100px;
+    //     margin-left: 0px;
+    //     margin-right: 0px;
+    // }
+
+    .footer-cards {
+        flex-direction: column;
+        padding-top: 50px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .each-card {
+        margin: 0px;
+    }
+    .footer-cards-p {
+        font-size : 15px;
+        //text-align: left;
+    }
+
+    agm-map{
+        height: 300px;
+        width : 270px;
+    }
+
+    .fixed-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        //background-color: #f8a000;  
+        background-color: white;    
+        
+    }
+    .bottomnav-cards-icon {  
+        margin-left: 25px;   
+        margin-right: 25px;
+    }
+
+    .navbar-brand > fa-icon {
+        //color: #00a2eb
+        color: #f87800;        
+    }
+    
+}

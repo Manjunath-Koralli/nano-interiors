@@ -1,1 +1,318 @@
-<p>project works!</p>
+<div class="container-fluid">
+    <div class="parallax-search overlay home-1">
+    </div>
+    <div class="flex-div heading">
+      <p>PROJECTS</p>        
+    </div>
+
+    <div class="filteredList">
+        <button class="btn filteredListBtn active" #allFilter (click)="show('all')">Show All</button>
+        <button class="btn filteredListBtn" #dogFilter (click)="show('residential')">Residential</button> 
+        <button class="btn filteredListBtn" #cowFilter (click)="show('commercial')">Commercial</button> 
+        <!-- <button class="btn filteredListBtn" #humanFilter (click)="show('office')">Office</button>  -->
+    </div>
+
+    <div class="portfolio-gallery">
+        <div class="all" *ngIf="all">
+            <div class="first-all">
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-1.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-2.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-3.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+            </div>
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-4.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-5.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-6.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+            </div>
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-4.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-5.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-6.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project Card</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf = "residential" class="residential">
+            <div class="first-all">
+                <div class="first-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-1.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Budget Projects</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-5.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Budget Projects</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-6.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Budget Projects</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>                
+            </div>            
+        </div>        
+        <div *ngIf = "commercial" class="commercial">
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>                    
+                    <img src="assets/images/proj-4.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Premium Projects</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>                    
+                    <img src="assets/images/proj-2.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Premium Projects</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-3.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Premium Projects</h4>
+                        <p>Interior Design</p>
+                    </div>
+                    <div class="proj-empty"></div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf = "office" class="office">
+            <div class="second-all">
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-4.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-2.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+                <div class="second-all-img">
+                    <div class="content-overlay"></div>
+                    <img src="assets/images/proj-1.jpg" class="card-image">
+                    <div class="fadeIn-bottom"></div>
+                    <div class="proj-info">
+                        <h4>Project</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-cards">
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <img src="assets/images/logo-1.png" width="140" height="60" >
+                </div>
+                <div class="card-body each-card-body">
+                    <p class="card-text footer-cards-p each-card-body-p">
+                        <span> We are a team of professional, </span>
+                        <span> energetic individuals with </span>
+                        <span> talented designers avaliable to </span>
+                        <span> guide our clients through the </span>
+                        <span> flawless and timely execution  </span>
+                        <span> of any Interior Design project. </span>                      
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <fa-icon [icon]="faMapMarkerAlt" class="fa-xs footer-cards-icon"></fa-icon> Falt 201, Hebbal, Bangalore
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <fa-icon [icon]="faEnvelope" class="fa-xs footer-cards-icon"></fa-icon> +324 123 45 978
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <fa-icon [icon]="faPhoneAlt" class="fa-xs footer-cards-icon"></fa-icon> Support@Mailus.Com
+                    </p>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Location</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body each-card-body">
+                    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+                        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                            (dragEnd)="markerDragEnd($event)"></agm-marker>
+                    </agm-map>                    
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Navigation</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body">        
+                    <div class="use-links">
+                        <div class="first-link-part footer-cards-p">
+                            <div class="each-link-first"><p>Concept Design</p></div>
+                            <div class="each-link"><p>Project Designs</p></div>
+                            <div class="each-link"><p>Make Overs</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                        </div>
+                        <div class="second-link-part footer-cards-p">
+                            <div class="each-link-first"><p>Concept Design</p></div>
+                            <div class="each-link"><p>Project Designs</p></div>
+                            <div class="each-link"><p>Make Overs</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                        </div>      
+                      </div>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Contact Us</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body"> 
+                    <p class="card-text footer-cards-p">
+                      <input class="footer-input" type="tel" placeholder="Phone num">
+                    </p>       
+                    <p class="card-text footer-cards-p">
+                        <input class="footer-input" type="text" placeholder="Your Email">
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <button type="submit" class="btn footer-btn">Submit</button>
+                    </p>
+                    <p class="card-text footer-cards-p">*Contact us and get latest news and updates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light">
+    <div class="bottomnav-cards-icon">
+      <a class="navbar-brand">
+        <!-- <fa-icon [icon]="faInstagram" class="fa-2x"></fa-icon> -->
+        <img src="https://img.icons8.com/ios/40/f87800/instagram-new.png"/>
+      </a>
+    </div>
+    <div class="bottomnav-cards-icon">
+      <a class="navbar-brand">
+        <!-- <fa-icon [icon]="faPhoneAlt" class="fa-2x"></fa-icon> -->
+        <img src="https://img.icons8.com/ios/40/f87800/apple-phone.png"/>
+      </a>
+    </div>    
+    <div class="bottomnav-cards-icon">
+      <a class="navbar-brand">
+        <!-- <fa-icon [icon]="faWhatsapp" class="fa-2x"></fa-icon> -->
+        <img src="https://img.icons8.com/ios/40/f87800/whatsapp--v5.png"/>
+      </a>
+    </div>
+</nav>
