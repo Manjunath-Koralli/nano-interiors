@@ -1,0 +1,298 @@
+.container-fluid {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.parallax-search.home-1 {
+    position: relative;
+    // background: url('../../../assets/images/bg-home-1.jpg') no-repeat top;
+    background: url('../../../assets/images/final-images/tv-unit.png') no-repeat top;
+    background-size: 100% 100%;
+    background-attachment: fixed !important;
+    height: 80vh;
+    z-index: -1;  
+    //opacity: 0.8;    
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {    
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    //z-index: -1;
+    transform: scale(1.0);
+    margin-top: -300px;
+}
+
+.contactus {
+    margin-top: 200px;
+}
+
+.contactus-text {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    padding-top: 10vh;
+}
+
+.contactus-text-empty {
+    width: 10px;
+    height: 45px;
+    background-color: red;
+    border-radius: 3px;
+}
+
+.contactus-text-p {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    //justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.contact-form-card {
+    border: 0px;
+}
+
+.contact-logos {
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+    margin-left: 20px;
+}
+
+// .contact-form-card ,
+// .contact-logos {
+//     margin-right: 100px;
+// }
+
+.form-group > input,textarea {
+    width: 800px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-btn {
+    border-radius: 0px;
+}
+
+.single-contact-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.single-contact-logos-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.footer {
+    margin-top: 100px;
+    // margin-left: 100px;
+    // margin-right: 100px;
+    //background: #303441;
+    background: #212529 !important;
+}
+
+.footer-cards {
+    //margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.each-card {
+    border: 0px;
+    margin: 10px;
+    background: #212529 !important;
+    color: rgba(245, 255, 255, 0.8);
+}
+
+.each-card-header {
+    border: 0px;
+    //background-color: white;
+    background: #212529 !important;
+}
+// .each-card-body {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.each-card-body-p > span{
+    display: block;
+}
+
+.footer-text-empty {
+    width: 50px;
+    height: 5px;
+    background-color: red;
+}
+
+.use-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-link-part {
+    margin-right: 15px;
+}
+// .second-link-part {
+//     margin-right: 10px;
+// }
+
+.each-link-first {
+    border-bottom: 1px black dashed;
+}
+.each-link {
+    margin-top: 10px;
+    border-bottom: 1px black dashed;
+}
+
+.footer-input {
+    height: 40px;
+    width: 250px;
+}
+
+.footer-btn {
+    background-color: red;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-size: 16px;
+    border-radius:0px;
+}
+
+.footer-cards-icon {
+    margin-right: 10px;
+}
+
+agm-map{
+    height: 300px;
+    width : 300px;
+}
+
+.fixed-bottom  {
+    display: none;
+}
+
+@media (max-width: 800px) { 
+    .parallax-search.home-1 {
+        //background: url('../../../assets/images/final-images/tv-unit.png') no-repeat top;
+        background-attachment: scroll;
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .flex-div {
+        flex-direction: column;
+    }
+
+    .heading {    
+        font-weight: bold;
+        font-size: 30px;
+        transform: scale(1);
+        margin-top: -175px;
+    }
+    
+    .contactus {
+        margin-top: 150px;
+    }
+    
+    .contactus-text {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+        padding-top: 5vh;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .form-group > input,textarea {
+        width: 300px;
+    }
+
+    .contact-logos {
+        display: flex;
+        flex-direction: column;
+        margin-top: -50px;
+        margin-left: 0px;
+    }
+
+    
+    // .footer {
+    //     margin-top: 100px;
+    //     margin-left: 0px;
+    //     margin-right: 0px;
+    // }
+
+    .footer-cards {
+        flex-direction: column;
+        padding-top: 50px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .each-card {
+        margin: 0px;
+    }
+    .footer-cards-p {
+        font-size : 15px;
+        //text-align: left;
+    }
+
+    agm-map{
+        height: 300px;
+        width : 270px;
+    }
+
+    .fixed-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        //background-color: #f8a000;  
+        background-color: white;    
+        
+    }
+    .bottomnav-cards-icon {  
+        margin-left: 25px;   
+        margin-right: 25px;
+    }
+
+    .navbar-brand > fa-icon {
+        //color: #00a2eb
+        color: #f87800;        
+    }
+    
+}

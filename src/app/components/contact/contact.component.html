@@ -1,1 +1,161 @@
-<p>contact works!</p>
+<div class="container-fluid">
+    <div class="parallax-search overlay home-1">
+    </div>
+    <div class="flex-div heading">
+      <p> CONTACT US </p>        
+    </div>
+
+    <div class="contactus">
+        <div class="contactus-text">
+            <div class="contactus-text-empty">
+            </div>
+            <div class="contactus-text-p">
+                <p>HAVE A QUESTION? <br> CONTACT US</p>
+            </div>
+        </div>
+        <div class="contact-section">
+            <div class="card contact-form-card">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="comment" placeholder="Message" style="height: 150px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark form-btn">Send Your Message</button>
+                </form>
+            </div>
+            <div class="contact-logos">
+                <div class="single-contact-logos">
+                    <img src="https://img.icons8.com/ios/40/000000/marker--v1.png" class="single-contact-logos-item"/>
+                    <p class="single-contact-logos-item">Flat A, 20/7, Reynolds Neck Str </p>
+                </div>
+                <div class="single-contact-logos">
+                    <img src="https://img.icons8.com/ios/40/000000/filled-message.png" class="single-contact-logos-item"/>
+                    <p class="single-contact-logos-item"> info@blanca.com </p>
+                </div>
+                <div class="single-contact-logos">
+                    <img src="https://img.icons8.com/ios/40/000000/apple-phone.png" class="single-contact-logos-item"/>
+                    <p class="single-contact-logos-item"> +324 123 45 978 & 01 </p>
+                </div>
+                <div class="single-contact-logos">
+                    <img src="https://img.icons8.com/ios/40/000000/whatsapp--v5.png" class="single-contact-logos-item"/>
+                    <p class="single-contact-logos-item"> +324 123 45 978 & 01 </p>
+                </div>             
+            </div>            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-cards">
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <img src="assets/images/logo-1.png" width="140" height="60" >
+                </div>
+                <div class="card-body each-card-body">
+                    <p class="card-text footer-cards-p each-card-body-p">
+                        <span> We are a team of professional, </span>
+                        <span> energetic individuals with </span>
+                        <span> talented designers avaliable to </span>
+                        <span> guide our clients through the </span>
+                        <span> flawless and timely execution  </span>
+                        <span> of any Interior Design project. </span>                      
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <fa-icon [icon]="faMapMarkerAlt" class="fa-xs footer-cards-icon"></fa-icon> Falt 201, Hebbal, Bangalore
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <fa-icon [icon]="faEnvelope" class="fa-xs footer-cards-icon"></fa-icon> +324 123 45 978
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <fa-icon [icon]="faPhoneAlt" class="fa-xs footer-cards-icon"></fa-icon> Support@Mailus.Com
+                    </p>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Location</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body each-card-body">
+                    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+                        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                            (dragEnd)="markerDragEnd($event)"></agm-marker>
+                    </agm-map>                    
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Navigation</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body">        
+                    <div class="use-links">
+                        <div class="first-link-part footer-cards-p">
+                            <div class="each-link-first"><p>Concept Design</p></div>
+                            <div class="each-link"><p>Project Designs</p></div>
+                            <div class="each-link"><p>Make Overs</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                        </div>
+                        <div class="second-link-part footer-cards-p">
+                            <div class="each-link-first"><p>Concept Design</p></div>
+                            <div class="each-link"><p>Project Designs</p></div>
+                            <div class="each-link"><p>Make Overs</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                            <div class="each-link"><p>Consulting</p></div>
+                        </div>      
+                      </div>
+                </div>
+            </div>
+            <div class="card each-card">
+                <div class="card-header each-card-header">
+                    <h5>Contact Us</h5>
+                    <div class="footer-text-empty">
+                    </div>
+                </div>
+                <div class="card-body"> 
+                    <p class="card-text footer-cards-p">
+                      <input class="footer-input" type="tel" placeholder="Phone num">
+                    </p>       
+                    <p class="card-text footer-cards-p">
+                        <input class="footer-input" type="text" placeholder="Your Email">
+                    </p>
+                    <p class="card-text footer-cards-p">
+                        <button type="submit" class="btn footer-btn">Submit</button>
+                    </p>
+                    <p class="card-text footer-cards-p">*Contact us and get latest news and updates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light">
+    <div class="bottomnav-cards-icon">
+      <a class="navbar-brand">
+        <!-- <fa-icon [icon]="faInstagram" class="fa-2x"></fa-icon> -->
+        <img src="https://img.icons8.com/ios/40/f87800/instagram-new.png"/>
+      </a>
+    </div>
+    <div class="bottomnav-cards-icon">
+      <a class="navbar-brand">
+        <!-- <fa-icon [icon]="faPhoneAlt" class="fa-2x"></fa-icon> -->
+        <img src="https://img.icons8.com/ios/40/f87800/apple-phone.png"/>
+      </a>
+    </div>    
+    <div class="bottomnav-cards-icon">
+      <a class="navbar-brand">
+        <!-- <fa-icon [icon]="faWhatsapp" class="fa-2x"></fa-icon> -->
+        <img src="https://img.icons8.com/ios/40/f87800/whatsapp--v5.png"/>
+      </a>
+    </div>
+</nav>
