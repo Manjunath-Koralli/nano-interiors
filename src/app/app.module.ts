@@ -34,7 +34,8 @@ import { AgmCoreModule } from '@agm/core';
     FontAwesomeModule,
     IonicModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCzMH_xDGDdyRlyGEZzUzF3NLwOkC5_CkQ',
+      // apiKey: 'AIzaSyCzMH_xDGDdyRlyGEZzUzF3NLwOkC5_CkQ',
+      apiKey : 'AIzaSyB0c-ugi6L7ojm6bSSGTQnc9Yw25EDIvwo',
       libraries: ['places']
     })
   

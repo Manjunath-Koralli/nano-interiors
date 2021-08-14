@@ -214,33 +214,32 @@ export class Home1Component implements OnInit {
   clientStore = [
     {
       id : 'one',
-      src : 'assets/images/cl-1.png',
+      src : 'assets/images/final-images/greenply-logo.png',
     },
     {
       id : 'two',
-      src : 'assets/images/cl-2.png',
+      src : 'assets/images/final-images/ebco-1.png',
       
     },
     {
       id : 'three',
-      src : 'assets/images/cl-3.png',
-      
+      src : 'assets/images/final-images/royale-touch-1.png',      
     },
     {
       id : 'four',
-      src : 'assets/images/cl-4.png',
+      src : 'assets/images/final-images/hettich.png',
     },
     {
       id : 'five',
-      src : 'assets/images/cl-5.png',
+      src : 'assets/images/final-images/century-ply.png',
     },
     {
       id : 'six',
-      src : 'assets/images/cl-6.png',
+      src : 'assets/images/final-images/merino.png',
     },
     {
       id : 'seven',
-      src : 'assets/images/cl-7.png',
+      src : 'assets/images/final-images/greenply-logo.png',
     }
   ]
 
@@ -275,8 +274,8 @@ export class Home1Component implements OnInit {
   @ViewChild("allFilter")
   buttonAll!: ElementRef; 
 
-  all : boolean = true;
-  residential : boolean = false;
+  all : boolean = false;
+  residential : boolean = true;
   commercial : boolean = false;
   office : boolean = false;
 
@@ -343,9 +342,11 @@ export class Home1Component implements OnInit {
   setCurrentLocation() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.zoom = 8;
+        // this.latitude = position.coords.latitude;
+        // this.longitude = position.coords.longitude;
+        this.latitude = 12.8922944;
+        this.longitude = 77.728169;
+        this.zoom = 18;
         console.log(this.latitude,this.longitude)
         //this.getAddress(this.latitude, this.longitude);
       });
@@ -354,16 +355,12 @@ export class Home1Component implements OnInit {
  
   markerDragEnd($event: any) {
     console.log($event);
-    this.latitude = $event.coords.lat;
-    this.longitude = $event.coords.lng;
+    // this.latitude = $event.coords.lat;
+    // this.longitude = $event.coords.lng;
     //this.getAddress(this.latitude, this.longitude);
-  }
-  
-
-  
-
-  
-  
+    this.latitude = 12.8922944;
+    this.longitude = 77.728169;
+  }  
   
   
 
