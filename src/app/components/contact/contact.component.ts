@@ -46,9 +46,11 @@ export class ContactComponent implements OnInit {
   setCurrentLocation() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.zoom = 8;
+        // this.latitude = position.coords.latitude;
+        // this.longitude = position.coords.longitude;
+        this.latitude = 12.8922944;
+        this.longitude = 77.728169;
+        this.zoom = 18;
         console.log(this.latitude,this.longitude)
         //this.getAddress(this.latitude, this.longitude);
       });
@@ -57,8 +59,10 @@ export class ContactComponent implements OnInit {
  
   markerDragEnd($event: any) {
     console.log($event);
-    this.latitude = $event.coords.lat;
-    this.longitude = $event.coords.lng;
+    // this.latitude = $event.coords.lat;
+    // this.longitude = $event.coords.lng;
+    this.latitude = 12.8922944;
+    this.longitude = 77.728169;
     //this.getAddress(this.latitude, this.longitude);
   }
 
