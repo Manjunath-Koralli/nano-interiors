@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "interior-design-98ab2": {
+      "hosting": {
+        "nano-interiors1": [
+          "interior-design-98ab2"
+        ]
+      }
+    }
+  }
+}

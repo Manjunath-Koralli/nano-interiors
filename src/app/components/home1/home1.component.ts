@@ -1,18 +1,19 @@
-import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { faQuoteLeft, faStar as faStar1, faMapMarkerAlt, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { MapsAPILoader } from '@agm/core';
-
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AngularFirestoreCollection,AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home1',
   templateUrl: './home1.component.html',
   styleUrls: ['./home1.component.scss']
 })
-export class Home1Component implements OnInit {
+export class Home1Component implements OnInit, AfterContentChecked {
 
   strings =  ['Apartment', 'Plaza','House'];
   recentWorkOptions: OwlOptions = { 
@@ -285,16 +286,39 @@ export class Home1Component implements OnInit {
   //address!: string;
   private geoCoder: any;
 
-  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone) { 
+  quoteForm!: FormGroup;
+  selectedItemsList1 : any = [];
+  selectedItemsList2 : any = [];
+  private submissionForm!: AngularFirestoreCollection<any>;
+
+  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone, private fb: FormBuilder,
+      private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore) { 
   }
 
   ngOnInit(): void {
-
+    this.fetchSelectedItems();
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
     });
+
+    this.submissionForm = this.firestore.collection('submissions');
+    this.quoteForm = this.fb.group({
+      room : [''],
+      budget : [''],
+      part : [''],
+      time : [''],
+      type : [''],
+      name : [''],
+      city : [''],
+      phone : [''],
+      email : ['']
+    });
     
   }    
+
+  ngAfterContentChecked() : void {
+    this.changeDetector.detectChanges();
+  }
 
   show(type : string){
       if(type === 'all') {
@@ -361,6 +385,61 @@ export class Home1Component implements OnInit {
     this.latitude = 12.8922944;
     this.longitude = 77.728169;
   }  
+
+  checkboxesDataList1 = [
+    {
+      id: 'C001',
+      label: 'Kitchen',
+      isChecked: true
+    },
+    {
+      id: 'C002',
+      label: 'Master Bedroom',
+      isChecked: false
+    }
+  ]
+  checkboxesDataList2 = [
+    {
+      id: 'C003',
+      label: 'Other Bedrooms',
+      isChecked: false
+    },
+    {
+      id: 'C004',
+      label: 'Dining/Living',
+      isChecked: false
+    },
+  ]
+
+  
+  changeSelection() {
+    this.fetchSelectedItems();
+  }
+
+  fetchSelectedItems() {
+    this.selectedItemsList1 = this.checkboxesDataList1.filter((value, index) => {
+      return value.isChecked
+    });
+
+    this.selectedItemsList2 = this.checkboxesDataList2.filter((value, index) => {
+      return value.isChecked
+    });
+  }
+
+  submitData(value: any) {
+    console.log(this.selectedItemsList1);
+    console.log(this.selectedItemsList2);
+    
+    value = {...value,part1 : this.selectedItemsList1};
+    value = {...value, part2 : this.selectedItemsList2};
+    console.log(value);
+    this.submissionForm.add(value).then(res => {
+      console.log(res)
+    }).catch(err => console.log(err)
+    ).finally(() => {
+      
+    });
+  }
   
   
 
