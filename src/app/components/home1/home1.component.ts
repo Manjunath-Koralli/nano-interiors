@@ -106,7 +106,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   slidesStore = [
     {
       id : 'one',
-      src : 'assets/images/s-1.jpg',
+      src : 'assets/images/final-images/carousel/c8.jpg',
       title : 'Luxury House',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -115,7 +115,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'two',
-      src : 'assets/images/s-2.jpg',
+      src : 'assets/images/final-images/carousel/c7.JPG',
       title : 'Luxury Condo',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -124,7 +124,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'three',
-      src : 'assets/images/s-3.jpg',
+      src : 'assets/images/final-images/carousel/c6.jpg',
       title : 'Luxury House',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -133,7 +133,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'four',
-      src : 'assets/images/s-6.jpg',
+      src : 'assets/images/final-images/carousel/c5.jpg',
       title : 'Luxury Apartment',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -142,7 +142,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'five',
-      src : 'assets/images/p-1.jpg',
+      src : 'assets/images/final-images/carousel/c4.jpg',
       title : 'Luxury Condo',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -151,7 +151,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'six',
-      src : 'assets/images/p-2.jpg',
+      src : 'assets/images/final-images/carousel/c3.JPG',
       title : 'Villa House',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -160,13 +160,23 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'seven',
-      src : 'assets/images/p-5.jpg',
+      src : 'assets/images/final-images/carousel/c2.JPG',
       title : 'Family Apartment',
       amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
+    },
+    {
+      id : 'eight',
+      src : 'assets/images/final-images/carousel/c1.JPG',
+      title : 'Family Apartment',
+      amount : '$1000',
+      spec1 : '6 Bed',
+      spec2 : '3 Bath',
+      area : '720 sq ft'
     }
+    
   ]
 
   customerStore = [
@@ -263,17 +273,17 @@ export class Home1Component implements OnInit, AfterContentChecked {
   humanbtnActive : any;
   allbtnActive : any;
 
-  @ViewChild("dogFilter")
-  buttonDog!: ElementRef; 
+  @ViewChild("res")
+  buttonRes!: ElementRef; 
 
-  @ViewChild("cowFilter")
-  buttonCow!: ElementRef;
+  @ViewChild("com")
+  buttonCom!: ElementRef;
 
-  @ViewChild("humanFilter")
-  buttonHuman!: ElementRef;
+  // @ViewChild("office")
+  // buttonOff!: ElementRef;
 
-  @ViewChild("allFilter")
-  buttonAll!: ElementRef; 
+  // @ViewChild("all")
+  // buttonAll!: ElementRef; 
 
   all : boolean = false;
   residential : boolean = true;
@@ -326,40 +336,40 @@ export class Home1Component implements OnInit, AfterContentChecked {
         this.residential = false;
         this.commercial = false;
         this.office = false;
-        this.buttonAll.nativeElement.classList.add('active')
-        this.buttonDog.nativeElement.classList.remove('active');
-        this.buttonCow.nativeElement.classList.remove('active');
-        this.buttonHuman.nativeElement.classList.remove('active');        
+        // this.buttonAll.nativeElement.classList.add('active')
+        this.buttonCom.nativeElement.classList.remove('active');
+        // this.buttonOff.nativeElement.classList.remove('active');
+        this.buttonRes.nativeElement.classList.remove('active');        
       }
       else if(type === 'commercial') {
         this.all = false;
         this.residential = false;
         this.commercial = true;
         this.office = false;
-        this.buttonAll.nativeElement.classList.remove('active')
-        this.buttonDog.nativeElement.classList.remove('active');
-        this.buttonCow.nativeElement.classList.add('active');
-        this.buttonHuman.nativeElement.classList.remove('active');  
+        // this.buttonAll.nativeElement.classList.remove('active')
+        // this.buttonOff.nativeElement.classList.remove('active');
+        this.buttonCom.nativeElement.classList.add('active');
+        this.buttonRes.nativeElement.classList.remove('active');  
       }
       else if(type === 'residential') {
         this.all = false;
         this.residential = true;
         this.commercial = false;
         this.office = false;
-        this.buttonAll.nativeElement.classList.remove('active')
-        this.buttonDog.nativeElement.classList.add('active');
-        this.buttonCow.nativeElement.classList.remove('active');
-        this.buttonHuman.nativeElement.classList.remove('active');  
+        // this.buttonAll.nativeElement.classList.remove('active')
+        this.buttonRes.nativeElement.classList.add('active');
+        this.buttonCom.nativeElement.classList.remove('active');
+        // this.buttonOff.nativeElement.classList.remove('active');  
       }
       else if(type === 'office') {
         this.all = false;
         this.residential = false;
         this.commercial = false;
         this.office = true;
-        this.buttonAll.nativeElement.classList.remove('active')
-        this.buttonDog.nativeElement.classList.remove('active');
-        this.buttonCow.nativeElement.classList.remove('active');
-        this.buttonHuman.nativeElement.classList.add('active');  
+        // this.buttonAll.nativeElement.classList.remove('active')
+        this.buttonRes.nativeElement.classList.remove('active');
+        this.buttonCom.nativeElement.classList.remove('active');
+        // this.buttonOff.nativeElement.classList.add('active');  
       }
   }
 
