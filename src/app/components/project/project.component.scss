@@ -116,6 +116,11 @@
 //     transition: all 0.3s ease-in-out 0s;
 // }
 
+.first-all-img:hover,
+.second-all-img:hover {
+    cursor: pointer;
+}
+
 .first-all-img:hover .content-overlay,
 .second-all-img:hover .content-overlay{
     opacity: 1;

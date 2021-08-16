@@ -4,6 +4,7 @@ import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { MapsAPILoader } from '@agm/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -12,17 +13,17 @@ import { MapsAPILoader } from '@agm/core';
 })
 export class ProjectComponent implements OnInit {
 
-  @ViewChild("dogFilter")
-  buttonDog!: ElementRef; 
+  @ViewChild("res")
+  buttonRes!: ElementRef; 
 
-  @ViewChild("cowFilter")
-  buttonCow!: ElementRef;
+  @ViewChild("com")
+  buttonCom!: ElementRef;
 
-  @ViewChild("humanFilter")
-  buttonHuman!: ElementRef;
+  // @ViewChild("office")
+  // buttonOff!: ElementRef;
 
-  @ViewChild("allFilter")
-  buttonAll!: ElementRef; 
+  // @ViewChild("all")
+  // buttonAll!: ElementRef;  
 
   faQuoteLeft = faQuoteLeft;
   faStar1 = faStar1;
@@ -36,8 +37,8 @@ export class ProjectComponent implements OnInit {
   faWhatsapp = faWhatsapp;
   faWhatsappSquare = faWhatsappSquare;
 
-  all : boolean = true;
-  residential : boolean = false;
+  all : boolean = false;
+  residential : boolean = true;
   commercial : boolean = false;
   office : boolean = false;
 
@@ -47,7 +48,7 @@ export class ProjectComponent implements OnInit {
   //address!: string;
   private geoCoder: any;
   
-  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone) { }
+  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone,private router: Router) { }
 
   ngOnInit(): void {
     this.mapsAPILoader.load().then(() => {
@@ -61,42 +62,42 @@ export class ProjectComponent implements OnInit {
       this.residential = false;
       this.commercial = false;
       this.office = false;
-      this.buttonAll.nativeElement.classList.add('active')
-      this.buttonDog.nativeElement.classList.remove('active');
-      this.buttonCow.nativeElement.classList.remove('active');
-      this.buttonHuman.nativeElement.classList.remove('active');        
+      // this.buttonAll.nativeElement.classList.add('active')
+      this.buttonCom.nativeElement.classList.remove('active');
+      // this.buttonOff.nativeElement.classList.remove('active');
+      this.buttonRes.nativeElement.classList.remove('active');        
     }
     else if(type === 'commercial') {
       this.all = false;
       this.residential = false;
       this.commercial = true;
       this.office = false;
-      this.buttonAll.nativeElement.classList.remove('active')
-      this.buttonDog.nativeElement.classList.remove('active');
-      this.buttonCow.nativeElement.classList.add('active');
-      this.buttonHuman.nativeElement.classList.remove('active');  
+      // this.buttonAll.nativeElement.classList.remove('active')
+      // this.buttonOff.nativeElement.classList.remove('active');
+      this.buttonCom.nativeElement.classList.add('active');
+      this.buttonRes.nativeElement.classList.remove('active');  
     }
     else if(type === 'residential') {
       this.all = false;
       this.residential = true;
       this.commercial = false;
       this.office = false;
-      this.buttonAll.nativeElement.classList.remove('active')
-      this.buttonDog.nativeElement.classList.add('active');
-      this.buttonCow.nativeElement.classList.remove('active');
-      this.buttonHuman.nativeElement.classList.remove('active');  
+      // this.buttonAll.nativeElement.classList.remove('active')
+      this.buttonRes.nativeElement.classList.add('active');
+      this.buttonCom.nativeElement.classList.remove('active');
+      // this.buttonOff.nativeElement.classList.remove('active');  
     }
     else if(type === 'office') {
       this.all = false;
       this.residential = false;
       this.commercial = false;
       this.office = true;
-      this.buttonAll.nativeElement.classList.remove('active')
-      this.buttonDog.nativeElement.classList.remove('active');
-      this.buttonCow.nativeElement.classList.remove('active');
-      this.buttonHuman.nativeElement.classList.add('active');  
+      // this.buttonAll.nativeElement.classList.remove('active')
+      this.buttonRes.nativeElement.classList.remove('active');
+      this.buttonCom.nativeElement.classList.remove('active');
+      // this.buttonOff.nativeElement.classList.add('active');  
     }
-  }
+}
 
   setCurrentLocation() {
     if ('geolocation' in navigator) {
@@ -121,6 +122,10 @@ export class ProjectComponent implements OnInit {
     this.longitude = 77.728169;
     //this.zoom = 18;
     //this.getAddress(this.latitude, this.longitude);
+  }
+
+  goToPremium() {
+    this.router.navigateByUrl('projects/premium');
   }
 
 }

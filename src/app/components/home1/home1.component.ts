@@ -7,6 +7,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { MapsAPILoader } from '@agm/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AngularFirestoreCollection,AngularFirestore } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home1',
@@ -302,7 +303,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   private submissionForm!: AngularFirestoreCollection<any>;
 
   constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone, private fb: FormBuilder,
-      private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore) { 
+      private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore, private router: Router) { 
   }
 
   ngOnInit(): void {
@@ -451,6 +452,9 @@ export class Home1Component implements OnInit, AfterContentChecked {
     });
   }
   
+  goToPremium() {
+    this.router.navigateByUrl('projects/premium');
+  }
   
 
 }

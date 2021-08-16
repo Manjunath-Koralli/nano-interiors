@@ -16,6 +16,7 @@ import { IonicModule } from '@ionic/angular';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
+import { PremiumComponent } from './components/premium/premium.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AngularFireModule } from '@angular/fire';
     ServicesComponent,
     ContactComponent,
     AboutUsComponent,
-    Home1Component
+    Home1Component,
+    PremiumComponent
   ],
   imports: [
     BrowserModule,

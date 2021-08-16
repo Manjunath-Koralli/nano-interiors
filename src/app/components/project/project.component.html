@@ -6,10 +6,10 @@
     </div>
 
     <div class="filteredList">
-        <button class="btn filteredListBtn active" #allFilter (click)="show('all')">Show All</button>
-        <button class="btn filteredListBtn" #dogFilter (click)="show('residential')">Residential</button> 
-        <button class="btn filteredListBtn" #cowFilter (click)="show('commercial')">Commercial</button> 
-        <!-- <button class="btn filteredListBtn" #humanFilter (click)="show('office')">Office</button>  -->
+        <!-- <button class="btn filteredListBtn active" #all (click)="show('all')">Show All</button> -->
+        <button class="btn filteredListBtn active" #res (click)="show('residential')">Residential</button> 
+        <button class="btn filteredListBtn" #com (click)="show('commercial')">Commercial</button> 
+        <!-- <button class="btn filteredListBtn" #office (click)="show('office')">Office</button>  -->
     </div>
 
     <div class="portfolio-gallery">
@@ -118,22 +118,22 @@
                     <img src="assets/images/proj-1.jpg" class="card-image">
                     <div class="fadeIn-bottom"></div>
                     <div class="proj-info">
-                        <h4>Budget Projects</h4>
+                        <h4>Luxury Projects</h4>
                         <p>Interior Design</p>
                     </div>
                     <div class="proj-empty"></div>
                 </div>
-                <div class="second-all-img">
+                <div class="first-all-img" (click)="goToPremium()">
                     <div class="content-overlay"></div>
                     <img src="assets/images/proj-5.jpg" class="card-image">
                     <div class="fadeIn-bottom"></div>
                     <div class="proj-info">
-                        <h4>Budget Projects</h4>
+                        <h4>Premium Projects</h4>
                         <p>Interior Design</p>
                     </div>
                     <div class="proj-empty"></div>
                 </div>
-                <div class="second-all-img">
+                <div class="first-all-img">
                     <div class="content-overlay"></div>
                     <img src="assets/images/proj-6.jpg" class="card-image">
                     <div class="fadeIn-bottom"></div>
@@ -152,7 +152,7 @@
                     <img src="assets/images/proj-4.jpg" class="card-image">
                     <div class="fadeIn-bottom"></div>
                     <div class="proj-info">
-                        <h4>Premium Projects</h4>
+                        <h4>Luxury Projects</h4>
                         <p>Interior Design</p>
                     </div>
                     <div class="proj-empty"></div>
@@ -172,7 +172,7 @@
                     <img src="assets/images/proj-3.jpg" class="card-image">
                     <div class="fadeIn-bottom"></div>
                     <div class="proj-info">
-                        <h4>Premium Projects</h4>
+                        <h4>Budget Projects</h4>
                         <p>Interior Design</p>
                     </div>
                     <div class="proj-empty"></div>
