@@ -30,6 +30,14 @@
     flex: 0 0 30.333333%;
 }
 
+.carousel {
+    margin: 100px;
+    
+}
+
+.carousel-inner {
+    height: 700px;
+}
 @media (max-width: 800px) { 
     .first-all {
         display: flex;
