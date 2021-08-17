@@ -5,6 +5,8 @@ import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { MapsAPILoader } from '@agm/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-contact',
@@ -35,11 +37,26 @@ export class ContactComponent implements OnInit {
   zoom!: number;
   //address!: string;
   private geoCoder: any;
-  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone) { }
+
+  feedbackForm!: FormGroup;
+  selectedItemsList1 : any = [];
+  selectedItemsList2 : any = [];
+  private submissionfeedbackForm!: AngularFirestoreCollection<any>;
+
+  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone,private fb: FormBuilder,
+    private firestore: AngularFirestore) { }
 
   ngOnInit(): void {
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
+    });
+
+    this.submissionfeedbackForm = this.firestore.collection('feedback');
+    this.feedbackForm = this.fb.group({
+      firstname : [''],
+      lastname : [''],
+      message : [''],
+      email : ['']
     });
   }
 
@@ -64,6 +81,17 @@ export class ContactComponent implements OnInit {
     this.latitude = 12.8922944;
     this.longitude = 77.728169;
     //this.getAddress(this.latitude, this.longitude);
+  }
+
+  submitData(value: any) {
+    console.log(value);
+    this.submissionfeedbackForm.add(value).then(res => {
+      console.log(res);
+      alert("Successfully submitted")
+    }).catch(err => console.log(err)
+    ).finally(() => {
+      
+    });
   }
 
 }

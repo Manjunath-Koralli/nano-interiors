@@ -449,7 +449,8 @@ export class Home1Component implements OnInit, AfterContentChecked {
     value = {...value, part2 : this.selectedItemsList2};
     console.log(value);
     this.submissionForm.add(value).then(res => {
-      console.log(res)
+      console.log(res);
+      alert("Successfully submitted")
     }).catch(err => console.log(err)
     ).finally(() => {
       

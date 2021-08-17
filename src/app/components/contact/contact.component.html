@@ -15,38 +15,42 @@
         </div>
         <div class="contact-section">
             <div class="card contact-form-card">
-                <form class="contact-form">
+                <form class="contact-form" [formGroup]="feedbackForm">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="first-name" placeholder="First Name">
+                        <input type="text" class="form-control" id="first-name" placeholder="First Name" 
+                            formControlName="firstname">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="last-name" placeholder="Last Name">
+                        <input type="text" class="form-control" id="last-name" placeholder="Last Name"
+                            formControlName="lastname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="comment" placeholder="Message" style="height: 150px;"></textarea>
+                        <textarea class="form-control" id="comment" placeholder="Message" style="height: 150px;"
+                            formControlName="message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark form-btn">Send Your Message</button>
+                    <button type="submit" class="btn btn-dark form-btn" (click)="submitData(feedbackForm.value)">
+                        Send Your Message</button>
                 </form>
             </div>
             <div class="contact-logos">
                 <div class="single-contact-logos">
                     <img src="https://img.icons8.com/ios/40/000000/marker--v1.png" class="single-contact-logos-item"/>
-                    <p class="single-contact-logos-item">Flat A, 20/7, Reynolds Neck Str </p>
+                    <p class="single-contact-logos-item"> No 85/1 Sulikunte, Bangalore </p>
                 </div>
                 <div class="single-contact-logos">
                     <img src="https://img.icons8.com/ios/40/000000/filled-message.png" class="single-contact-logos-item"/>
-                    <p class="single-contact-logos-item"> info@blanca.com </p>
+                    <p class="single-contact-logos-item"> info@nanointeriors.com </p>
                 </div>
                 <div class="single-contact-logos">
                     <img src="https://img.icons8.com/ios/40/000000/apple-phone.png" class="single-contact-logos-item"/>
-                    <p class="single-contact-logos-item"> +324 123 45 978 & 01 </p>
+                    <p class="single-contact-logos-item"> +91 98444 14984 </p>
                 </div>
                 <div class="single-contact-logos">
                     <img src="https://img.icons8.com/ios/40/000000/whatsapp--v5.png" class="single-contact-logos-item"/>
-                    <p class="single-contact-logos-item"> +324 123 45 978 & 01 </p>
+                    <p class="single-contact-logos-item"> +91 98444 14984 </p>
                 </div>             
             </div>            
         </div>
@@ -125,7 +129,7 @@
                 </div>
                 <div class="card-body"> 
                     <p class="card-text footer-cards-p">
-                      <input class="footer-input" type="tel" placeholder="Phone num">
+                      <input class="footer-input" type="tel" placeholder="Phone">
                     </p>       
                     <p class="card-text footer-cards-p">
                         <input class="footer-input" type="text" placeholder="Your Email">

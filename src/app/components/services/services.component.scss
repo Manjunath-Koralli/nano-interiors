@@ -137,13 +137,13 @@
     background-color: #f87800;
 }
 
-.footer {
-    // margin-top: 100px;
-    // margin-left: 100px;
-    // margin-right: 100px;
-    //background: #303441;
-    background: #212529 !important;
-}
+// .footer {
+//     // margin-top: 100px;
+//     // margin-left: 100px;
+//     // margin-right: 100px;
+//     //background: #303441;
+//     background: #212529 !important;
+// }
 
 .footer-cards {
     //margin-top: 100px;
@@ -158,14 +158,15 @@
 .each-card {
     border: 0px;
     margin: 10px;
-    background: #212529 !important;
-    color: rgba(245, 255, 255, 0.8);
+    // background: #212529 !important;
+    // color: rgba(245, 255, 255, 0.8);
 }
 
 .each-card-header {
     border: 0px;
     //background-color: white;
-    background: #212529 !important;
+    //background: #212529 !important;
+    background-color: white;
 }
 // .each-card-body {
 //     display: flex;

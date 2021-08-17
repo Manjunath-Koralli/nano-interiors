@@ -36,7 +36,7 @@
                     <div class="recent-content"></div>
                     <div class="recent-details">
                         <div class="recent-title">{{ slide.title }}</div>
-                        <div class="recent-price">{{ slide.amount }}</div>
+                        <!-- <div class="recent-price">{{ slide.amount }}</div> -->
                         <div class="house-details">
                             {{ slide.spec1 }} <span> | </span> {{ slide.spec2 }} <span> | </span> {{ slide.area }}
                         </div>                 
@@ -397,7 +397,7 @@
                 </div>
                 <div class="card-body"> 
                     <p class="card-text footer-cards-p">
-                      <input class="footer-input" type="tel" placeholder="Phone num">
+                      <input class="footer-input" type="tel" placeholder="Phone">
                     </p>       
                     <p class="card-text footer-cards-p">
                         <input class="footer-input" type="text" placeholder="Your Email">
@@ -511,7 +511,7 @@
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">City</label>
-                      <input type="city" class="form-control" id="inputcity" formControlName="city">
+                      <input type="text" class="form-control" id="inputcity" formControlName="city">
                     </div>
                 </div>
                 <div class="form-row">
@@ -519,13 +519,14 @@
                         <label for="inputPassword4">Phone</label>
                         <input type="tel" class="form-control" id="inputphone" formControlName="phone">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
                         <label for="inputAddress">Email Address</label>
                         <input type="email" class="form-control" id="inputemail" 
                             formControlName="email" placeholder="someone@mailaddress.com">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger modal-btn" (click)="submitData(quoteForm.value)">
+                <button type="submit" class="btn btn-danger modal-btn" (click)="submitData(quoteForm.value)"
+                        data-dismiss="modal">
                     Save changes
                 </button>
                 <!-- <button type="button" class="btn btn-danger modal-btn">Next</button> -->
