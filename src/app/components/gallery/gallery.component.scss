@@ -26,3 +26,21 @@
     position: relative;
     margin: 10px;
 }
+
+@media (max-width: 800px) { 
+    .first-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .first-all-img {
+        position: relative;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+}
