@@ -108,7 +108,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   slidesStore = [
     {
       id : 'one',
-      src : '../../../assets/images/final-images/carousel/c8.jpg',
+      src : 'assets/images/final-images/carousel/c8.jpg',
       
       // src : 'assets/images/final-images/carousel/c8.jpg',
       title : 'Luxury House',
@@ -119,7 +119,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'two',
-      src : '../../../assets/images/final-images/carousel/c7.JPG',
+      src : 'assets/images/final-images/carousel/c7.JPG',
       // src : 'assets/images/final-images/carousel/c7.JPG',
       title : 'Luxury Condo',
       amount : '$23000',
@@ -129,7 +129,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'three',
-      src : '../../../assets/images/final-images/carousel/c6.jpg',
+      src : 'assets/images/final-images/carousel/c6.jpg',
       title : 'Luxury House',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -138,7 +138,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'four',
-      src : '../../../assets/images/final-images/carousel/c5.jpg',
+      src : 'assets/images/final-images/carousel/c5.jpg',
       title : 'Luxury Apartment',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -147,7 +147,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'five',
-      src : '../../../assets/images/final-images/carousel/c4.jpg',
+      src : 'assets/images/final-images/carousel/c4.jpg',
       title : 'Luxury Condo',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -156,7 +156,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'six',
-      src : '../../../assets/images/final-images/carousel/c3.JPG',
+      src : 'assets/images/final-images/carousel/c3.JPG',
       title : 'Villa House',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -165,7 +165,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'seven',
-      src : '../../../assets/images/final-images/carousel/c2.JPG',
+      src : 'assets/images/final-images/carousel/c2.JPG',
       title : 'Family Apartment',
       amount : '$23000',
       spec1 : '6 Bed',
@@ -174,7 +174,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'eight',
-      src : '../../../assets/images/final-images/carousel/c1.JPG',
+      src : 'assets/images/final-images/carousel/c1.JPG',
       title : 'Family Apartment',
       amount : '$1000',
       spec1 : '6 Bed',
