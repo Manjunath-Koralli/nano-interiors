@@ -1,0 +1,28 @@
+.container-fluid {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.portfolio-gallery {
+    margin-top: 50px;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.first-all-img {
+    position: relative;
+    margin: 10px;
+}

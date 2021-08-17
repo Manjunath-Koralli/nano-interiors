@@ -39,6 +39,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/ng2-image-viewer/imageviewer.scss",
               "src/styles.scss",
               {
                 "input": "node_modules/@ionic/angular/css/core.css"

@@ -4,6 +4,7 @@ import { faQuoteLeft, faStar as faStar1, faMapMarkerAlt, faEnvelope, faPhoneAlt 
 import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-premium',
@@ -29,7 +30,7 @@ export class PremiumComponent implements OnInit {
   zoom!: number;
   //address!: string;
   private geoCoder: any;
-  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone) { }
+  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone,private router: Router) { }
 
   ngOnInit(): void {
     this.mapsAPILoader.load().then(() => {
@@ -60,6 +61,10 @@ export class PremiumComponent implements OnInit {
     this.longitude = 77.728169;
     //this.zoom = 18;
     //this.getAddress(this.latitude, this.longitude);
+  }
+
+  goToGallery(){
+    this.router.navigateByUrl('projects/premium/gallery');
   }
 
 

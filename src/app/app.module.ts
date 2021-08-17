@@ -17,6 +17,7 @@ import { AgmCoreModule } from '@agm/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { PremiumComponent } from './components/premium/premium.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PremiumComponent } from './components/premium/premium.component';
     ContactComponent,
     AboutUsComponent,
     Home1Component,
-    PremiumComponent
+    PremiumComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
