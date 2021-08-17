@@ -302,10 +302,11 @@ export class Home1Component implements OnInit, AfterContentChecked {
   private geoCoder: any;
 
   quoteForm!: FormGroup;
+  contactForm!: FormGroup;
   selectedItemsList1 : any = [];
   selectedItemsList2 : any = [];
   private submissionForm!: AngularFirestoreCollection<any>;
-
+  private submissionContactForm!: AngularFirestoreCollection<any>;
   constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone, private fb: FormBuilder,
       private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore, private router: Router) { 
   }
@@ -317,6 +318,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     });
 
     this.submissionForm = this.firestore.collection('submissions');
+    this.submissionContactForm = this.firestore.collection('contact');
     this.quoteForm = this.fb.group({
       room : [''],
       budget : [''],
@@ -326,6 +328,10 @@ export class Home1Component implements OnInit, AfterContentChecked {
       name : [''],
       city : [''],
       phone : [''],
+      email : ['']
+    });
+    this.contactForm = this.fb.group({
+      contact : [''],
       email : ['']
     });
     
@@ -449,6 +455,16 @@ export class Home1Component implements OnInit, AfterContentChecked {
     value = {...value, part2 : this.selectedItemsList2};
     console.log(value);
     this.submissionForm.add(value).then(res => {
+      console.log(res);
+      alert("Successfully submitted")
+    }).catch(err => console.log(err)
+    ).finally(() => {
+      
+    });
+  }
+
+  submitContactData(value: any) {
+    this.submissionContactForm.add(value).then(res => {
       console.log(res);
       alert("Successfully submitted")
     }).catch(err => console.log(err)
