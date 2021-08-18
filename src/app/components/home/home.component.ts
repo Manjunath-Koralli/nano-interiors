@@ -13,7 +13,7 @@ import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-  strings =  ['Apartment', 'Plaza','House'];
+  strings =  ['Residentials','Plaza','Apartment'];
  
   faQuoteLeft = faQuoteLeft;
   faStar1 = faStar1;
@@ -152,7 +152,6 @@ export class HomeComponent implements OnInit {
       
       // src : 'assets/images/final-images/carousel/c8.jpg',
       title : 'Luxury House',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'

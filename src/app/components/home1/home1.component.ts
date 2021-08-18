@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 })
 export class Home1Component implements OnInit, AfterContentChecked {
 
-  strings =  ['Apartment', 'Plaza','House'];
+  strings =  ['Apartment', 'Plaza','Residentials'];
   recentWorkOptions: OwlOptions = { 
     //margin : 0,
     //stagePadding: 0,   
@@ -112,7 +112,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       
       // src : 'assets/images/final-images/carousel/c8.jpg',
       title : 'Luxury House',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
@@ -122,7 +121,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       src : 'assets/images/final-images/carousel/c7.JPG',
       // src : 'assets/images/final-images/carousel/c7.JPG',
       title : 'Luxury Condo',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
@@ -131,7 +129,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       id : 'three',
       src : 'assets/images/final-images/carousel/c6.jpg',
       title : 'Luxury House',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
@@ -140,7 +137,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       id : 'four',
       src : 'assets/images/final-images/carousel/c5.jpg',
       title : 'Luxury Apartment',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
@@ -149,7 +145,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       id : 'five',
       src : 'assets/images/final-images/carousel/c4.jpg',
       title : 'Luxury Condo',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
@@ -158,7 +153,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       id : 'six',
       src : 'assets/images/final-images/carousel/c3.JPG',
       title : 'Villa House',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
@@ -167,7 +161,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
       id : 'seven',
       src : 'assets/images/final-images/carousel/c2.JPG',
       title : 'Family Apartment',
-      amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
