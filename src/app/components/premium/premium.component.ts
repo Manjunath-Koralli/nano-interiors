@@ -5,6 +5,7 @@ import { faStar as faStar2 } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram, faInstagramSquare, faWhatsapp, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { ClientNameService } from 'src/app/common/client-name.service';
 
 @Component({
   selector: 'app-premium',
@@ -30,7 +31,8 @@ export class PremiumComponent implements OnInit {
   zoom!: number;
   //address!: string;
   private geoCoder: any;
-  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone,private router: Router) { }
+  constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone,private router: Router,
+        private nameService : ClientNameService) { }
 
   ngOnInit(): void {
     this.mapsAPILoader.load().then(() => {
@@ -63,7 +65,8 @@ export class PremiumComponent implements OnInit {
     //this.getAddress(this.latitude, this.longitude);
   }
 
-  goToGallery(){
+  goToGallery(name : string){
+    this.nameService.setClientName(name);
     this.router.navigateByUrl('projects/premium/gallery');
   }
 
