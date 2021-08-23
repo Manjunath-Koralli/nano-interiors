@@ -245,10 +245,6 @@ export class Home1Component implements OnInit, AfterContentChecked {
     {
       id : 'six',
       src : 'assets/images/final-images/merino.png',
-    },
-    {
-      id : 'seven',
-      src : 'assets/images/final-images/greenply-logo.png',
     }
   ]
 
