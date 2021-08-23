@@ -118,7 +118,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'two',
-      src : 'assets/images/final-images/carousel/c7.JPG',
+      src : 'assets/images/final-images/carousel/c7-min.JPG',
       // src : 'assets/images/final-images/carousel/c7.JPG',
       title : 'Luxury Condo',
       spec1 : '6 Bed',
@@ -151,7 +151,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'six',
-      src : 'assets/images/final-images/carousel/c3.JPG',
+      src : 'assets/images/final-images/carousel/c3-min.JPG',
       title : 'Villa House',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
@@ -159,7 +159,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'seven',
-      src : 'assets/images/final-images/carousel/c2.JPG',
+      src : 'assets/images/final-images/carousel/c2-min.JPG',
       title : 'Family Apartment',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
@@ -167,7 +167,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'eight',
-      src : 'assets/images/final-images/carousel/c1.JPG',
+      src : 'assets/images/final-images/carousel/c1-min.JPG',
       title : 'Family Apartment',
       amount : '$1000',
       spec1 : '6 Bed',
