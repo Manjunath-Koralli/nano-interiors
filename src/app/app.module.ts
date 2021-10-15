@@ -59,7 +59,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyAw5_XjuCuZ7kzCRLpbWhqNrQwVZMpv6R4",
-      authDomain: "nano-interiors.firebaseapp.com",
+      // authDomain: "nano-interiors.firebaseapp.com",
+      authDomain: "nanointeriors.com",
       projectId: "nano-interiors",
       storageBucket: "nano-interiors.appspot.com",
       messagingSenderId: "29127173164",
