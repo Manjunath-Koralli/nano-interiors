@@ -108,8 +108,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   slidesStore = [
     {
       id : 'one',
-      src : 'assets/images/final-images/carousel/c8.jpg',
-      
+      src : 'assets/images/final-images/carousel/c8.jpg',      
       // src : 'assets/images/final-images/carousel/c8.jpg',
       title : 'Luxury House',
       spec1 : '6 Bed',
