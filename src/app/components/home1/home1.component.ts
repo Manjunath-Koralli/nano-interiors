@@ -167,7 +167,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     {
       id : 'eight',
       src : 'assets/images/final-images/carousel/c1-min.JPG',
-      title : 'Family Apartment',
+      title : 'Family House',
       amount : '$1000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
