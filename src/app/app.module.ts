@@ -46,7 +46,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
       apiKey : 'AIzaSyB0c-ugi6L7ojm6bSSGTQnc9Yw25EDIvwo',
       libraries: ['places']
     }),
-    AngularFireModule.initializeApp({
+    
+    /*AngularFireModule.initializeApp({
       apiKey: "AIzaSyDuXRBWqgNaKV16ckCYewh2IDBgvCgQP5M",
       authDomain: "interior-design-98ab2.firebaseapp.com",
       projectId: "interior-design-98ab2",
@@ -54,7 +55,17 @@ import { GalleryComponent } from './components/gallery/gallery.component';
       messagingSenderId: "849073272633",
       appId: "1:849073272633:web:1bda098c8154ad32169ae8",
       measurementId: "G-9RQ1352ZT5"
-    })
+    })*/
+
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyAw5_XjuCuZ7kzCRLpbWhqNrQwVZMpv6R4",
+      authDomain: "nano-interiors.firebaseapp.com",
+      projectId: "nano-interiors",
+      storageBucket: "nano-interiors.appspot.com",
+      messagingSenderId: "29127173164",
+      appId: "1:29127173164:web:3dcbe6d8b7d9f8c5e59d89",
+      measurementId: "G-874CM973SG"
+    })    
   ],
   providers: [],
   bootstrap: [AppComponent]

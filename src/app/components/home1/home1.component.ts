@@ -295,6 +295,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   selectedItemsList2 : any = [];
   private submissionForm!: AngularFirestoreCollection<any>;
   private submissionContactForm!: AngularFirestoreCollection<any>;
+  
   constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone, private fb: FormBuilder,
       private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore, private router: Router) { 
   }
