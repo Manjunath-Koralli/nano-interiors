@@ -105,9 +105,9 @@ export class ProjectComponent implements OnInit {
         // this.latitude = position.coords.latitude;
         // this.longitude = position.coords.longitude;
         // this.zoom = 8;
-        this.latitude = 12.8922944;
-        this.longitude = 77.728169;
-        this.zoom = 18;
+        this.latitude = 12.892333;
+        this.longitude = 77.730384;
+        this.zoom = 15;
         console.log(this.latitude,this.longitude)
         //this.getAddress(this.latitude, this.longitude);
       });
