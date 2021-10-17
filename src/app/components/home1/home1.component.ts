@@ -179,34 +179,48 @@ export class Home1Component implements OnInit, AfterContentChecked {
   customerStore = [
     {
       id : 'one',
-      src : 'assets/images/ts-1.jpg',
-      name : 'Lisa Smith',
-      location : 'Raichur',
+      src : 'assets/images/final-images/reviews/Meenakshi.jpeg',
+      name : 'Menakshi',
+      location : 'Bangalore',
       rating : '5',
-      feedback : 'Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.'
+      feedback : 
+      'When I was contemplating between many brands for my house interiors, I came to know about Nano interiors.' + 
+      'They took my requirements carefully, designed based on my needs and gave adequate information before going ahead.'+ 
+      'Owner is very nice and humble person who addresses all customers needs.'+ 
+      'They use all high quality products. My house turned out to be so elegant and beautiful. Thanks to Nano interiors.'
     },
     {
       id : 'two',
-      src : 'assets/images/ts-4.jpg',
-      name : 'Gary Steven',
+      src : 'assets/images/final-images/reviews/Abhik.jpeg',
+      name : 'Abhik Pal',
       location : 'Bengaluru',
-      rating : '4',
-      feedback : 'Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.'
+      rating : '5',
+      feedback : 
+      'I had been looking for a good interior designer and at the same time budget friendly.'+
+      'I had spoken with many designers but finally we decided to go with NANO INTERIOR as their owner is so humble and is a very nice person.'+
+      'Also the people who work under him are very well trained and the work they do has so good perfection.'+
+      'Also they finished the work within the stipulated time and kept their commitments.'+
+      'You should always go with NANO INTERIOR.'
     },
     {
       id : 'three',
-      src : 'assets/images/ts-1.jpg',
-      name : 'Jhon Morris',
-      location : 'Hubli',
-      rating : '3',
-      feedback : 'Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.'
+      src : 'assets/images/final-images/reviews/Sanjay Biswas.jpeg',
+      name : 'Sanjay Biswas',
+      location : 'Bengaluru',
+      rating : '5',
+      feedback : 
+      'I have done my flat interior work with Nano Interiors and their owner is very good person'+
+      'The team who work under him are also very well trained.'+
+      '90% of the work was done by his factory (machine fitting)'+
+      'and also they finished the work within the stipulated time.'+
+      'Thank you Nano Interior owner & team.'
     },
     {
       id : 'four',
       src : 'assets/images/ts-6.jpg',
       name : 'Marry Smith',
       location : 'Dharwad',
-      rating : '4',
+      rating : '5',
       feedback : 'Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.'
     },
     {

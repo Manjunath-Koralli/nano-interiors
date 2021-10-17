@@ -96,7 +96,7 @@
     /* top: 50%;
     left: 50%; */
     width: 300px;
-    height: 400px;
+    height: 500px;
     /* transform: translate(-50%, -50%); */
     border-radius: 10px;
     overflow: hidden;
@@ -112,9 +112,9 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    //z-index: 2;
     background-color: #000;
-    transition: .5s;
+    //transition: .5s;
 }
     
 .card-image:hover img {
@@ -122,10 +122,10 @@
     transition: .5s;
 }
 
-.profile:hover .card-image {
-    transform: translateY(-100px);
-    transition: all .9s;
-}
+// .profile:hover .card-image {
+//     transform: translateY(-100px);
+//     transition: all .9s;
+// }
 
 .social-icons {
     position: absolute;
