@@ -533,16 +533,17 @@
 
 .last-section {
     background: url('../../../assets/images/bg-white-3.png') 0 0 repeat !important;
-    height: 800px;       
+    height: 1000px;       
 } 
 
 .testimonials-cards-carousel {
     margin-left: 250px;
     margin-right: 150px;
+    height: auto;
 }
 
 .testimonials-carousel-cards {
-    width: 350px;
+    width: 350px;    
     border: 0px !important;
     background-color: white;
 }
@@ -619,7 +620,7 @@
 // }
 
 .clients-carousel {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 250px;
     margin-right: 150px;
 }
