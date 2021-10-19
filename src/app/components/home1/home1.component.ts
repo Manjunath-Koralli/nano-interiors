@@ -217,19 +217,33 @@ export class Home1Component implements OnInit, AfterContentChecked {
     },
     {
       id : 'four',
-      src : 'assets/images/ts-6.jpg',
-      name : 'Marry Smith',
-      location : 'Dharwad',
+      src : 'assets/images/final-images/reviews/Kalyan Biswas.jpeg',
+      name : 'Kalyan Biswas',
+      location : 'Bengaluru',
       rating : '5',
-      feedback : 'Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.'
+      feedback : 
+      "We have had the pleasure of working with Niranjan from Nano Interiors and his competent and professional team for our home interiors. They are very professional and creative team. Their key strength lies in quickly understanding customer requirements and bringing new suggestions and options based on experience. He along with her team of carpenters brought in a very realistic, practical and a durable outlook to our interiors within the budget that we had outlined and several additions that we kept suggesting. Attention to small details and complete ownership - result an impeccable job. Thank you Niranjan! We truly enjoyed working with you. Wish you and your team the very best."
+      
     },
     {
       id : 'five',
-      src : 'assets/images/ts-1.jpg',
-      name : 'Cristy Mayer',
-      location : 'Gulbarga',
+      src : 'assets/images/final-images/reviews/Madhurima.jpeg',
+      name : 'Madhurima',
+      location : 'Bengaluru',
       rating : '5',
-      feedback : 'Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.'
+      feedback : 
+      "We got our new bangalore home interiors done from Nano Interiors and must say it's a very satisfactory experience."+
+      "Before the search started for an interior decorator,"+
+      "we were skeptical due to various negative reviews on various companies where projects were delayed and responses"+
+      "and quality was terrible."+
+      "Even though they may fall in the premium category as some may say, however we feel it was totally worth it."+ 
+      "We had an urgent 3 weeks move it timeline and the work scale was considerable."+
+      "They not only ensured we were able to move in on agreed timelines but also had a very helpful, "+
+      "professional and accommodative approach and also ensured great quality of work delivered. "+
+      "Price is also reasonable. "+
+      "The team is extremely professional and make sure to fulfil all requirements of the customers. "+
+      "If you are looking for an upscale interior, go for them. You will not regret on your decision. "+
+      "A big THANK YOU to Niranjan Jee and all the team members of Nano Interiors... Keep going 🙂"
     }
   ]
 

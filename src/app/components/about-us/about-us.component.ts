@@ -36,10 +36,13 @@ export class AboutUsComponent implements OnInit {
   zoom!: number;
   //address!: string;
   private geoCoder: any;
+  plusSign :  boolean = false;
+  otherSign : boolean = false;
   constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone) { }
 
   ngOnInit(): void {
     $('.counter').each(function () {
+      console.log($(this).text().split(" ")[0])
       $(this)
         .prop('Counter', 0)
         .animate(
@@ -47,15 +50,21 @@ export class AboutUsComponent implements OnInit {
             Counter: $(this).text(),
           },
           {
-            duration: 4000,
+            duration: 6000,
             easing: 'swing',
             step: function (now) {
+              //$(this).text(Math.ceil(now));
               $(this).text(Math.ceil(now));
             },
           }
         );
     });
 
+    setTimeout(() => {
+      this.plusSign = true;
+    }, 6000);
+
+      
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
     });

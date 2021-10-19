@@ -265,6 +265,7 @@
     color: #d2d2d2
 }
 
+
 .counter {
     display: block;
     font-size: 32px;
@@ -273,6 +274,12 @@
     line-height: 28px
 }
 
+.client-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .counter-box.colored {
     background: #3acf87
 }
