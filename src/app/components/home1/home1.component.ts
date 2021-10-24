@@ -48,15 +48,15 @@ export class Home1Component implements OnInit, AfterContentChecked {
   }
 
   customerOptions: OwlOptions = { 
-    margin : 10,
-    stagePadding: 0,   
+    //margin : 10,
+    //stagePadding: 0,   
     autoplay : true,
     loop: true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 1000,
+    navSpeed: 3000,
     navText: ['', ''],
     //navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive: {
@@ -67,13 +67,13 @@ export class Home1Component implements OnInit, AfterContentChecked {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
-        items: 3
+        items: 5
       }
     },
-    nav: true    
+    nav: false    
   }
 
   clientsOptions: OwlOptions = { 

@@ -108,7 +108,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 4));
+      transform: translateX(calc(-250px * 6));
     }
 }
   
@@ -117,7 +117,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 4));
+      transform: translateX(calc(-250px * 6));
     }
 }
 
@@ -726,6 +726,24 @@ agm-map{
 }
 
 @media (max-width: 800px) { 
+    @-webkit-keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-350px * 6));
+        }
+    }
+      
+    @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-350px * 6));
+        }
+    }
+
     .parallax-search.home-1 {
         background-attachment: scroll;
         background-size: cover;
