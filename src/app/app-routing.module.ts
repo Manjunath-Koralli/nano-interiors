@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HomeComponent } from './components/home/home.component';
 import { Home1Component } from './components/home1/home1.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'projects/premium', component: PremiumComponent }, 
   { path: 'projects/premium/gallery', component: GalleryComponent }, 
   { path: 'home', component: Home1Component },
+  { path : 'reviews', component : CustomerReviewsComponent },
   { path:'', redirectTo:'/home', pathMatch:'full'},
   { path:'**', redirectTo:'/home', pathMatch:'full'},
 ];

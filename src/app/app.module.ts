@@ -16,8 +16,11 @@ import { IonicModule } from '@ionic/angular';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { PremiumComponent } from './components/premium/premium.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     AboutUsComponent,
     Home1Component,
     PremiumComponent,
-    GalleryComponent
+    GalleryComponent,
+    CustomerReviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -65,8 +69,11 @@ import { GalleryComponent } from './components/gallery/gallery.component';
       storageBucket: "nano-interiors.appspot.com",
       messagingSenderId: "29127173164",
       appId: "1:29127173164:web:3dcbe6d8b7d9f8c5e59d89",
-      measurementId: "G-874CM973SG"
-    })    
+      measurementId: "G-874CM973SG",
+      databaseURL: "https://nano-interiors-default-rtdb.asia-southeast1.firebasedatabase.app",
+    }),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
