@@ -3,15 +3,32 @@
   <div class="card">
     <form class="feedback-form" [formGroup]="feedbackForm">
       <div class="form-group">
-          <input type="text" class="form-control" id="first-name" placeholder="Name" 
-              formControlName="name">
+          <input type="text" class="form-control" id="first-name" placeholder="Name" formControlName="name">
+          <div class="alert alert-danger" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+              <div *ngIf="name?.errors?.required || name?.errors?.notOnlyWhitespace">
+                Name is required
+              </div>
+              <div *ngIf="name?.errors?.minlength">
+                Name must be atleast 2 characters long
+              </div>
+          </div>
       </div>
       <div class="form-group">
           <input type="text" class="form-control" id="location" placeholder="Location" formControlName="location">
+          <div class="alert alert-danger" *ngIf="location?.invalid && (location?.dirty || location?.touched)">
+            <div *ngIf="location?.errors?.required || location?.errors?.notOnlyWhitespace">
+              Location is required
+            </div>
+          </div>
       </div>
       <div class="form-group">
           <textarea class="form-control" id="feedback" placeholder="Feedback Message" style="height: 150px;"
               formControlName="feedback"></textarea>
+              <div class="alert alert-danger" *ngIf="feedback?.invalid && (feedback?.dirty || feedback?.touched)">
+                <div *ngIf="feedback?.errors?.required || feedback?.errors?.notOnlyWhitespace">
+                  Feedback is required
+                </div>
+            </div>
       </div>
       <div class="form-group">
         <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)"/>

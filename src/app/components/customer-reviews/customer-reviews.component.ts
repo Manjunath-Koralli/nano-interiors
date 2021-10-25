@@ -23,8 +23,8 @@ export class CustomerReviewsComponent implements OnInit,Validators {
   ngOnInit(): void {
     this.feedbackForm = this.fb.group({      
       name : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
-      location : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
-      feedback : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
+      location : new FormControl('' , [Validators.required,FormValidators.notOnlyWhitespace]),
+      feedback : new FormControl('' , [Validators.required,FormValidators.notOnlyWhitespace]),
     });
 
     this.uploadService.getFiles().snapshotChanges().pipe(
@@ -53,6 +53,7 @@ export class CustomerReviewsComponent implements OnInit,Validators {
         this.percentage = percentage;
         if(this.percentage == 100) {
           console.log(this.percentage)
+          alert("Feedback Submitted succesfully");
         }
       },
       error => {
@@ -60,5 +61,9 @@ export class CustomerReviewsComponent implements OnInit,Validators {
       }
     );
   }
+
+  get name(){ return this.feedbackForm.get('name'); }
+  get location(){ return this.feedbackForm.get('location'); }
+  get feedback(){ return this.feedbackForm.get('feedback'); }
 
 }
