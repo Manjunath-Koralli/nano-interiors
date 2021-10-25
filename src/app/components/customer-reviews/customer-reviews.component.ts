@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FileUpload } from 'src/app/models/file-upload';
 import { FileUploadService } from 'src/app/services/file-upload.service';
 import { map } from 'rxjs/operators';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormValidators } from 'src/app/validators/form-validators';
 
 @Component({
   selector: 'app-customer-reviews',
   templateUrl: './customer-reviews.component.html',
   styleUrls: ['./customer-reviews.component.scss']
 })
-export class CustomerReviewsComponent implements OnInit {
+export class CustomerReviewsComponent implements OnInit,Validators {
 
   selectedFiles!: FileList | undefined;
   currentFileUpload!: FileUpload;
@@ -20,10 +21,10 @@ export class CustomerReviewsComponent implements OnInit {
   constructor(private uploadService: FileUploadService,private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.feedbackForm = this.fb.group({
-      name : [''],
-      location : [''],
-      feedback : [''],
+    this.feedbackForm = this.fb.group({      
+      name : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
+      location : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
+      feedback : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
     });
 
     this.uploadService.getFiles().snapshotChanges().pipe(
@@ -50,6 +51,9 @@ export class CustomerReviewsComponent implements OnInit {
     this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
       percentage => {
         this.percentage = percentage;
+        if(this.percentage == 100) {
+          console.log(this.percentage)
+        }
       },
       error => {
         console.log(error);

@@ -1,33 +1,39 @@
-<form class="feedback-form" [formGroup]="feedbackForm">
-  <div class="form-group">
-      <input type="text" class="form-control" id="first-name" placeholder="Name" 
-          formControlName="name">
-  </div>
-  <div class="form-group">
-      <input type="text" class="form-control" id="location" placeholder="Location" formControlName="location">
-  </div>
-  <div class="form-group">
-      <textarea class="form-control" id="feedback" placeholder="Feedback Message" style="height: 150px;"
-          formControlName="feedback"></textarea>
-  </div>
-  <div class="form-group">
-    <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)"/>
-  </div>
-  <button type="submit" class="btn btn-success form-btn" [disabled]="!selectedFiles" (click)="upload(feedbackForm.value)">Submit</button>
-</form>
+<div class="container-fluid">
+  <p>Feedback form</p>
+  <div class="card">
+    <form class="feedback-form" [formGroup]="feedbackForm">
+      <div class="form-group">
+          <input type="text" class="form-control" id="first-name" placeholder="Name" 
+              formControlName="name">
+      </div>
+      <div class="form-group">
+          <input type="text" class="form-control" id="location" placeholder="Location" formControlName="location">
+      </div>
+      <div class="form-group">
+          <textarea class="form-control" id="feedback" placeholder="Feedback Message" style="height: 150px;"
+              formControlName="feedback"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)"/>
+      </div>
+      <button type="submit" class="btn btn-success form-btn" [disabled]="!selectedFiles || !feedbackForm.valid" (click)="upload(feedbackForm.value)">Submit</button>
+    </form>
+  </div>  
+</div>
+
 
 <!-- <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()"> Upload </button> -->
 
-<div *ngIf="currentFileUpload" class="progress mt-2">
+<!-- <div *ngIf="currentFileUpload" class="progress mt-2">
     <div class="progress-bar progress-bar-info" role="progressbar"
       attr.aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" 
       [ngStyle]="{ width: percentage + '%' }">
         {{ percentage }}%
     </div>
-</div>
+</div> -->
 
 
-<div class="card">
+<!-- <div class="card">
     <div class="card-header">List of Files</div>
     <ul class="list-group list-group-flush" *ngFor="let file of fileUploads">
       <li class="list-group-item">
@@ -35,4 +41,4 @@
         <button class="btn btn-danger btn-sm" style="float: right">Delete</button>
       </li>
     </ul>
-</div>
+</div> -->
