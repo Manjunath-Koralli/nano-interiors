@@ -234,10 +234,16 @@ Apache-2.0
 @firebase/component
 Apache-2.0
 
+@firebase/database
+Apache-2.0
+
 @firebase/firestore
 Apache-2.0
 
 @firebase/logger
+Apache-2.0
+
+@firebase/storage
 Apache-2.0
 
 @firebase/util
@@ -486,7 +492,11 @@ firebase/app
 
 firebase/auth
 
+firebase/database
+
 firebase/firestore
+
+firebase/storage
 
 ionic-loader
 
