@@ -4,6 +4,7 @@ import { FileUploadService } from 'src/app/services/file-upload.service';
 import { map } from 'rxjs/operators';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormValidators } from 'src/app/validators/form-validators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-reviews',
@@ -18,7 +19,7 @@ export class CustomerReviewsComponent implements OnInit,Validators {
   fileUploads!: any[];
   feedbackForm!: FormGroup;
 
-  constructor(private uploadService: FileUploadService,private fb: FormBuilder) { }
+  constructor(private uploadService: FileUploadService,private fb: FormBuilder,private router : Router) { }
 
   ngOnInit(): void {
     this.feedbackForm = this.fb.group({      
@@ -59,6 +60,7 @@ export class CustomerReviewsComponent implements OnInit,Validators {
         if(this.percentage == 100) {
           console.log(this.percentage)
           alert("Feedback Submitted succesfully");
+          this.router.navigateByUrl("/home")
         }
       },
       error => {
