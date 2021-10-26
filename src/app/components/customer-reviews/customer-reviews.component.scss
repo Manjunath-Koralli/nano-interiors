@@ -20,6 +20,36 @@ p {
 .error {
     color: red;
 }
+
+::-webkit-file-upload-button {
+    //background: none;
+    border-radius: 50px;
+    color: black;
+    padding: 10px;
+    font-size: 13px;
+}
+
+// .file-upload {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: flex-start;
+// }
+.upload-button {
+    border-radius: 50px;
+    padding: 10px;
+}
+.upload-p {
+    margin-left: -860px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-btn {
+    border-radius: 30px;
+}
 @media (max-width: 800px) { 
 
     .container-fluid {
@@ -33,5 +63,11 @@ p {
 
     .feedback-form {
         padding: 10px;
+    }
+
+    .upload-p {
+        margin-left: -10px;
+        margin-left: -218px;
+        margin-top: -58px;
     }
 }

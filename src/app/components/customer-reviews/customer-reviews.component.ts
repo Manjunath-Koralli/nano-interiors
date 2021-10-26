@@ -22,7 +22,7 @@ export class CustomerReviewsComponent implements OnInit,Validators {
 
   ngOnInit(): void {
     this.feedbackForm = this.fb.group({      
-      name : new FormControl('' , [Validators.required,Validators.minLength(2),FormValidators.notOnlyWhitespace]),
+      name : new FormControl('' , [Validators.required,Validators.minLength(3),FormValidators.notOnlyWhitespace]),
       location : new FormControl('' , [Validators.required,FormValidators.notOnlyWhitespace]),
       feedback : new FormControl('' , [Validators.required,FormValidators.notOnlyWhitespace]),
     });
@@ -38,8 +38,13 @@ export class CustomerReviewsComponent implements OnInit,Validators {
     });
   }
 
+  file!: File;
+  fileTrue : boolean = false;
   selectFile(event : any): void {
     this.selectedFiles = event.target.files;
+    this.file = this.selectedFiles?.item(0) as File;
+    this.fileTrue = true;
+    console.log(this.file)
   }
 
   upload(value: any): void {
