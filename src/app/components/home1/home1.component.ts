@@ -8,6 +8,8 @@ import { MapsAPILoader } from '@agm/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AngularFirestoreCollection,AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { FileUploadService } from 'src/app/services/file-upload.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home1',
@@ -324,8 +326,10 @@ export class Home1Component implements OnInit, AfterContentChecked {
   private submissionForm!: AngularFirestoreCollection<any>;
   private submissionContactForm!: AngularFirestoreCollection<any>;
 
+  fileUploads!: any[];
   constructor(private mapsAPILoader: MapsAPILoader,private ngZone: NgZone, private fb: FormBuilder,
-      private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore, private router: Router) { 
+      private changeDetector:ChangeDetectorRef,private firestore: AngularFirestore, private router: Router,
+      private uploadService: FileUploadService) { 
   }
 
   ngOnInit(): void {
@@ -350,6 +354,16 @@ export class Home1Component implements OnInit, AfterContentChecked {
     this.contactForm = this.fb.group({
       contact : [''],
       email : ['']
+    });
+
+    this.uploadService.getFiles().snapshotChanges().pipe(
+      map(changes =>
+        // store the key
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(fileUploads => {
+      this.fileUploads = fileUploads;
+      console.log(this.fileUploads)
     });
     
   }    
