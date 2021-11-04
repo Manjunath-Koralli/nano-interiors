@@ -6,7 +6,7 @@
     height: 100vh;
     overflow: hidden;
     overflow-y: auto;
-    perspective: 3px;
+    
 }
 
 .parallax-search.home-1 {
@@ -311,6 +311,7 @@
 .each-card {
     border: 0px;
     margin: 10px;
+    margin-bottom: 25px;
     // background: #212529 !important;
     //color: rgba(245, 255, 255, 0.8);
 }
@@ -463,6 +464,7 @@
 
     .each-card {
         margin: 0px;
+        margin-bottom: 25px;
     }
     .footer-cards-p {
         font-size : 15px;

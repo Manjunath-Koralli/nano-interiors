@@ -2,21 +2,24 @@
     <div class="parallax-search overlay home-1">
     </div>
     <div class="flex-div heading">
-      <p>Interior Design For </p>
-      <div class="typewriter-container">
-        <p><ngtypewriter [StringList]='strings' [speed]='1000'></ngtypewriter></p>
-      </div>        
+        <p>Interior Design For </p>
+        <div class="typewriter-container">
+            <p>
+                <ngtypewriter [StringList]='strings' [speed]='1000'></ngtypewriter>
+            </p>
+        </div>
     </div>
     <div class="flex-div text">
-      <p>Our Experience Ensures That Your Projects Will Be Done Right And With The <br> Upmost Professionalism.</p>  
+        <p>Our Experience Ensures That Your Projects Will Be Done Right And With The <br> Upmost Professionalism.</p>
     </div>
     <div class="flex-button buttons">
-        <button type="button" class="btn btn-lg btn-danger button-margin" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-lg btn-danger button-margin" data-toggle="modal"
+            data-target="#exampleModal">
             GET QUOTES
         </button>
-      <!-- <button type="button" class="btn btn-lg btn-danger button-margin">Contact Us</button> -->
+        <!-- <button type="button" class="btn btn-lg btn-danger button-margin">Contact Us</button> -->
     </div>
-    
+
 
     <div class="recently bg-white-3">
         <div class="recently-text">
@@ -25,13 +28,13 @@
             <div class="recently-text-p">
                 <p>RECENTLY <br> WORKS</p>
             </div>
-        </div>  
-        
-        <div class="cards-carousel slider">  
+        </div>
+
+        <div class="cards-carousel slider">
             <div class="slide-track">
                 <div class="card each-card carousel-cards" *ngFor="let slide of slidesStore">
                     <div class="slide">
-                        <img [src]="slide.src" height="600" width="250" alt="" style="object-fit: cover;"/>
+                        <img [src]="slide.src" height="600" width="250" alt="" style="object-fit: cover;" />
                     </div>
                     <div class="recent-content"></div>
                     <div class="recent-details">
@@ -39,17 +42,17 @@
                         <!-- <div class="recent-price">{{ slide.amount }}</div> -->
                         <!-- <div class="house-details">
                             {{ slide.spec1 }} <span> | </span> {{ slide.spec2 }} <span> | </span> {{ slide.area }}
-                        </div>   -->            
+                        </div>   -->
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
-    </div> 
+    </div>
 
-    <div class="info-help">
+    <div class="info-help ">
         <div class="flex-text">
             <h2>Why Choose Us</h2>
-            <p>We offer Excellent Interior Services</p>  
+            <p>We offer Excellent Interior Services</p>
         </div>
     </div>
 
@@ -57,20 +60,22 @@
         <div class="card single-featured-box">
             <div class="icon">
                 <img src="assets/images/i-5.svg" class="card-img-top" alt="..." width="85" height="85">
-            </div>        
-            <h3 class="mt-5">Friendly Discussion</h3>    
+            </div>
+            <h3 class="mt-5">Friendly Discussion</h3>
             <p class="card-text">
-                We are a team of dedicated and skilled professionals to start a friendly conversation on Phone/Home/Our Offices</p>
+                We are a team of dedicated and skilled professionals to start a friendly conversation on Phone/Home/Our
+                Offices</p>
             <p class="card-text">where we will get to know your tastes, initial ideas and lifestyle. </p>
             <!-- <a class="read-more-btn">Read More</a> -->
-            
+
         </div>
         <div class="card single-featured-box">
             <div class="icon">
                 <img src="assets/images/i-6.svg" class="card-img-top" alt="..." width="85" height="85">
             </div>
-            <h3 class="mt-5">Designing your Space</h3>    
-            <p class="card-text">We are here to help you style your home, your way with our technical skills to create the beautiful interiors designs</p>
+            <h3 class="mt-5">Designing your Space</h3>
+            <p class="card-text">We are here to help you style your home, your way with our technical skills to create
+                the beautiful interiors designs</p>
             <p>With outstanding Color, Size, Comfortable and affordable price. </p>
             <!-- <a class="read-more-btn">Read More</a> -->
         </div>
@@ -78,16 +83,18 @@
             <div class="icon">
                 <img src="assets/images/i-7.svg" class="card-img-top" alt="..." width="85" height="85">
             </div>
-            <h3 class="mt-5">Transparent Pricing</h3>    
-            <p class="card-text">With no hidden charges, we offer you Instant Princing and easy finance option to stay within your budget.</p>
+            <h3 class="mt-5">Transparent Pricing</h3>
+            <p class="card-text">With no hidden charges, we offer you Instant Princing and easy finance option to stay
+                within your budget.</p>
             <!-- <a class="read-more-btn">Read More</a> -->
         </div>
         <div class="card single-featured-box">
             <div class="icon">
                 <img src="assets/images/i-8.svg" class="card-img-top" alt="..." width="85" height="85">
             </div>
-            <h3 class="mt-5">From Design to Reality</h3>    
-            <p class="card-text">Once you are 100% happy, we then bring it to life with your budget and lifestyle though the flawless and timely execution.</p>
+            <h3 class="mt-5">From Design to Reality</h3>
+            <p class="card-text">Once you are 100% happy, we then bring it to life with your budget and lifestyle though
+                the flawless and timely execution.</p>
             <p> We promise you to deliver a creative and cozy interior Home. </p>
             <!-- <a class="read-more-btn">Read More</a> -->
         </div>
@@ -95,7 +102,7 @@
             <div class="icon">
                 <img src="assets/images/warrenty.svg" class="card-img-top" alt="..." width="85" height="85">
             </div>
-            <h3 class="mt-5"> 10 - Year Warranty</h3>    
+            <h3 class="mt-5"> 10 - Year Warranty</h3>
             <p class="card-text">Get 1 Year of Free Service and 10 Year of Warranty </p>
             <!-- <a class="read-more-btn">Read More</a> -->
         </div>
@@ -103,17 +110,17 @@
 
     <div class="portfolio">
         <div class="portfolio-text">
-          <div class="portfolio-text-empty">
-          </div>
-          <div class="portfolio-text-p">
-            <p>LATEST <br> PROJECTS</p>
-          </div>
+            <div class="portfolio-text-empty">
+            </div>
+            <div class="portfolio-text-p">
+                <p>LATEST <br> PROJECTS</p>
+            </div>
         </div>
     </div>
 
     <div class="filteredList">
         <!-- <button class="btn filteredListBtn active" #all (click)="show('all')">Show All</button> -->
-        <button class="btn filteredListBtn active" #res (click)="show('residential')">Residential</button> 
+        <button class="btn filteredListBtn active" #res (click)="show('residential')">Residential</button>
         <!-- <button class="btn filteredListBtn" #com (click)="show('commercial')">Commercial</button> -->
         <!-- <button class="btn filteredListBtn" #office (click)="show('office')">Office</button>  -->
     </div>
@@ -126,7 +133,7 @@
                     <img src="assets/images/proj-1.jpg" class="card-image">
                     <div class="social-icons fadeIn-bottom">
                         <h4>Project</h4>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="first-all-img">
                     <div class="content-overlay"></div>
@@ -167,11 +174,11 @@
                 </div>
             </div>
         </div>
-        <div *ngIf = "residential" class="residential">
+        <div *ngIf="residential" class="residential">
             <div class="first-all">
                 <div class="first-all-img">
                     <div class="content-overlay"></div>
-                    <img src="assets/images/final-images/res1.png" class="card-image"  height="200">
+                    <img src="assets/images/final-images/res1.png" class="card-image" height="200">
                     <div class="social-icons fadeIn-bottom">
                         <h4>Luxury Projects</h4>
                     </div>
@@ -185,17 +192,17 @@
                 </div>
                 <div class="first-all-img">
                     <div class="content-overlay"></div>
-                    <img src="assets/images/final-images/why-us.png" class="card-image"  height="205">
-                    <div class="social-icons fadeIn-bottom">
+                    <img src="assets/images/final-images/budgetImg.jpeg" class="card-image" height="305">
+                    <div class="social-icons fadeIn-bottom" (click)="goToBudget()">
                         <h4>Budget Projects</h4>
                     </div>
-                </div>                
-            </div>            
-        </div>        
-        <div *ngIf = "commercial" class="commercial">
+                </div>
+            </div>
+        </div>
+        <div *ngIf="commercial" class="commercial">
             <div class="second-all">
                 <div class="second-all-img">
-                    <div class="content-overlay"></div>                    
+                    <div class="content-overlay"></div>
                     <img src="assets/images/final-images/comm1.jpg" class="card-image" height="200">
                     <div class="social-icons fadeIn-bottom">
                         <h4>Luxury Projects</h4>
@@ -217,7 +224,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf = "office" class="office">
+        <div *ngIf="office" class="office">
             <div class="second-all">
                 <div class="second-all-img">
                     <div class="content-overlay"></div>
@@ -243,7 +250,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- <div class="view-all">
         <button class="btn view-all-btn" type="button">VIEW ALL</button>
     </div> -->
@@ -253,20 +260,21 @@
             <div class="card-body">
                 <h3 class="card-title living-room-title">Living room design</h3>
                 <h5 class="card-subtitle living-room-price mt-3"></h5>
-                <p class="card-text living-room-text">Our team creates Comfortable and Well Invented spaces for your Home
-                    taking into account all your wishes and consideration to make it look even better.                  
+                <p class="card-text living-room-text">Our team creates Comfortable and Well Invented spaces for your
+                    Home
+                    taking into account all your wishes and consideration to make it look even better.
                 </p>
-                <button type="button" class="btn btn-lg btn-dark">Get Started</button>              
+                <button type="button" class="btn btn-lg btn-dark">Get Started</button>
             </div>
-          </div>
+        </div>
     </div>
 
-    <div class="last-section">
+    <div class="recently bg-white-3">
         <div class="recently-text">
             <div class="recently-text-empty">
             </div>
             <div class="recently-text-p">
-                <p>HAPPY <br> CUSTOMERS</p>
+                <p>HAPPY <br> CUSTOMERS </p>
             </div>
         </div>
 
@@ -274,73 +282,196 @@
             <div class="slide-track">
                 <div class="card each-card testimonials-carousel-cards" *ngFor="let slide of fileUploads">
                     <div class="card-header testimonials-card-header">
-                        <h5 class="testimonials-card-header-item">{{ slide.customerName }}</h5>                            
-                        <div class="card_img testimonials-card-img testimonials-card-header-item"> 
+                        <h5 class="testimonials-card-header-item">{{ slide.customerName }}</h5>
+                        <div class="card_img testimonials-card-img testimonials-card-header-item">
                             <img src="{{ slide.url }}" alt="user-image">
                         </div>
                         <p class="testimonials-cards-p testimonials-card-header-item">{{ slide.customerLocation }}</p>
-                        <div class="testimonials-card-header-item-icon" *ngIf = "slide.customerRating == '5'">
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                        </div>   
-                        <div class="testimonials-card-header-item-icon" *ngIf = "slide.customerRating == '4'">
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                        </div>  
-                        <div class="testimonials-card-header-item-icon" *ngIf = "slide.customerRating == '3'">
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                        </div>  
-                        <div class="testimonials-card-header-item-icon" *ngIf = "slide.customerRating == '2'">
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                        <div class="testimonials-card-header-item-icon" *ngIf="slide.customerRating == '5'">
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
                         </div>
-                        <div class="testimonials-card-header-item-icon" *ngIf = "slide.customerRating == '1'">
-                                <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                                <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
-                        </div>                      
+                        <div class="testimonials-card-header-item-icon" *ngIf="slide.customerRating == '4'">
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                        </div>
+                        <div class="testimonials-card-header-item-icon" *ngIf="slide.customerRating == '3'">
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                        </div>
+                        <div class="testimonials-card-header-item-icon" *ngIf="slide.customerRating == '2'">
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                        </div>
+                        <div class="testimonials-card-header-item-icon" *ngIf="slide.customerRating == '1'">
+                            <fa-icon [icon]="faStar1" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                            <fa-icon [icon]="faStar2" class="fa-xs star-icon"></fa-icon>
+                        </div>
                     </div>
                     <div class="card-body testimonials-card-body">
-                        <fa-icon [icon]="faQuoteLeft" class="fa-1x icons"></fa-icon>                          
+                        <fa-icon [icon]="faQuoteLeft" class="fa-1x icons"></fa-icon>
                         <p class="card-text testimonials-cards-p card-p">
                             <i>{{ slide.customerFeedback }}</i>
                         </p>
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
 
         <div class="clients-carousel slider">
             <div class="slide-track">
                 <div class="each-card" *ngFor="let slide of clientStore">
-                    <div class="clients-carousel-cards">    
+                    <div class="clients-carousel-cards">
                         <img src="{{ slide.src }}" alt="user-image">
-                    </div>   
-                </div>         
-            </div>  
-        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tell us about your place</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="contact-form" [formGroup]="quoteForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="rooms">How many rooms are you looking to furnish?</label>
+                                <select id="rooms" class="form-control" formControlName="room">
+                                    <option selected>Select BHK</option>
+                                    <option> 1 BHK </option>
+                                    <option> 2 BHK </option>
+                                    <option> 3 BHK </option>
+                                    <option> 4 BHK </option>
+                                    <option> Villa </option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="budget">What is your budget for this project?</label>
+                                <select id="budget" class="form-control" formControlName="budget">
+                                    <option selected> Select one </option>
+                                    <option> 1-2 Lakhs </option>
+                                    <option> 2-3 Lakhs </option>
+                                    <option> 3-4 Lakhs </option>
+                                    <option> 4-5 Lakhs </option>
+                                    <option> 5-6 Lakhs </option>
+                                    <option> 6-7 Lakhs </option>
+                                    <option> 7-10 Lakhs </option>
+                                    <option> 10-15 Lakhs </option>
+                                    <option> 15-20 Lakhs </option>
+                                    <option> 20-30 Lakhs </option>
+                                    <option> More than 30 Lakhs </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="items">Which part of your house are you looking to furnish?</label>
+                            <div class="form-group col-md-6">
+                                <div class="form-check form-check-inline" *ngFor="let item of checkboxesDataList1">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="item.isChecked"
+                                        [id]="item.id" value="" formControlName="part" (change)="changeSelection()">
+                                    <label class="form-check-label"> {{item.label}} </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="form-check form-check-inline" *ngFor="let item of checkboxesDataList2">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="item.isChecked"
+                                        [id]="item.id" value="" formControlName="part" (change)="changeSelection()">
+                                    <label class="form-check-label"> {{item.label}} </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="inputPassword4">By when will the site be ready for interiors?</label>
+                                <select id="time" class="form-control" formControlName="time">
+                                    <option selected>Select one</option>
+                                    <option> Within a week </option>
+                                    <option> Within 1-3 weeks </option>
+                                    <option> Within 4-6 weeks </option>
+                                    <option> More than 6 weeks </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="rooms">What kind of work are you looking for?</label>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type" id="inlineRadio1"
+                                        value="luxury" formControlName="type">
+                                    <label class="form-check-label" for="inlineRadio1">Luxury Projects</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type" id="inlineRadio2"
+                                        value="premium" formControlName="type">
+                                    <label class="form-check-label" for="inlineRadio2">Premium Projects</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="type" id="inlineRadio3"
+                                        value="budget" formControlName="type">
+                                    <label class="form-check-label" for="inlineRadio3">Budget Projects</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Full Name</label>
+                                <input type="text" class="form-control" id="inputname" formControlName="name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">City</label>
+                                <input type="text" class="form-control" id="inputcity" formControlName="city">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Phone</label>
+                                <input type="tel" class="form-control" id="inputphone" formControlName="phone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputAddress">Email Address</label>
+                                <input type="email" class="form-control" id="inputemail" formControlName="email"
+                                    placeholder="someone@mailaddress.com">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger modal-btn" (click)="submitData(quoteForm.value)"
+                            data-dismiss="modal">
+                            Save changes
+                        </button>
+                        <!-- <button type="button" class="btn btn-danger modal-btn">Next</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
         <div class="footer-cards">
             <div class="card each-card">
                 <div class="card-header each-card-header">
-                    <img src="assets/images/logo-1.png" width="140" height="60" >
+                    <img src="assets/images/logo-1.png" width="140" height="60">
                 </div>
                 <div class="card-body each-card-body">
                     <p class="card-text footer-cards-p each-card-body-p">
@@ -348,11 +479,11 @@
                         <span> energetic individuals with </span>
                         <span> talented designers avaliable to </span>
                         <span> guide our clients through the </span>
-                        <span> flawless and timely execution  </span>
-                        <span> of any Interior Design project. </span>                      
+                        <span> flawless and timely execution </span>
+                        <span> of any Interior Design project. </span>
                     </p>
                     <p class="card-text footer-cards-p">
-                        <fa-icon [icon]="faMapMarkerAlt" class="fa-xs footer-cards-icon"></fa-icon> 
+                        <fa-icon [icon]="faMapMarkerAlt" class="fa-xs footer-cards-icon"></fa-icon>
                         No 85/1 Sulikunte, Sarjapura main road, Bangalore
                     </p>
                     <p class="card-text footer-cards-p">
@@ -370,11 +501,9 @@
                     </div>
                 </div>
                 <div class="card-body each-card-body">
-                    <!-- <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
-                        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
-                            (dragEnd)="markerDragEnd($event)"></agm-marker>
-                    </agm-map>                     -->
-                    <iframe class="agm-map" width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=52.70967533219885, -8.020019531250002&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br />
+                    <iframe class="agm-map" width="100%" height="200"
+                        src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=12.8922944,77.7303577&amp;q=Nano%20Interiors%2C%20Bengalore%2C%20India&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br />
                 </div>
             </div>
             <div class="card each-card">
@@ -383,7 +512,7 @@
                     <div class="footer-text-empty">
                     </div>
                 </div>
-                <div class="card-body">        
+                <div class="card-body">
                     <div class="use-links">
                         <div class="first-link-part footer-cards-p">
                             <div class="each-link-first">
@@ -393,38 +522,44 @@
                             </div>
                             <div class="each-link">
                                 <p>
-                                    <a class="nav-link" [routerLink]="'/about-us'" routerLinkActive="active-link">About Us</a>
+                                    <a class="nav-link" [routerLink]="'/about-us'" routerLinkActive="active-link">About
+                                        Us</a>
                                 </p>
                             </div>
                             <div class="each-link">
                                 <p>
-                                    <a class="nav-link" [routerLink]="'/services'" routerLinkActive="active-link">Services</a>
+                                    <a class="nav-link" [routerLink]="'/services'"
+                                        routerLinkActive="active-link">Services</a>
                                 </p>
                             </div>
                             <div class="each-link">
                                 <p>
-                                    <a class="nav-link" [routerLink]="'/projects'" routerLinkActive="active-link">Projects</a>
+                                    <a class="nav-link" [routerLink]="'/projects'"
+                                        routerLinkActive="active-link">Projects</a>
                                 </p>
                             </div>
                         </div>
                         <div class="second-link-part footer-cards-p">
                             <div class="each-link-first">
                                 <p>
-                                    <a class="nav-link" [routerLink]="'/projects/premium'" routerLinkActive="active-link">Luxury Projects</a> 
+                                    <a class="nav-link" [routerLink]="'/projects/premium'"
+                                        routerLinkActive="active-link">Luxury Projects</a>
                                 </p>
                             </div>
                             <div class="each-link">
                                 <p>
-                                    <a class="nav-link" [routerLink]="'/projects/premium'" routerLinkActive="active-link">Premium Projects</a>
+                                    <a class="nav-link" [routerLink]="'/projects/premium'"
+                                        routerLinkActive="active-link">Premium Projects</a>
                                 </p>
                             </div>
                             <div class="each-link">
                                 <p>
-                                    <a class="nav-link" [routerLink]="'/projects/premium'" routerLinkActive="active-link">Budget Projects</a>
+                                    <a class="nav-link" [routerLink]="'/projects/premium'"
+                                        routerLinkActive="active-link">Budget Projects</a>
                                 </p>
-                            </div>                            
-                        </div>      
-                      </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card each-card">
@@ -433,16 +568,17 @@
                     <div class="footer-text-empty">
                     </div>
                 </div>
-                <div class="card-body"> 
+                <div class="card-body">
                     <form [formGroup]="contactForm">
                         <p class="card-text footer-cards-p">
                             <input class="footer-input" type="tel" placeholder="Phone" formControlName="contact">
-                        </p>       
+                        </p>
                         <p class="card-text footer-cards-p">
                             <input class="footer-input" type="text" placeholder="Your Email" formControlName="email">
                         </p>
                         <p class="card-text footer-cards-p">
-                            <button type="submit" class="btn footer-btn" (click)="submitContactData(contactForm.value)">Submit</button>
+                            <button type="submit" class="btn footer-btn"
+                                (click)="submitContactData(contactForm.value)">Submit</button>
                         </p>
                     </form>
                     <p class="card-text footer-cards-p">*Contact us and get latest news and updates</p>
@@ -450,155 +586,30 @@
             </div>
         </div>
     </div>
-    <div class="below-footer"></div>  
+    
+    <div class="below-footer"></div>
     <br>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tell us about your place</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form class="contact-form" [formGroup]="quoteForm">
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="rooms">How many rooms are you looking to furnish?</label>
-                    <select id="rooms" class="form-control" formControlName="room">
-                        <option selected>Select BHK</option>
-                        <option> 1 BHK </option>
-                        <option> 2 BHK </option>
-                        <option> 3 BHK </option>
-                        <option> 4 BHK </option>
-                        <option> Villa </option>
-                      </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="budget">What is your budget for this project?</label>
-                    <select id="budget" class="form-control" formControlName="budget">
-                        <option selected> Select one </option>
-                        <option> 1-2 Lakhs </option>
-                        <option> 2-3 Lakhs </option>
-                        <option> 3-4 Lakhs </option>
-                        <option> 4-5 Lakhs </option>
-                        <option> 5-6 Lakhs </option>
-                        <option> 6-7 Lakhs </option>
-                        <option> 7-10 Lakhs </option>
-                        <option> 10-15 Lakhs </option>
-                        <option> 15-20 Lakhs </option>
-                        <option> 20-30 Lakhs </option>
-                        <option> More than 30 Lakhs </option>
-                      </select>
-                  </div>
-                </div>
-                <div class="form-row">
-                    <label for="items">Which part of your house are you looking to furnish?</label>
-                    <div class="form-group col-md-6">
-                        <div class="form-check form-check-inline" *ngFor="let item of checkboxesDataList1">
-                            <input class="form-check-input" type="checkbox" [(ngModel)]="item.isChecked"
-                                [id]="item.id" value="" formControlName="part" (change)="changeSelection()">
-                            <label class="form-check-label"> {{item.label}} </label>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <div class="form-check form-check-inline" *ngFor="let item of checkboxesDataList2">
-                            <input class="form-check-input" type="checkbox" [(ngModel)]="item.isChecked"
-                            [id]="item.id" value="" formControlName="part" (change)="changeSelection()">
-                            <label class="form-check-label"> {{item.label}} </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                      <label for="inputPassword4">By when will the site be ready for interiors?</label>
-                      <select id="time" class="form-control" formControlName="time">
-                        <option selected>Select one</option>
-                        <option> Within a week </option>
-                        <option> Within 1-3 weeks </option>
-                        <option> Within 4-6 weeks </option>
-                        <option> More than 6 weeks </option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="rooms">What kind of work are you looking for?</label>
-                        <br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="type" 
-                                id="inlineRadio1" value="luxury" formControlName="type">
-                            <label class="form-check-label" for="inlineRadio1">Luxury Projects</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="type" 
-                                id="inlineRadio2" value="premium" formControlName="type">
-                            <label class="form-check-label" for="inlineRadio2">Premium Projects</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="type" 
-                                id="inlineRadio3" value="budget" formControlName="type">
-                            <label class="form-check-label" for="inlineRadio3">Budget Projects</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Full Name</label>
-                      <input type="text" class="form-control" id="inputname" formControlName="name">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputPassword4">City</label>
-                      <input type="text" class="form-control" id="inputcity" formControlName="city">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4">Phone</label>
-                        <input type="tel" class="form-control" id="inputphone" formControlName="phone">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputAddress">Email Address</label>
-                        <input type="email" class="form-control" id="inputemail" 
-                            formControlName="email" placeholder="someone@mailaddress.com">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-danger modal-btn" (click)="submitData(quoteForm.value)"
-                        data-dismiss="modal">
-                    Save changes
-                </button>
-                <!-- <button type="button" class="btn btn-danger modal-btn">Next</button> -->
-            </form>
-        </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-danger modal-btn">Save changes</button>
-        </div> -->
-      </div>
-    </div>
 </div>
+
+
 <nav class="navbar fixed-bottom navbar-light">
     <div class="bottomnav-cards-icon">
-      <a class="navbar-brand" href="https://www.instagram.com/nano_interiors_/">
-        <!-- <fa-icon [icon]="faInstagram" class="fa-2x"></fa-icon> -->
-        <img src="https://img.icons8.com/ios/40/f87800/instagram-new.png"/>
-      </a>
+        <a class="navbar-brand" href="https://www.instagram.com/nano_interiors_/">
+            <!-- <fa-icon [icon]="faInstagram" class="fa-2x"></fa-icon> -->
+            <img src="https://img.icons8.com/ios/40/f87800/instagram-new.png" />
+        </a>
     </div>
     <div class="bottomnav-cards-icon">
-      <a class="navbar-brand" href="tel:+919844414984">
-        <!-- <fa-icon [icon]="faPhoneAlt" class="fa-2x"></fa-icon> -->
-        <img src="https://img.icons8.com/ios/40/f87800/apple-phone.png"/>
-      </a>
-    </div>    
+        <a class="navbar-brand" href="tel:+919844414984">
+            <!-- <fa-icon [icon]="faPhoneAlt" class="fa-2x"></fa-icon> -->
+            <img src="https://img.icons8.com/ios/40/f87800/apple-phone.png" />
+        </a>
+    </div>
     <div class="bottomnav-cards-icon">
         <a class="navbar-brand" href="https://api.whatsapp.com/send?phone=+919844414984&text=Send20%a20%quote">
-        <!-- <a class="navbar-brand" href="whatsapp://send?text=Hello World!&phone=+918971039148"> -->
+            <!-- <a class="navbar-brand" href="whatsapp://send?text=Hello World!&phone=+918971039148"> -->
             <!-- <fa-icon [icon]="faWhatsapp" class="fa-2x"></fa-icon> -->
-            <img src="https://img.icons8.com/ios/40/f87800/whatsapp--v5.png"/>
+            <img src="https://img.icons8.com/ios/40/f87800/whatsapp--v5.png" />
         </a>
     </div>
 </nav>
-
-
-

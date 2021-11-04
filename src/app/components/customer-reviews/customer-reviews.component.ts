@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormValidators } from 'src/app/validators/form-validators';
 import { Router } from '@angular/router';
+import { AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-customer-reviews',
@@ -18,8 +19,12 @@ export class CustomerReviewsComponent implements OnInit,Validators {
   percentage: number | undefined;
   fileUploads!: any[];
   feedbackForm!: FormGroup;
+  private submissionContactForm!: AngularFirestoreCollection<any>;
 
-  constructor(private uploadService: FileUploadService,private fb: FormBuilder,private router : Router) { }
+  constructor(
+    private uploadService: FileUploadService,
+    private fb: FormBuilder,
+    private router : Router) { }
 
   ngOnInit(): void {
     this.feedbackForm = this.fb.group({      
@@ -54,19 +59,26 @@ export class CustomerReviewsComponent implements OnInit,Validators {
     this.selectedFiles = undefined;
 
     this.currentFileUpload = new FileUpload(value.name,value.location,"5",value.feedback,file);
-    this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
-      percentage => {
-        this.percentage = percentage;
-        if(this.percentage == 100) {
-          console.log(this.percentage)
-          alert("Feedback Submitted succesfully");
-          this.router.navigateByUrl("/home")
-        }
-      },
-      error => {
-        console.log(error);
-      }
-    );
+      this.submissionContactForm.add(value).then(res => {
+        console.log(res);
+        alert("Successfully submitted")
+      }).catch(err => console.log(err)
+      ).finally(() => {
+        
+      });
+    // this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
+    //   percentage => {
+    //     this.percentage = percentage;
+    //     if(this.percentage == 100) {
+    //       console.log(this.percentage)
+    //       alert("Feedback Submitted succesfully");
+    //       this.router.navigateByUrl("/home")
+    //     }
+    //   },
+    //   error => {
+    //     console.log(error);
+    //   }
+    // );
   }
 
   get name(){ return this.feedbackForm.get('name'); }
