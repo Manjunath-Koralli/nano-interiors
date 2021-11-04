@@ -170,15 +170,15 @@
                 </div>
                 <div class="first-all-img">
                     <div class="content-overlay"></div>
-                    <img src="assets/images/final-images/res2.jpg" class="card-image"  height="200">
+                    <img src="assets/images/final-images/why-us.png" class="card-image"  height="200">
                     <div class="social-icons fadeIn-bottom" (click)="goToPremium()">
                         <h4>Premium Projects</h4>
                     </div>
                 </div>
                 <div class="first-all-img">
                     <div class="content-overlay"></div>
-                    <img src="assets/images/final-images/why-us.png" class="card-image"  height="205">
-                    <div class="social-icons fadeIn-bottom">
+                    <img src="assets/images/final-images/budgetImg.jpeg" class="card-image"  height="305">
+                    <div class="social-icons fadeIn-bottom"  (click)="goToBudget()">
                         <h4>Budget Projects</h4>
                     </div>
                 </div>                
@@ -253,14 +253,7 @@
           </div>
     </div>
 
-    <div class="last-section">
-        <div class="recently-text">
-            <div class="recently-text-empty">
-            </div>
-            <div class="recently-text-p">
-                <p>HAPPY <br> CUSTOMERS</p>
-            </div>
-        </div>
+   
 
         <!-- <div class="testimonials-cards-carousel slider">
             <div class="slide-track">
@@ -316,6 +309,102 @@
                 </div>            
             </div>
         </div>  -->
+
+
+        <!--New Video Upload-->
+        <div class="portfolio">
+            <div class="portfolio-text">
+              <div class="portfolio-text-empty">
+              </div>
+              <div class="portfolio-text-p">
+                <p>LATEST <br>PROJECT VIDEO</p>
+              </div>
+            </div>
+        </div>
+    
+        <div class="portfolio-gallery">
+            
+            <div *ngIf = "residential" class="residential">
+                <div class="first-all">
+                    <div class="first-all-img">
+                        <iframe width="370" height="230" src="https://www.youtube.com/embed/W2SOVfk81d8">
+                        </iframe>
+                    </div>
+                    <div class="first-all-img">
+                        <iframe width="370" height="230" src="https://www.youtube.com/embed/UDSUMt7wN9w">
+                        </iframe>
+                    </div>
+                    <div class="first-all-img">
+                        <iframe width="370" height="230" src="https://www.youtube.com/embed/xTzrDzdBRfo">
+                        </iframe>
+                    </div>  
+                    <div class="first-all-img">
+                        <iframe width="370" height="230" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    </div>               
+                </div>            
+            </div>        
+            <div *ngIf = "commercial" class="commercial">
+                <div class="second-all">
+                    <div class="second-all-img">
+                        <div class="content-overlay"></div>                    
+                        <img src="assets/images/final-images/comm1.jpg" class="card-image" height="200">
+                        <div class="social-icons fadeIn-bottom">
+                            <h4>Luxury Projects</h4>
+                        </div>
+                    </div>
+                    <div class="second-all-img">
+                        <div class="content-overlay"></div>
+                        <img src="assets/images/final-images/living-room.png" class="card-image" height="200">
+                        <div class="social-icons fadeIn-bottom" (click)="goToPremium()">
+                            <h4>Premium Projects</h4>
+                        </div>
+                    </div>
+                    <div class="second-all-img">
+                        <div class="content-overlay"></div>
+                        <img src="assets/images/final-images/comm3.jpg" class="card-image" height="200">
+                        <div class="social-icons fadeIn-bottom">
+                            <h4>Budget Projects</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf = "office" class="office">
+                <div class="second-all">
+                    <div class="second-all-img">
+                        <div class="content-overlay"></div>
+                        <img src="assets/images/proj-4.jpg" class="card-image">
+                        <div class="social-icons fadeIn-bottom">
+                            <h4>Project</h4>
+                        </div>
+                    </div>
+                    <div class="second-all-img">
+                        <div class="content-overlay"></div>
+                        <img src="assets/images/proj-2.jpg" class="card-image">
+                        <div class="social-icons fadeIn-bottom">
+                            <h4>Project</h4>
+                        </div>
+                    </div>
+                    <div class="second-all-img">
+                        <div class="content-overlay"></div>
+                        <img src="assets/images/proj-1.jpg" class="card-image">
+                        <div class="social-icons fadeIn-bottom">
+                            <h4>Project</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!--Customer Review-->
+
+        <div class="last-section">
+            <div class="recently-text">
+                <div class="recently-text-empty">
+                </div>
+                <div class="recently-text-p">
+                    <p>HAPPY <br> CUSTOMERS</p>
+                </div>
+            </div>
 
         <div class="testimonials-cards-carousel slider">
             <div class="slide-track">
@@ -417,10 +506,11 @@
                     </div>
                 </div>
                 <div class="card-body each-card-body">
-                    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+                    <!-- <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
                         <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
                             (dragEnd)="markerDragEnd($event)"></agm-marker>
-                    </agm-map>                    
+                    </agm-map>                     -->
+                    <iframe width="100%" height="200" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=12.8922944,77.7303577&amp;q=Nano%20Interiors%2C%20Bengalore%2C%20India&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br />
                 </div>
             </div>
             <div class="card each-card">

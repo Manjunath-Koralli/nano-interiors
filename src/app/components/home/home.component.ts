@@ -37,19 +37,19 @@ export class HomeComponent implements OnInit {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 1000,
+    navSpeed: 10000,
     navText: ['', ''],
     responsive: {
-      0: {
+      6600: {
         items: 1
       },
-      400: {
+      8000: {
         items: 2
       },
-      740: {
+      9500: {
         items: 3
       },
-      940: {
+      10000: {
         items: 4
       }
     },
@@ -66,22 +66,22 @@ export class HomeComponent implements OnInit {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 1000,
+    navSpeed: 6000,
     navText: ['', ''],
     center: true,
     //navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive: {
-      0: {
+      1500: {
         items: 1
       },
-      400: {
-        items: 1
+      3000: {
+        items: 2
       },
-      740: {
-        items: 1
+      4500: {
+        items: 3
       },
-      940: {
-        items: 6
+      6000: {
+        items: 4
       }
     },
     nav: false    
@@ -96,21 +96,21 @@ export class HomeComponent implements OnInit {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 1000,
+    navSpeed: 10000,
     navText: ['', ''],
     //navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive: {
-      0: {
+      5000: {
         items: 1
       },
-      400: {
+      7000: {
         items: 2
       },
-      740: {
+      8500: {
         items: 3
       },
-      940: {
-        items: 3
+      9000: {
+        items: 4
       }
     },
     nav: true    
@@ -146,26 +146,26 @@ export class HomeComponent implements OnInit {
   }
 
   slidesStore = [
-    {
-      id : 'one',
-      src : '../../../assets/images/final-images/carousel/c8.jpg',
+    // {
+    //   id : 'one',
+    //   src : '../../../assets/images/final-images/carousel/c8.jpg',
       
-      // src : 'assets/images/final-images/carousel/c8.jpg',
-      title : 'Luxury House',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
-    {
-      id : 'two',
-      src : '../../../assets/images/final-images/carousel/c7.JPG',
-      // src : 'assets/images/final-images/carousel/c7.JPG',
-      title : 'Luxury Condo',
-      amount : '$23000',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
+    //   // src : 'assets/images/final-images/carousel/c8.jpg',
+    //   title : 'Luxury House',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
+    // {
+    //   id : 'two',
+    //   src : '../../../assets/images/final-images/carousel/c7.JPG',
+    //   // src : 'assets/images/final-images/carousel/c7.JPG',
+    //   title : 'Luxury Condo',
+    //   amount : '$23000',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
     {
       id : 'three',
       src : '../../../assets/images/final-images/carousel/c6.jpg',
@@ -178,21 +178,21 @@ export class HomeComponent implements OnInit {
     {
       id : 'four',
       src : '../../../assets/images/final-images/carousel/c5.jpg',
-      title : 'Luxury Apartment',
+      title : 'Apartment',
       amount : '$23000',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
     },
-    {
-      id : 'five',
-      src : '../../../assets/images/final-images/carousel/c4.jpg',
-      title : 'Luxury Condo',
-      amount : '$23000',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
+    // {
+    //   id : 'five',
+    //   src : '../../../assets/images/final-images/carousel/c4.jpg',
+    //   title : 'Luxury Condo',
+    //   amount : '$23000',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
     {
       id : 'six',
       src : '../../../assets/images/final-images/carousel/c3.JPG',
@@ -202,24 +202,24 @@ export class HomeComponent implements OnInit {
       spec2 : '3 Bath',
       area : '720 sq ft'
     },
-    {
-      id : 'seven',
-      src : '../../../assets/images/final-images/carousel/c2.JPG',
-      title : 'Family Apartment',
-      amount : '$23000',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
-    {
-      id : 'eight',
-      src : '../../../assets/images/final-images/carousel/c1.JPG',
-      title : 'Family Apartment',
-      amount : '$1000',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    }
+    // {
+    //   id : 'seven',
+    //   src : '../../../assets/images/final-images/carousel/c2.JPG',
+    //   title : 'Family Apartment',
+    //   amount : '$23000',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
+    // {
+    //   id : 'eight',
+    //   src : '../../../assets/images/final-images/carousel/c1.JPG',
+    //   title : 'Family Apartment',
+    //   amount : '$1000',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // }
     
   ]
 

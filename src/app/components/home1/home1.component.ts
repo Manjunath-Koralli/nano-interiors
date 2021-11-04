@@ -117,39 +117,39 @@ export class Home1Component implements OnInit, AfterContentChecked {
       spec2 : '3 Bath',
       area : '720 sq ft'
     },
-    {
-      id : 'two',
-      src : 'assets/images/final-images/carousel/c7-min.JPG',
-      // src : 'assets/images/final-images/carousel/c7.JPG',
-      title : 'Luxury Condo',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
-    {
-      id : 'three',
-      src : 'assets/images/final-images/carousel/c6.jpg',
-      title : 'Luxury House',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
+    // {
+    //   id : 'two',
+    //   src : 'assets/images/final-images/carousel/c7-min.JPG',
+    //   // src : 'assets/images/final-images/carousel/c7.JPG',
+    //   title : 'Luxury Condo',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
+    // {
+    //   id : 'three',
+    //   src : 'assets/images/final-images/carousel/c6.jpg',
+    //   title : 'Luxury House',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
     {
       id : 'four',
       src : 'assets/images/final-images/carousel/c5.jpg',
-      title : 'Luxury Apartment',
+      title : 'Apartment',
       spec1 : '6 Bed',
       spec2 : '3 Bath',
       area : '720 sq ft'
     },
-    {
-      id : 'five',
-      src : 'assets/images/final-images/carousel/c4.jpg',
-      title : 'Luxury Condo',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
+    // {
+    //   id : 'five',
+    //   src : 'assets/images/final-images/carousel/c4.jpg',
+    //   title : 'Luxury Condo',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
     {
       id : 'six',
       src : 'assets/images/final-images/carousel/c3-min.JPG',
@@ -158,23 +158,23 @@ export class Home1Component implements OnInit, AfterContentChecked {
       spec2 : '3 Bath',
       area : '720 sq ft'
     },
-    {
-      id : 'seven',
-      src : 'assets/images/final-images/carousel/c2-min.JPG',
-      title : 'Family Apartment',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    },
-    {
-      id : 'eight',
-      src : 'assets/images/final-images/carousel/c1-min.JPG',
-      title : 'Family House',
-      amount : '$1000',
-      spec1 : '6 Bed',
-      spec2 : '3 Bath',
-      area : '720 sq ft'
-    }
+    // {
+    //   id : 'seven',
+    //   src : 'assets/images/final-images/carousel/c2-min.JPG',
+    //   title : 'Family Apartment',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // },
+    // {
+    //   id : 'eight',
+    //   src : 'assets/images/final-images/carousel/c1-min.JPG',
+    //   title : 'Family House',
+    //   amount : '$1000',
+    //   spec1 : '6 Bed',
+    //   spec2 : '3 Bath',
+    //   area : '720 sq ft'
+    // }
     
   ]
 
@@ -508,5 +508,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
     this.router.navigateByUrl('projects/premium');
   }
   
-
+  goToBudget() {
+    this.router.navigateByUrl('projects/budget');
+  }
 }
