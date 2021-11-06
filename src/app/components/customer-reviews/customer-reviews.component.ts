@@ -73,7 +73,7 @@ export class CustomerReviewsComponent implements OnInit,Validators {
           console.log(this.percentage)
           alert("Feedback Submitted succesfully");
           this.router.navigateByUrl("/home")
-        }
+        }        
       },
       error => {
         console.log(error);
