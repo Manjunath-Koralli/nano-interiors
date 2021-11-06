@@ -59,26 +59,26 @@ export class CustomerReviewsComponent implements OnInit,Validators {
     this.selectedFiles = undefined;
 
     this.currentFileUpload = new FileUpload(value.name,value.location,"5",value.feedback,file);
-      this.submissionContactForm.add(value).then(res => {
-        console.log(res);
-        alert("Successfully submitted")
-      }).catch(err => console.log(err)
-      ).finally(() => {
+      // this.submissionContactForm.add(value).then(res => {
+      //   console.log(res);
+      //   alert("Successfully submitted")
+      // }).catch(err => console.log(err)
+      // ).finally(() => {
         
-      });
-    // this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
-    //   percentage => {
-    //     this.percentage = percentage;
-    //     if(this.percentage == 100) {
-    //       console.log(this.percentage)
-    //       alert("Feedback Submitted succesfully");
-    //       this.router.navigateByUrl("/home")
-    //     }
-    //   },
-    //   error => {
-    //     console.log(error);
-    //   }
-    // );
+      // });
+    this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
+      percentage => {
+        this.percentage = percentage;
+        if(this.percentage == 100) {
+          console.log(this.percentage)
+          alert("Feedback Submitted succesfully");
+          this.router.navigateByUrl("/home")
+        }
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
   get name(){ return this.feedbackForm.get('name'); }
