@@ -252,7 +252,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   clientStore = [
     {
       id : 'one',
-      src : 'assets/images/final-images/greenply-logo.png',
+      src : 'afssets/images/final-images/greenply-logo.png',
     },
     {
       id : 'two',

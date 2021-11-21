@@ -67,7 +67,7 @@
 .bg-white-4 {
     margin-top: 0px;
     background: url('../../../assets/images/bg-white-3.png') 0 0 repeat !important;
-    height: 1200px;      
+    height: 891px;      
 }
 
 .recently-text {
@@ -973,4 +973,12 @@
         color: #f87800;        
     }
     
+}
+.restrict-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    line-clamp: 2 !important;
+    -webkit-box-orient: vertical
 }
