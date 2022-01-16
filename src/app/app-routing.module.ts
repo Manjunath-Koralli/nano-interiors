@@ -10,6 +10,7 @@ import { Home1Component } from './components/home1/home1.component';
 import { PremiumComponent } from './components/premium/premium.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ServicesComponent } from './components/services/services.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'projects/budget/gallery', component: GalleryComponent }, 
   { path: 'home', component: Home1Component },
   { path : 'reviews', component : CustomerReviewsComponent },
+  { path : 'projects/videos', component : VideosComponent },
   { path:'', redirectTo:'/home', pathMatch:'full'},
   { path:'**', redirectTo:'/home', pathMatch:'full'}
 ];

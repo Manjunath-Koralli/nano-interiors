@@ -511,4 +511,7 @@ export class Home1Component implements OnInit, AfterContentChecked {
   goToBudget() {
     this.router.navigateByUrl('projects/budget');
   }
+  moreVideo(){
+    this.router.navigateByUrl('projects/videos')
+  }
 }

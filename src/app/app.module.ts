@@ -21,6 +21,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { PremiumComponent } from './components/premium/premium.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
+import { VideosComponent } from './components/videos/videos.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CustomerReviewsComponent } from './components/customer-reviews/customer
     Home1Component,
     PremiumComponent,
     GalleryComponent,
-    CustomerReviewsComponent
+    CustomerReviewsComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
