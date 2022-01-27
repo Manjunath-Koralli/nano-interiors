@@ -1,0 +1,118 @@
+var imgData1 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAfAzIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDooor/QA/ynCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiivUvgp8FP7X8rWNYi/0Th7a2cf8AHx6O4/ueg/i6n5fvfnXih4oZFwFkVTPs+qcsI6QgvjqT6Qgusn90VeUmops+/wDDbw2zvjjO6eSZJTvN6yk/gpw6zm+iX3ydoxTbSLPwA+FEn2iPXtSgTytu6yikX5i3BE2Ow/u5653DGFJ9hoor/CHxf8WM48Q+IqnEGb+7f3adNNuNKmtoRvvu3KWnNJt2Ssl/tn4U+F+U8BZBTyLKvet71So1aVSb3k7bdox15YpK7d2yiiivy4/SgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD5Dooor/AKdD/nDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK9P+Bvwcj8QpFreqKkliGP2a3PInZSQWf/ZBBG3uRzx97898UPE3JOAsgq8Q59O1OPuxiviqVGm404LrKVm+yScpNRTa+98NvDnOeN89p5DkkL1Jayk/hpwTSlOb6RV15ttRScmkP+CnwU/tfytY1iL/AETh7a2cf8fHo7j+56D+Lqfl+97VRRX+E3jF4xZ74jZ7LOc5lywjdUqSfuUofyx7yejnNq832ioxj/td4TeE2SeH+SRynKY3m7OrVa9+rPu+yWqhBO0V3blKRRRRX5MfqIUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/9k='
+var doc = new jsPDF()
+
+      doc.setLineWidth(0.5)
+      doc.line(7, 8, 204, 7.5)
+      doc.line(8, 9, 203, 8.5)
+
+      doc.line(7, 285, 7, 8)
+      doc.line(8, 284, 8, 9)
+
+      doc.line(204, 285, 204, 7)
+      doc.line(203, 284, 203, 8)
+
+      doc.line(7, 285, 204, 285)
+      doc.line(8, 284, 203, 284)
+
+
+      doc.setFontSize(12)
+      doc.text('+91 8971039148',165, 35)
+      doc.text('rachayya.rk@gmail.com',151, 40)
+      doc.text('created by:- ',151, 45)
+      doc.text('Vimal Habib',174, 45)
+
+      doc.setFontSize(13)
+      var img = "";
+      doc.addImage(imgData, 'JPEG', 9, 30, 55, 25)
+      doc.addImage(imgData1,'JPEG',8.5,9.5,194,5)
+      doc.text('Date: ',13, 65)
+      doc.text('30/10/2022',25, 65)
+      doc.setFontSize(13)
+      doc.text('Dear Ms/Mr. Rachayya Kallimath,',13, 71)
+
+      doc.setFontSize(14)
+      doc.text('Greetings from Nano Interiors.',13, 85)
+      doc.setLineWidth(0.8)
+      doc.line(13, 86, 50, 86);
+      doc.setFontSize(12)
+      doc.text('Nano Interiors, exult in successful delivering for more than 1000+ interior designs with the Upmost',13, 95)
+      doc.text('Professionalism. Our experience ensures that your projects will be done Right and with excellant',13, 100)
+      doc.text(' Designs and Fully Featured services.',13, 105);
+      
+      doc.setFontSize(16)
+      doc.setFont('bold')
+      doc.text('Nano Interiors:',13, 120)
+        
+      doc.setLineWidth(0.8)
+       doc.setDrawColor(255, 0, 0)
+      doc.line(25, 135, 45, 135)
+      doc.line(25, 150, 45, 150)
+      doc.line(25, 150, 25, 135)
+      doc.line(45, 150, 45, 135)
+        
+      doc.line(67, 135, 87, 135)
+      doc.line(67, 150, 87, 150)
+      doc.line(67, 150, 67, 135)
+      doc.line(87, 150, 87, 135)
+      
+      doc.line(109, 135, 129, 135)
+      doc.line(109, 150, 129, 150)
+      doc.line(109, 150, 109, 135)
+      doc.line(129, 150, 129, 135)
+      
+      doc.line(151, 135, 171, 135)
+      doc.line(151, 150, 171, 150)
+      doc.line(151, 150, 151, 135)
+      doc.line(171, 150, 171, 135)
+      
+      doc.setFontSize(8)
+      doc.setTextColor(255, 0, 0)
+      doc.text("UNMATCHED", 25, 153)
+      doc.text("PRICE:", 31, 156)
+      
+      doc.text("CREATIVITY &",67, 153)
+      doc.text("QUALITY:",70, 156)
+      
+      doc.text("WARRANTY &", 110, 153)
+      doc.text("SERVICE VISITS:", 108.5, 156)
+      
+      doc.text("60 DAYS &", 154.5, 153)
+      doc.text("EXECUTION:", 153, 156)
+      
+      doc.setTextColor(0,0,0)
+      doc.setFontSize(8)
+      doc.text("We assure you of never heard",18,160)
+      doc.text("before prices for the given quality &",14,163.5)
+      doc.text("services",30,167)
+      
+      doc.text("We use quality materials.",63,160)
+      doc.text("Plywood, before prices for the",60.5,163.5)
+      doc.text("given quality & etc.",66,167)
+      
+      doc.text("We provide comprehensive",103, 160)
+      doc.text("warranty of 5 years with regular",101, 163.5)
+      doc.text("service visits every 180 days post",100, 167)
+      doc.text("project delivery.",110, 170.5)
+      
+      doc.text("Assured Turn around time",147, 160)
+      
+      
+      
+      doc.setFontSize(12)
+      doc.text("Referring to our discussions, kindly find attached our proposal for designing your lovely home and in the ",13, 180)
+      doc.text("meantime, kindly go through our website www.decorpot.com for completed projects by us; we are sure ",13, 187)
+      doc.text("you will end up loving our work like our other customers have!",13, 194)
+      
+      
+
+    doc.setFontSize(25)
+    doc.setFontType('bold');    
+    doc.text(10, 120, 'QUOTATION')
+
+doc.setFontSize(16)
+doc.setFontType('bold');    
+doc.text(80, 140, 'SUMMARY')
+
+
+
+

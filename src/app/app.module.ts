@@ -22,6 +22,7 @@ import { PremiumComponent } from './components/premium/premium.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CustomerReviewsComponent } from './components/customer-reviews/customer-reviews.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { QuotesComponent } from './components/quotes/quotes.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { VideosComponent } from './components/videos/videos.component';
     PremiumComponent,
     GalleryComponent,
     CustomerReviewsComponent,
-    VideosComponent
+    VideosComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,
