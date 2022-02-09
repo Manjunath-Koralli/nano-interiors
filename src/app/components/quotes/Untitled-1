@@ -1,0 +1,1276 @@
+var imgData1 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAfAzIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDooor/QA/ynCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiivUvgp8FP7X8rWNYi/0Th7a2cf8AHx6O4/ueg/i6n5fvfnXih4oZFwFkVTPs+qcsI6QgvjqT6Qgusn90VeUmops+/wDDbw2zvjjO6eSZJTvN6yk/gpw6zm+iX3ydoxTbSLPwA+FEn2iPXtSgTytu6yikX5i3BE2Ow/u5653DGFJ9hoor/CHxf8WM48Q+IqnEGb+7f3adNNuNKmtoRvvu3KWnNJt2Ssl/tn4U+F+U8BZBTyLKvet71So1aVSb3k7bdox15YpK7d2yiiivy4/SgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD5Dooor/AKdD/nDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK9P+Bvwcj8QpFreqKkliGP2a3PInZSQWf/ZBBG3uRzx97898UPE3JOAsgq8Q59O1OPuxiviqVGm404LrKVm+yScpNRTa+98NvDnOeN89p5DkkL1Jayk/hpwTSlOb6RV15ttRScmkP+CnwU/tfytY1iL/AETh7a2cf8fHo7j+56D+Lqfl+97VRRX+E3jF4xZ74jZ7LOc5lywjdUqSfuUofyx7yejnNq832ioxj/td4TeE2SeH+SRynKY3m7OrVa9+rPu+yWqhBO0V3blKRRRRX5MfqIUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/9k='
+var doc = new jsPDF()
+addBorder();
+
+
+doc.setFontSize(12)
+doc.text('+91 8971039148', 165, 35)
+doc.text('rachayya.rk@gmail.com', 151, 40)
+doc.text('created by:- ', 151, 45)
+doc.text('Vimal Habib', 174, 45)
+
+doc.setFontSize(13)
+var img = "";
+doc.addImage(imgData, 'JPEG', 9, 30, 55, 25)
+doc.addImage(imgData1, 'JPEG', 8.5, 9.5, 194, 5)
+doc.text('Date: ', 13, 65)
+doc.text('30/10/2022', 25, 65)
+doc.setFontSize(13)
+doc.text('Dear Ms/Mr. Rachayya Kallimath,', 13, 71)
+
+doc.setFontSize(14)
+doc.text('Greetings from Nano Interiors.', 13, 85)
+doc.setLineWidth(0.8)
+doc.line(13, 86, 50, 86);
+doc.setFontSize(12)
+doc.text('Nano Interiors, exult in successful delivering for more than 1000+ interior designs with the Upmost', 13, 95)
+doc.text('Professionalism. Our experience ensures that your projects will be done Right and with excellant', 13, 100)
+doc.text(' Designs and Fully Featured services.', 13, 105);
+
+doc.setFontSize(16)
+doc.setFont('bold')
+doc.text('Nano Interiors:', 13, 120)
+
+doc.setLineWidth(0.8)
+doc.setDrawColor(255, 0, 0)
+doc.line(25, 135, 45, 135)
+doc.line(25, 150, 45, 150)
+doc.line(25, 150, 25, 135)
+doc.line(45, 150, 45, 135)
+
+doc.line(67, 135, 87, 135)
+doc.line(67, 150, 87, 150)
+doc.line(67, 150, 67, 135)
+doc.line(87, 150, 87, 135)
+
+doc.line(109, 135, 129, 135)
+doc.line(109, 150, 129, 150)
+doc.line(109, 150, 109, 135)
+doc.line(129, 150, 129, 135)
+
+doc.line(151, 135, 171, 135)
+doc.line(151, 150, 171, 150)
+doc.line(151, 150, 151, 135)
+doc.line(171, 150, 171, 135)
+
+doc.setFontSize(8)
+doc.setTextColor(255, 0, 0)
+doc.text("UNMATCHED", 25, 153)
+doc.text("PRICE:", 31, 156)
+
+doc.text("CREATIVITY &", 67, 153)
+doc.text("QUALITY:", 70, 156)
+
+doc.text("WARRANTY &", 110, 153)
+doc.text("SERVICE VISITS:", 108.5, 156)
+
+doc.text("60 DAYS &", 154.5, 153)
+doc.text("EXECUTION:", 153, 156)
+
+doc.setTextColor(0, 0, 0)
+doc.setFontSize(8)
+doc.text("We assure you of never heard", 18, 160)
+doc.text("before prices for the given quality &", 14, 163.5)
+doc.text("services", 30, 167)
+
+doc.text("We use quality materials.", 63, 160)
+doc.text("Plywood, before prices for the", 60.5, 163.5)
+doc.text("given quality & etc.", 66, 167)
+
+doc.text("We provide comprehensive", 103, 160)
+doc.text("warranty of 5 years with regular", 101, 163.5)
+doc.text("service visits every 180 days post", 100, 167)
+doc.text("project delivery.", 110, 170.5)
+
+doc.text("Assured Turn around time", 147, 160)
+
+doc.setFontSize(12)
+doc.text("Referring to our discussions, kindly find attached our proposal for designing your lovely home and in the ", 13, 180)
+doc.text("meantime, kindly go through our website www.decorpot.com for completed projects by us; we are sure ", 13, 187)
+doc.text("you will end up loving our work like our other customers have!", 13, 194)
+
+doc.setFontSize(13)
+doc.setFontType('bold');
+doc.text("Looking forward to making your home a beautiful ", 13, 250)
+doc.setTextColor(255, 0, 0)
+doc.text("#nanointeriors", 113.5, 250)
+
+//Signature
+doc.setFontType('normal');
+doc.setTextColor(0, 0, 0)
+doc.text("Yours Sincerely,", 162, 260)
+doc.setTextColor(255, 0, 0)
+doc.text("(Rachayya Kallimath)", 157.5, 280)
+
+//adding new page
+doc.addPage();
+doc.setLineWidth(0.5)
+doc.line(7, 8, 204, 7)
+doc.line(8, 9, 203, 8)
+
+doc.line(7, 285, 7, 8)
+doc.line(8, 284, 8, 9)
+
+doc.line(204, 285, 204, 7)
+doc.line(203, 284, 203, 8)
+
+doc.line(7, 285, 204, 285)
+doc.line(8, 284, 203, 284)
+
+doc.setFontSize(24)
+doc.addImage(imgData, 'JPEG', 145, 20, 55, 25)
+doc.addImage(imgData1, 'JPEG', 8.5, 9.5, 194, 5)
+doc.setFontType("bold")
+doc.setTextColor(0, 0, 0)
+doc.text('QUOTATION', 13, 25)
+doc.setTextColor(255, 0, 0)
+var initHeight = 60;
+var space = 15;
+var data = {
+    "foyer": [
+        {
+            "index": "1",
+            "particulars_header": "SHOE UNIT",
+            "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+            "code_material": "Plywood",
+            "finish_type": "Laminate",
+            "area_or_quantity": "24.1",
+            "aq": "Area",
+            "cost_per_quantity": "1,163.62",
+            "total_costing": "28,043.24"
+        },
+        {
+            "index": "2",
+            "particulars_header": "SHOE RACK SEATER",
+            "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+            "code_material": "Plywood",
+            "finish_type": "Veneer",
+            "area_or_quantity": "4.5",
+            "aq": "Area",
+            "cost_per_quantity": "2,039.62",
+            "total_costing": "9,178.29"
+        },
+        {
+            "index": "3",
+            "particulars_header": "SEATING CUSHION",
+            "particulars_sub_header": "Providing and fixing of seating cushion in Fabric (Fabric upto Rs 300/meter)",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "4.5",
+            "aq": "Area",
+            "cost_per_quantity": "970.90",
+            "total_costing": "4,369.05"
+        },
+        {
+            "index": "4",
+            "particulars_header": "LOUVERS",
+            "particulars_sub_header": "Louvers",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "2",
+            "aq": "Qty",
+            "cost_per_quantity": "5,256.00",
+            "total_costing": "10,512.00"
+        },
+        {
+            "index": "5",
+            "particulars_header": "TINTED MIRROR",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "7.4",
+            "aq": "Area",
+            "cost_per_quantity": "562.83",
+            "total_costing": "4,164.94"
+        },
+        {
+            "index": "6",
+            "particulars_header": "MS FRAME WITH POWDER COATING",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "1",
+            "aq": "Qty",
+            "cost_per_quantity": "20,367.00",
+            "total_costing": "20,367.00"
+        },
+        {
+            "index": "8",
+            "particulars_header": "GOLA PROFILE HANDLE",
+            "particulars_sub_header": "Gola Profile handle",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "2",
+            "aq": "Qty",
+            "cost_per_quantity": "2,920.00",
+            "total_costing": "5,840.00"
+        },
+        {
+            "index": "9",
+            "particulars_header": "SOFT CLOSING - HINGES",
+            "particulars_sub_header": "Hettich",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "7",
+            "aq": "Qty",
+            "cost_per_quantity": "292.00",
+            "total_costing": "2,044.00"
+        },
+        {
+            "index": "10",
+            "particulars_header": "FALSE CEILING WITH PAINT",
+            "particulars_sub_header": "False Ceiling made with gypsum board with paint",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "120",
+            "aq": "cus",
+            "cost_per_quantity": "116.07",
+            "total_costing": "13,928.40"
+        },
+        {
+            "index": "11",
+            "particulars_header": "FALSE CEILING LIGHT POINT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "6",
+            "aq": "Qty",
+            "cost_per_quantity": "973.82",
+            "total_costing": "5,842.92"
+        },
+        {
+            "index": "11",
+            "particulars_header": "FALSE CEILING LIGHT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "6",
+            "aq": "Qty",
+            "cost_per_quantity": "973.82",
+            "total_costing": "5,842.92"
+        },
+        {
+            "index": "12",
+            "particulars_header": "COVE LIGHT POINT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "1",
+            "aq": "Qty",
+            "cost_per_quantity": "973.82",
+            "total_costing": "5,842.92"
+        },
+        {
+            "index": "13",
+            "particulars_header": "COVE LIGHT POINT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "1",
+            "aq": "Qty",
+            "cost_per_quantity": "1,314.00",
+            "total_costing": "1,314.00"
+        },
+        {
+            "index": "14",
+            "particulars_header": "COVE LIGHT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "1",
+            "aq": "Qty",
+            "cost_per_quantity": "1,314.00",
+            "total_costing": "1,314.00"
+        },
+        {
+            "index": "15",
+            "particulars_header": "ADAPTER",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "1",
+            "aq": "Qty",
+            "cost_per_quantity": "438.00",
+            "total_costing": "438.00"
+        }
+    ],
+    "living": [
+        {
+            "index": "1",
+            "particulars_header": "TV UNIT PANELING",
+            "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+            "code_material": "Plywood",
+            "finish_type": "Laminate",
+            "area_or_quantity": "52.2",
+            "aq": "Area",
+            "cost_per_quantity": "654.81",
+            "total_costing": "34,181.08"
+        },
+        {
+            "index": "2",
+            "particulars_header": "TV UNIT BELOW STORAGE",
+            "particulars_sub_header": "Storage unit of selected ply and finish",
+            "code_material": "Plywood",
+            "finish_type": "Laminate",
+            "area_or_quantity": "12.7",
+            "aq": "Area",
+            "cost_per_quantity": "1,163.62",
+            "total_costing": "14,777.97"
+        },
+        {
+            "index": "3",
+            "particulars_header": "LEDGE MORE THAN 25MM",
+            "particulars_sub_header": "Any Ledge where the width is more than 25mm",
+            "code_material": "Plywood",
+            "finish_type": "Laminate",
+            "area_or_quantity": "15.8",
+            "aq": "Area",
+            "cost_per_quantity": "766.50",
+            "total_costing": "12,110.70"
+        },
+        {
+            "index": "4",
+            "particulars_header": "DRAWERS",
+            "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "4",
+            "aq": "Qty",
+            "cost_per_quantity": "1,460.00",
+            "total_costing": "5,840.00"
+        },
+        {
+            "index": "5",
+            "particulars_header": "SOFT CLOSING - CHANNELS",
+            "particulars_sub_header": "Hettich",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "4",
+            "aq": "Qty",
+            "cost_per_quantity": "730.00",
+            "total_costing": "2,920.00"
+        },
+        {
+            "index": "6",
+            "particulars_header": "GYPSUM PARTITION WITH PAINTING",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "32.4",
+            "aq": "Area",
+            "cost_per_quantity": "232.14",
+            "total_costing": "7,521.34"
+        },
+        {
+            "index": "7",
+            "particulars_header": "FALSE CEILING WITH PAINT",
+            "particulars_sub_header": "False Ceiling made with gypsum board with paint",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "287",
+            "aq": "Qty",
+            "cost_per_quantity": "116.07",
+            "total_costing": "33,312.09"
+        },
+        {
+            "index": "8",
+            "particulars_header": "FALSE CEILING WITH PAINT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "18",
+            "aq": "Qty",
+            "cost_per_quantity": "973.82",
+            "total_costing": "17,528.76"
+        },
+        {
+            "index": "9",
+            "particulars_header": "FALSE CEILING LIGHT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "18",
+            "aq": "Qty",
+            "cost_per_quantity": "973.82",
+            "total_costing": "17,528.76"
+        },
+        {
+            "index": "10",
+            "particulars_header": "COVE LIGHT POINT",
+            "particulars_sub_header": "N/A",
+            "code_material": "N/A",
+            "finish_type": "N/A",
+            "area_or_quantity": "3",
+            "aq": "Qty",
+            "cost_per_quantity": "1,314.00",
+            "total_costing": "3,942.00"
+        }
+    ]
+}
+
+
+//SUMMARY 2nd page
+
+for (var i = 0; i <= 9; i++) {
+
+    if (i === 0) {
+        doc.line(45, initHeight, 160, initHeight)
+        doc.line(45, initHeight + 10, 160, initHeight + 10)
+        doc.line(45, 60, 45, 265)
+        doc.line(160, 60, 160, 265)
+        doc.setFontSize(12)
+        doc.text("SUMMARY", initHeight + 28, initHeight + 7)
+    } else if (i === 9) {
+        space = space + 60
+        doc.setTextColor(0, 0, 0)
+        doc.text("TOTAL QUOTATION", 75, initHeight + space - 57)
+        doc.text("VALUE", 75, initHeight + space - 53)
+        doc.text("20,15,151.00", 140, initHeight + space - 57)
+        doc.text("DISCOUNT @ 27%", 75, initHeight + space - 45)
+        doc.text("5,44,090.77", 140, initHeight + space - 45)
+        doc.line(140, initHeight + space - 44, 155, initHeight + space - 44)
+        doc.text("SUB TOTAL", 75, initHeight + space - 38)
+        doc.text("14,71,060.23", 140, initHeight + space - 38)
+        doc.text("GST @ 18%", 75, initHeight + space - 30)
+        doc.text("2,64,790.84", 140, initHeight + space - 30)
+        doc.text("TOTAL", 75, initHeight + space - 22)
+        doc.text("17,35,851.07", 140, initHeight + space - 22)
+        doc.text("TOTAL CUSTOMER", 75, initHeight + space - 12)
+        doc.text("17,35,851.07", 140, initHeight + space - 12)
+        doc.line(75, initHeight + space - 20, 157, initHeight + space - 20)
+        doc.text("OUTFLOW", 75, initHeight + space - 8)
+        doc.line(45, initHeight + space + 10, 160, initHeight + space + 10)
+    } else {
+        doc.setFontSize(9)
+        doc.setFontType("normal")
+        doc.setTextColor(0, 0, 0)
+        doc.text("" + i, 47.5, initHeight + space + 1)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType("bold")
+        doc.text("KBR: KID'S BEDROOM", 55, initHeight + space + 0.9)
+        doc.setDrawColor(255, 0, 0)
+        doc.line(140, initHeight + space, 156, initHeight + space)
+        doc.text("20,15,151.00", 140, initHeight + space + 0.9)
+        doc.setDrawColor(0, 0, 0)
+        doc.setTextColor(255, 200, 0)
+        doc.text("20,15,151.00", 140, initHeight + space + 6.5)
+        doc.line(45, initHeight + space + 10, 160, initHeight + space + 10)
+        space = space + 15
+    }
+}
+
+
+//QUOTATION 3rd Page
+
+addPage();
+
+doc.setFontSize(24)
+doc.addImage(imgData, 'JPEG', 145, 20, 55, 25)
+doc.addImage(imgData1, 'JPEG', 8.5, 9.5, 194, 5)
+doc.setFontType("bold")
+doc.text('QUOTATION', 13, 25)
+
+doc.setFontSize(14)
+doc.setTextColor(255, 0, 0)
+doc.text("FOYER", 90, 60)
+doc.setTextColor(0, 0, 0)
+doc.setFontSize(8)
+doc.line(12.5, 65, 198, 65)
+doc.text("S.NO.", 15, 69)
+doc.text("PARTICULARS", 30, 69)
+doc.text("CORE MATERIAL", 68, 69)
+doc.text("FINISH TYPE", 97, 69)
+doc.text("AREA/QTY", 122, 69)
+doc.setFontSize(6)
+doc.text("(In Sq Feet)", 124, 73)
+doc.setFontSize(8)
+doc.text("COST", 155, 69)
+doc.setFontSize(6)
+doc.text("Per Sq Feet/Qty)", 147, 73)
+doc.setFontSize(8)
+doc.text("TOTAL COSTING", 172, 69)
+doc.line(12.5, 75, 198, 75)
+
+
+
+for (var i = 0; i < data.foyer.length; i++) {
+    if (i <= 10) {
+        doc.text("" + (i + 1), 15, 80 + (i * 18))
+        if ((data.foyer[i].particulars_header).length > 16) {
+            var sub_he = substringArray(data.foyer[i].particulars_header, 16)
+            if (sub_he.length > 0) {
+                for (var j = 0; j < sub_he.length; j++) {
+                    doc.setFontType("bold")
+                    doc.setTextColor(255, 0, 0)
+                    doc.text("" + sub_he[j], 30, 80 + (j * 3) + ((i) * 18))
+                    doc.setTextColor(0, 0, 0)
+                }
+            }
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 87 + (j * 3) + ((i) * 18))
+                }
+            }
+        } else {
+            doc.setFontType("bold")
+            doc.setTextColor(255, 0, 0)
+            doc.text("" + data.foyer[i].particulars_header, 30, 80 + (i * 18))
+            doc.setTextColor(0, 0, 0)
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 84 + (j * 3) + ((i) * 18))
+                }
+            }
+        }
+        doc.text("" + data.foyer[i].code_material, 68, 80 + (i * 18))
+        doc.text("" + data.foyer[i].finish_type, 97, 80 + (i * 18))
+        doc.text("" + data.foyer[i].area_or_quantity, 124, 80 + (i * 18))
+        doc.text("(" + data.foyer[i].aq + ")", 122, 83 + (i * 18))
+        doc.text("" + data.foyer[i].cost_per_quantity, 147, 80 + (i * 18))
+        doc.text("" + data.foyer[i].total_costing, 172, 80 + (i * 18))
+        if (i <= 9) {
+            doc.line(12.5, 93.5 + (i * 18), 198, 93.5 + (i * 18))
+        }
+    } else {
+        tempI = i - 10;
+        doc.text("" + (i + 1), 15, 22 + (tempI * 18))
+        if ((data.foyer[i].particulars_header).length > 16) {
+            var sub_he = substringArray(data.foyer[i].particulars_header, 16)
+            if (sub_he.length > 0) {
+                for (var j = 0; j < sub_he.length; j++) {
+                    doc.setFontType("bold")
+                    doc.setTextColor(255, 0, 0)
+                    doc.text("" + sub_he[j], 30, 22 + (j * 3) + ((tempI) * 18))
+                    doc.setTextColor(0, 0, 0)
+                }
+            }
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 22 + (j * 3) + ((tempI) * 18))
+                }
+            }
+        } else {
+            doc.setFontType("bold")
+            doc.setTextColor(255, 0, 0)
+            doc.text("" + data.foyer[i].particulars_header, 30, 22 + (tempI * 18))
+            doc.setTextColor(0, 0, 0)
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 26 + (j * 3) + ((tempI) * 18))
+                }
+            }
+        }
+        doc.text("" + data.foyer[i].code_material, 68, 22 + (tempI * 18))
+        doc.text("" + data.foyer[i].finish_type, 97, 22 + (tempI * 18))
+        doc.text("" + data.foyer[i].area_or_quantity, 124, 22 + (tempI * 18))
+        doc.text("(" + data.foyer[i].aq + ")", 122, 25 + (tempI * 18))
+        doc.text("" + data.foyer[i].cost_per_quantity, 147, 22 + (tempI * 18))
+        doc.text("" + data.foyer[i].total_costing, 172, 22 + (tempI * 18))
+        doc.line(12.5, 35 + (tempI * 18), 198, 35 + (tempI * 18))
+        if (i === 14) {
+            doc.setFontType("bold")
+            doc.setFontSize(10)
+            doc.text("FOYER TOTAL:", 140, 45 + (tempI * 18))
+            doc.text("1,20,323.56", 172, 45 + (tempI * 18))
+        }
+    }
+    //adding auto pages and border
+    if (i % 10 === 0 && i >= 10) {
+        addPage();
+        doc.setFontType("bold")
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.text("FOYER", 90, 20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(8)
+        doc.line(12.5, 25, 198, 25)
+        doc.text("S.NO.", 15, 29)
+        doc.text("PARTICULARS", 30, 29)
+        doc.text("CORE MATERIAL", 68, 29)
+        doc.text("FINISH TYPE", 97, 29)
+        doc.text("AREA/QTY", 122, 29)
+        doc.setFontSize(6)
+        doc.text("(In Sq Feet)", 124, 33)
+        doc.setFontSize(8)
+        doc.text("COST", 155, 29)
+        doc.setFontSize(6)
+        doc.text("Per Sq Feet/Qty)", 147, 33)
+        doc.setFontSize(8)
+        doc.text("TOTAL COSTING", 172, 29)
+        doc.line(12.5, 35, 198, 35)
+    }
+
+}
+
+
+////next page
+addPage();
+
+doc.setFontSize(14)
+      doc.text("FOYER",90,20)
+      doc.setFontSize(8)
+      doc.line(12.5, 25, 198, 25)
+      doc.text("S.NO.",15,29)
+      doc.text("PARTICULARS",30, 29)
+      doc.text("CORE MATERIAL",63,29)
+      doc.text("FINISH TYPE",95,29)
+      doc.text("AREA/QTY",122,29)
+      doc.setFontSize(6)
+      doc.text("(In Sq Feet)",124,33)
+      doc.setFontSize(8)
+      doc.text("COST",155,29)
+      doc.setFontSize(6)
+      doc.text("Per Sq Feet/Qty)",147,33)
+      doc.setFontSize(8)
+      doc.text("TOTAL COSTING",172,29)
+      doc.line(12.5, 35, 198, 35)
+
+for (var i = 0; i < data.foyer.length; i++) {
+    if (i <= 10) {
+        doc.text("" + (i + 1), 15, 40 + (i * 18))
+        if ((data.foyer[i].particulars_header).length > 16) {
+            var sub_he = substringArray(data.foyer[i].particulars_header, 16)
+            if (sub_he.length > 0) {
+                for (var j = 0; j < sub_he.length; j++) {
+                    doc.setFontType("bold")
+                    doc.setTextColor(255, 0, 0)
+                    doc.text("" + sub_he[j], 30, 40 + (j * 3) + ((i) * 18))
+                    doc.setTextColor(0, 0, 0)
+                }
+            }
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 47 + (j * 3) + ((i) * 18))
+                }
+            }
+        } else {
+            doc.setFontType("bold")
+            doc.setTextColor(255, 0, 0)
+            doc.text("" + data.foyer[i].particulars_header, 30, 40 + (i * 18))
+            doc.setTextColor(0, 0, 0)
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 44 + (j * 3) + ((i) * 18))
+                }
+            }
+        }
+        doc.text("" + data.foyer[i].code_material, 68, 40 + (i * 18))
+        doc.text("" + data.foyer[i].finish_type, 97, 40 + (i * 18))
+        doc.text("" + data.foyer[i].area_or_quantity, 124, 40 + (i * 18))
+        doc.text("(" + data.foyer[i].aq + ")", 122, 43 + (i * 18))
+        doc.text("" + data.foyer[i].cost_per_quantity, 147, 40 + (i * 18))
+        doc.text("" + data.foyer[i].total_costing, 172, 40 + (i * 18))
+        if (i <= 9) {
+            doc.line(12.5, 53.5 + (i * 18), 198, 53.5 + (i * 18))
+        }
+    } else {
+        tempI = i - 10;
+        doc.text("" + (i + 1), 15, 22 + (tempI * 18))
+        if ((data.foyer[i].particulars_header).length > 16) {
+            var sub_he = substringArray(data.foyer[i].particulars_header, 16)
+            if (sub_he.length > 0) {
+                for (var j = 0; j < sub_he.length; j++) {
+                    doc.setFontType("bold")
+                    doc.setTextColor(255, 0, 0)
+                    doc.text("" + sub_he[j], 30, 22 + (j * 3) + ((tempI) * 18))
+                    doc.setTextColor(0, 0, 0)
+                }
+            }
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 22 + (j * 3) + ((tempI) * 18))
+                }
+            }
+        } else {
+            doc.setFontType("bold")
+            doc.setTextColor(255, 0, 0)
+            doc.text("" + data.foyer[i].particulars_header, 30, 22 + (tempI * 18))
+            doc.setTextColor(0, 0, 0)
+            doc.setFontType("normal")
+            var he = substringArray(data.foyer[i].particulars_sub_header, 24)
+            if (he.length > 0) {
+                for (var j = 0; j < he.length; j++) {
+                    doc.setFontType("normal")
+                    doc.text("" + he[j], 30, 26 + (j * 3) + ((tempI) * 18))
+                }
+            }
+        }
+        doc.text("" + data.foyer[i].code_material, 68, 22 + (tempI * 18))
+        doc.text("" + data.foyer[i].finish_type, 97, 22 + (tempI * 18))
+        doc.text("" + data.foyer[i].area_or_quantity, 124, 22 + (tempI * 18))
+        doc.text("(" + data.foyer[i].aq + ")", 122, 25 + (tempI * 18))
+        doc.text("" + data.foyer[i].cost_per_quantity, 147, 22 + (tempI * 18))
+        doc.text("" + data.foyer[i].total_costing, 172, 22 + (tempI * 18))
+        doc.line(12.5, 35 + (tempI * 18), 198, 35 + (tempI * 18))
+        if (i === 14) {
+            doc.setFontType("bold")
+            doc.setFontSize(10)
+            doc.text("FOYER TOTAL:", 140, 45 + (tempI * 18))
+            doc.text("1,20,323.56", 172, 45 + (tempI * 18))
+        }
+    }
+    //adding auto pages and border
+    if (i % 10 === 0 && i >= 10) {
+        addPage();
+        doc.setFontType("bold")
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.text("FOYER", 90, 20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(8)
+        doc.line(12.5, 25, 198, 25)
+        doc.text("S.NO.", 15, 29)
+        doc.text("PARTICULARS", 30, 29)
+        doc.text("CORE MATERIAL", 68, 29)
+        doc.text("FINISH TYPE", 97, 29)
+        doc.text("AREA/QTY", 122, 29)
+        doc.setFontSize(6)
+        doc.text("(In Sq Feet)", 124, 33)
+        doc.setFontSize(8)
+        doc.text("COST", 155, 29)
+        doc.setFontSize(6)
+        doc.text("Per Sq Feet/Qty)", 147, 33)
+        doc.setFontSize(8)
+        doc.text("TOTAL COSTING", 172, 29)
+        doc.line(12.5, 35, 198, 35)
+    }
+
+}
+
+//add page to create Warrenty
+addPage();
+var matspec = [
+    {
+        "main": "Waterproof Ply -",
+        "desc": "BWP 710 Grade, 16mm thickness for carcasses of kitchen bottom cabinet."
+    },
+    {
+        "main": "Commercial Ply -",
+        "desc": "MR+ 303 Commercial Plywood for all other units (anti-termite and borer proof) material quality."
+    },
+    {
+        "main": "Shutters will be made from HDHMR Acrylic 1 mm (Senosan brand from Europe)/Century laminate.",
+        "desc": ""
+    },
+    {
+        "main": "Edgebanding -",
+        "desc": "Rehau"
+    },
+    {
+        "main": "Hinges and Channels -",
+        "desc": "Hafele/Hettich Soft Close."
+    },
+    {
+        "main": "Laminates -",
+        "desc": "Merino/Century (Inside 0.8mm and outside 1mm)"
+    },
+    {
+        "main": "Kitchen Baskets -",
+        "desc": "Hettich"
+    },
+    {
+        "main": "Locks -",
+        "desc": "Europa/Ebco"
+    },
+    {
+        "main": "Mirror -",
+        "desc": "Saint Gobain"
+    },
+    {
+        "main": "False Ceiling -",
+        "desc": "Gyproc (Saint Gobain) for boards. Gypcon and Gypmac for channels. LIGHTS NOT INCLUDED!",
+        "line":" Amoutn will vary accoding to the design and area."
+    },
+    {
+        "main": "Electricals/Lights -",
+        "desc": "NOT INCLUDED"
+    },
+    {
+        "main": "Flooring -",
+        "desc": "Wooden Green Panel (Skirting / beading will be extra as per actuals) 12. Soft close mechanism hardware will be charged extra at actuals."
+    }
+];
+
+for(var ii=0; ii<11; ii++){
+    if(ii===0){
+        doc.line(12.5, 25, 198, 25)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.text("MATERIAL SPECIFICATIONS",70,20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(8)
+        doc.setFontType('normal')
+    }
+    doc.text(""+(ii+1),15,29+(10*ii))
+    doc.text(""+matspec[ii].main,30, 29+(10*ii))
+    doc.text(""+matspec[ii].desc,63,29+(10*ii))
+    if(matspec[ii].line){
+        doc.text(""+matspec[ii].line,63,29+(10.4*ii))
+    }
+}
+
+    doc.line(12.5, 170, 198, 170)
+    doc.setFontSize(14)
+    doc.setTextColor(255, 0, 0)
+    doc.setFontType('bold')
+    doc.text("TERMS & CONDITIONS",70,165)
+    doc.setTextColor(0, 0, 0)
+    doc.setFontSize(10)
+    doc.text("Validity of the Quotation",15,175)
+    doc.setFontSize(10)
+    doc.setFontType('normal')
+    doc.text("1. The rates and amounts mentioned herein are applicable for 30 days from the date hereof and are subject to change.",15,180)
+    doc.text("2. The above quotation is an estimate based on current designs and measurements, they may undergo changes until",15,185)
+    doc.text(" the design sign-off phase and are:",18,190)
+    doc.text("i.   Dependent on the final designs.",25,195)
+    doc.text("ii.  Selection of Additional vendor units.",25,200)
+    doc.text("iii. Measurements",25, 205)
+    
+
+addPage();
+ doc.line(12.5, 25, 198, 25)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("SCOPE OF WORK",80,20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+
+    doc.text("1. Preparation of design concept (including carrying out necessary revisions till the design concepts are finally approved by",15,30)
+    doc.text(" the Client in writing), and providing estimates to enable the client to take a decision on the design concept:",18,35)
+    doc.text("2. Preparation of engineering drawings and specifications of all finishes and materials as per the approved design concept.",15,40)
+    doc.text("3. Preparation of 3d views for visual reference to represent the approved design concept.",15,45)
+    doc.text("4. Product manufacturing as per the approved designs, and as per the agreed material specifications.",15,50)
+    doc.text("5. Execution of the following solutions (applicable for products and services purchased through Walnut):",15, 55)
+    doc.text("i.     Installation of modular furniture at the site",25, 60)
+    doc.text("ii.    False ceiling",25, 65)
+    doc.text("iii.   Wall finishes",25, 70)
+    doc.text("iv.   Lighting solutions",25, 75)
+    doc.text("v.    Electrification",25, 80)
+    doc.text("vi.   Furnishings",25, 85)
+    
+    doc.text("6. During the execution phase, Walnut shall designate a designer to accompany the Client for shopping as set out herein. For ",15, 95)
+    doc.text("procurement of special vendor items, to be chosen from digital catalogues or from the vendors' business place, the designer ",19,100)
+    doc.text("assigned for the Project will accompany the Client for selection of home furnishing materials only.",19,105)
+    doc.text("7. The execution team takes the responsibility of removing the debris within 300m radius, dusting, and general cleaning of the",15,110)
+    doc.text("furnitures once the modular work is completed and the same has been incorporated in the cost sheet above. Deep cleaning",19,115)
+    doc.text(" if required will be charged extra.",18,120)
+    doc.text("8. The service provider undertakes and warrants that",15,125)
+    doc.text("i.   The said services will be provided in a timely and professional manner in accordance with the time schedules stipulated",25,130)
+    doc.text("in Clause 3, and will confirm to the standards generally observed in the industry for similar services and will be",30,135)
+    doc.text("provided with the level of skill and care expected of an experienced provider in the Service Provider's line of work.",30,140)
+    doc.text("ii.  It shall promplty inform the client in writing of anything which the service provider believes would materially either",25,146)
+    doc.text("iii. Vary the project or increase the cost of the project or change the quality of function of the project or increase the",25,152)
+    doc.text(" time taken to complete the project.",30,157)
+    
+     doc.line(12.5, 185, 198, 185)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("EXCLUSIONS",85,180)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("The following shall not be covered in the Scope of Work unless otherwise agreed,",15,190)
+        doc.text("1. The service provider can undertake the execution of any civil work at its own discretion as may be required and in accordance",15,195)
+        doc.text("with the Design approved by the Client, and if undertaken, both the parties shall agree in writing on the scope of such work",19,200)
+        doc.text("and the cost and expense thereof which may be additional over the quotation mentioned above.",19,205)
+        doc.text("2. Waterproofing, pest control and termite treatment, if any, shall be availed by the Client at their own cost.",15,210)
+        doc.text("3. The service provider does not take any responsibility for supervision/coordination for any works done directly by the builder ",15,215)
+        doc.text("or any other external vendor directly engaged by the Client.",19,220)
+
+
+addPage();
+ doc.line(12.5, 25, 198, 25)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("PROJECT",88,20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        
+    doc.text("1. From the payment of Design Initiation Fee, the Designer assigned to the Project shall provide proefssional design services",15,30)
+    doc.text("to the Client, for a period of (XX) days (as referred to in the table below), to prepare and finalise the design (\"Design\").",19,35)
+    doc.text("If the design is not approved within the said period, the Project Cost will be revised as per the Additional Cost clause.",19,40)
+    doc.text("2. The preparation of specifications for the Project, procurement of materials, production and packing of the products for delivery",15,45)
+    doc.text("to the site, execution and installation of the furniture and fixtures shall be completed within (XX) days from finalisation of",19,50)
+    doc.text("designs (as referred to in the table below). During this phase, false ceiling and electrical work will commence on the site.",19, 55)
+    doc.text("In case of change in the project scope, the timelines for projects of specific value are stated below:",15, 65)
+    doc.setFontType('bold')
+    doc.setFontSize(9)
+    doc.text("PROJECT",15,75)
+    doc.text("3D DESIGN",36,75)
+    doc.text("2D",63,75)
+    doc.text("2D DESIGN",80,75)
+    doc.text("MIN 3D",103,75)
+    doc.text("DESIGN",120,75)
+    doc.text("SHOPPING",140,75)
+    doc.text("NO OF COMPLEMENTARY",160,75)
+    doc.setFontType('normal')
+    doc.setFontSize(10)
+    
+    doc.text("7-10 Lacs",15,80)
+    doc.text("10-15 Lacs",15,85)
+    doc.text("15+ Lacs",15,90)
+    
+    doc.text("15 Days",38,80)
+    doc.text("20 Days",38,85)
+    doc.text("25 Days",38,90)
+        
+    doc.text("05 Days",60,80)
+    doc.text("06 Days",60,85)
+    doc.text("10+ Days",60,90)
+
+    doc.text("30 Days",82,80)
+    doc.text("45 Days",82,85)
+    doc.text("60+ Days",82,90)
+    
+    doc.text("2",106,80)
+    doc.text("3",106,85)
+    doc.text("4",106,90)
+    
+    doc.text("3",123,80)
+    doc.text("3",123,85)
+    doc.text("4",123,90)
+    
+    doc.text("1 Days",142,80)
+    doc.text("2 Days",142,85)
+    doc.text("3 Days",142,90)
+    
+    doc.text("2",173,80)
+    doc.text("3",173,85)
+    doc.text("4",173,90)
+    
+    doc.text("NOTE: For projects with value above 15Lacs, the exact timeline will be shared by the designer during the design phase and shall",15,100)
+    doc.text("be considered as the period in reference to the rest of the clauses.",15,105)
+    doc.text("All electrical and false ceiling work will be completed before starting the modular or carpentry work. The actual measurements,",15,112)
+    doc.text("false ceiling measurements and number of electrical work will be taken practically at the site and the same will be re-quoted in",15,117)
+    doc.text("the revised quotation. The Execution Initiation Fee will be at the site and the same will be re-quoted in the revised quotation.",15,122)
+    doc.text("The Execution Initiation Fee will be based on the revised quotation.",15,127)
+    
+    
+     doc.line(12.5, 155, 198, 155)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("PAYMENT",85,150)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("Payment to Walnut is divided into 3 slots as follows:",15,160)
+        
+        doc.text("1. Design Initiation Fee (10% of estimated project value payable at the start of the project)",15,165)
+        doc.text("2. Production Initiation Fee (50% of estimated project value payable at the agreement of final design and estimation).",15,170)
+        doc.text("3. Execution Initiation Fee (40% of estimated project value payable before the dispatch of goods to site).",15,175)
+        doc.text("4. False ceiling and electrical charges or any third party units if any, needs to be paid in full at the commencement of work.",15,180)
+        doc.text("Note 1: In case of revision in the estimated project value, additional payment will have to be paid by the Client upon revision",15,185)
+        doc.text("immediately .",15,190)
+        doc.text("Note 2: All the engineering drawings and specifications of all finishes and materials as per the approved design concept will be",15,195)
+        doc.text("shared post payment of Production Initiation Fee.",15,200)
+        doc.text("Note 3 Deep cleaning of site charges to be paid at actuals if opted for. Not included in the above estimate.",15,205)
+        doc.text("Payments towards all Additional Vendor Units (VRM) (refer quotation break-up) shall be paid in full in advance of ordering",15,215)
+        doc.text("product or incurring the service as per the below criteria due to their respective delivery timelines.",15,220)
+        doc.text("1. All vendor products which require site alteration & customisation will have to be paid along with the Production Initiation Fee.",15,225)
+        doc.text("2. Rest of the vendor products which do not require site alteration or customisation will have to be paid along with the Execution",15,230)
+        doc.text("Initiation Fee.",19,235)
+        doc.text("Any delay in payment could lead to delays in delivery timelines for which the service provider shall not be responsible in any",15,245)
+        doc.text("manner whatsoever. Late payment charges of 16% per annum will be applicable of such instances (if any).",15,250)
+        doc.text("All payment made at any stage are non-refundable in any event whatsoever.",15,260)
+        
+        
+    
+    
+
+addPage();
+ doc.line(12.5, 25, 198, 25)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("CHANGE REQUEST",80,20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        
+    doc.text("No changes will be accepted post 3D design signoff and at the site during the execution of the Project as the Designs will be",15,30)
+    doc.text("inalised at the office of Walnut prior to execution. As the complete production happens at the factory, any changes at site",15,35)
+    doc.text("should go to the factory for production. The Client must bear the difference of amount towards the material changes and also",15,40)
+    doc.text("additional timeline before the change is initiated. The Client acknowledges that the changes shall result in change of timelines,",15,45)
+    doc.text(" which may be extended, which shall not be attributable to the Service Provider in any manner whatsoever. Similarly, any VRM",15,50)
+    doc.text("selections and procurement by the Client during the execution phase may result in the extension of timeline, which shall not be",15, 55)
+    doc.text("attributable to the Service Provider.",15,60)
+    
+    
+     doc.line(12.5, 85, 198, 85)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("ADDITIONAL COSTS",80,80)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("Additional charges will be applicable in case of change requests and any increase in Scope of Work as described below, unless",15,90)
+        doc.text("otherwise agreed and incorporated in the costing above.",15,95)
+        doc.text("A large part of our commitment is attributable to the client honouring their design discussion meetings, material selection,",15,105)
+        doc.text("shopping meetings, prompt feedback & approvals. However, in case of timeline extensions attributable to the client despite best",15,110)
+        
+        doc.text("efforts from the Walnut team, INR 5,000 will be charged at the completion of every 10 days post the end of design timeline as",15,115)
+        doc.text("mentioned above to provide for the additional design services.",15,120)
+        doc.text("For wardrobes, 2 drawers will be provided by default and any additional internal drawers will cost Rs. 2,500/- per drawer and",15,130)
+        doc.text("external drawers will cost Rs. 4,000/- per drawer.",15,135)
+        doc.text("For dresser, crockery units, TV units and chest of cabinets, 3 drawers will be provided by default and any additional internal ",15,140)
+        doc.text("drawers will cost Rs. 2,500/- per drawer and external drawers will cost Rs. 4,000/- per drawer.",15,145)
+        doc.text("Any additional render beyond the complementary ones will be charged Rs. 3000/- per render.",15,150)
+        doc.text("Electrification includes only alteration of the existing electrical wiring which includes only labour and material. Any alteration of",15,155)
+        doc.text("electrical points needs. to be intimated before the installation of wooden fittings. The electrification cost is based on different",15,160)
+        doc.text("electrical services availed by the customer and calculated accordingly.",15,165)
+        
+        
+         doc.line(12.5, 195, 198, 195)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("TEXES & DUTIES",80,190)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("All unit pricing is exclusive of taxes which will be charged at the time of billing at each stage as per prevalent government tax rates.",15,200)
+        doc.text("Any bank, payment gateway fees or processing fee shall be borne by the Client as applicable.",15,205)
+    
+        doc.line(12.5, 235, 198, 235)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("PROJECTS ON HOLD",80,230)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("The project will be put on hold during the respective stages in following cases:",15,240)
+        doc.text("Case 1: Customer unavailability due to any unforeseen circumstances such as any medical emergency or an act of God.",15,245)
+        doc.text("Case 2: Site not Handed-Over by builder or flooring not done or any lack of permission issues at the site.",15,250)
+        doc.text("On-Hold Period can be upto a max of 60 days since the date of intimation by the client in writing.",15,260)
+        doc.text("The Additional Costs clauses, as stated above, will be applicable to any extension beyond the hold period.",15,265)
+        
+        
+       ////////////////////////////////
+       
+addPage();
+ doc.line(12.5, 25, 198, 25)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("VISIT TO SITE",88,20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        
+    doc.text("Visit to the site during the site execution and installation process is strictly restricted due to safety reasons unless such",15,30)
+    doc.text("visits are organised by Walnut for specific purposes. In case of unavoidable reasons if the client has to visit the site, it needs to",15,35)
+    doc.text("be done with prior intimation to the Walnut team.",15,40)
+    doc.text("Walnut's team will ensure that the client is updated on the progress of the execution work from time to time. Project development",15,50)
+    doc.text(" pictures will be shared at weekly frequency with the commencement of the site work.",15, 55)
+    doc.setFontType('bold')
+     doc.setFontSize(11)
+    doc.text("Site Handover",15,65)
+    doc.setFontType('normal')
+     doc.setFontSize(10)
+    doc.text("Handover of site and warranty certificates shall be completed, upon sign-off on the Delivery Checklist by Client, and delivery of",15,70)
+    doc.text(" the house keys to the Client which is conditional upon receipt of full payment by Walnut.",15,75)
+    
+    
+     doc.line(12.5, 105, 198, 105)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("DELIVERY & COMPENSATION FOR DELAY",50,100)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("The project will be handed over within the timelines indicated to the Client except in case of changing of order(s), act of",15,110)
+        doc.text("god or unforseen circumstances which may delay delivery. Walnut shall not be responsible for any delays which are attributable",15,115)
+        doc.text("to third party vendors / contractors not employed by Walnut, rules or policies of apartment management/housing society, the",15,120)
+        doc.text("site not being ready for installation or for reasons beyond its control.",15,125)
+       doc.text("Client will be compensated for INR 5,000 at the completion of every 10 days of delivery delay by Walnut Designs upto a maximum",15,135)
+       doc.text("of 5% of the project value only in case of such delays are directly attributable to Walnut i.e. subject to the below conditions:",15,140)
+       doc.text("1. Site has been handed over with required permission to commence work from both client and the builder.",15,150)
+       doc.text("2. There are no design and scope of work changes post finalisation of design.",15,155)
+       
+       
+         doc.line(12.5, 185, 198, 185)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("CANCELLATION & RETURNS",67,180)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("Customised and made-to-order furniture pieces cannot be returned or exchanged for a different design. Only in case of",15,190)
+        doc.text("manufacturing defects and damages shall such products be eligible for returns and replacements. Replacement and returns",15,195)
+        doc.text("will not be applicable in case of abnormal or unintended use of the product by any person not representing Walnut.",15,200)
+        doc.setFontType('bold')
+        doc.setFontSize(11)
+        doc.text("Copyrights:",15,210)
+        doc.setFontType('normal')
+        doc.setFontSize(10)
+        doc.text("The designs shared with the Client at any time, whether approved or otherwise, are the copyright of Walnut and are shared for",15,215)
+        doc.text("the limited intent of placing of order(s) by the Client with Walnut. Any design shared by Walnut can be used, installed or",15,220)
+        doc.text("shared by the Client, in any manner, only with the prior and express written consent of Walnut. Walnut will have the freedom",15,225)
+        doc.text("to use the designs including 2D, 3D / renders, actual site images of videos of promotion and marketing purposes.",15,230)
+        
+        
+        doc.line(12.5, 255, 198, 255)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("APPROVALS",80,250)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("All approvals of the apartment management/housing society and/or any other authority, as may be required, shall be",15,260)
+        doc.text("obtained by the Client timely and at its cost and expense.",15,265)
+       
+        /////////////////////////////////////////
+        
+             
+addPage();
+ doc.line(12.5, 25, 198, 25)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("WARRANTY",88,20)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        
+        doc.setFontType('bold')
+        doc.setFontSize(11)
+        doc.text("Period",15,35)
+        doc.setFontType('normal')
+        doc.setFontSize(10)
+        
+    doc.text("Warranty letter will be issued upon delivery of the house keys to the client and clearance of all dues to Walnut.",15,40)
+    
+    
+     doc.line(12.5, 85, 198, 85)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("TERMS",95,80)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("Client will be presented with a service letter after Handover of Site and clearance of all dues (including additional charges, if any)",15,90)
+        doc.text("to Walnut. To avail warranty and one free annual service, service letter must be shared with Walnut at each relevant time.",15,95)
+        doc.text("The warranty is available only on modular products which are made and installed by Walnut. Vendor products will have their own",15,100)
+        doc.text("warranty periods which vary from product to product and will be informed to the Client.",15,105)
+       doc.text("All products which have a warranty will carry a warranty card from the manufacturer. The warranty will apply only to specific",15,110)
+       doc.text("parts of the product as mentioned, and not to the whole assembled product.",15,115)
+       doc.text("Each part of a final product will have a different warranty.",15,120)
+       doc.text("If any repair or reassembly work has been performed on a product or any part thereof (whether a special vendor item or a product",15,125)
+       doc.text("manufactured by Walnut) by the Client without any authorisation from Walnut, the warranty coverage on the product will",15,130)
+       doc.text("automatically cease to exist.",15,135)
+       doc.text("Upon approval of a warranty claim by Walnut's quality control team, Walnut will repair the product or repace the same with",15,140)
+       doc.text("a comparable product with a similar value of the price of the original product.",15,145)
+       doc.text("Due to batch differences in laminate, veneer and other used material, there may be variations in the material and the finish",15,150)
+       doc.text("and the relplaed product may not be an exact replica of the original product.",15,155)
+       doc.text("If the price of the replacement is higher than the original product, or a similar product is unavailable, Walnut will reimburse",15,160)
+       doc.text("the original product cost to the Client.",15,165)
+       doc.text("The decision of the quality control team of Walnut on the validity of a warranty and/or damage to the product is final and",15,170)
+       doc.text("binding on the Client.",15,175)
+       doc.text("The terms and conditions of the warranty are fixed, non-negotiable, non-transferable and are only available for the benefit",15,180)
+       doc.text("of the oringal purchaser thereof.",15,185)
+       
+       
+       
+         doc.line(12.5, 215, 198, 215)
+        doc.setFontSize(14)
+        doc.setTextColor(255, 0, 0)
+        doc.setFontType('bold')
+        doc.text("NON APPLICABILITY",78,210)
+        doc.setTextColor(0, 0, 0)
+        doc.setFontSize(10)
+        doc.setFontType('normal')
+        doc.text("The warranty is not applicable in case of (i) unusual wear and tear, scratches, cuts or damage caused by impacts or accidents",15,220)
+        doc.text("or by abnormal or unintended use of the product, and (ii) incorrect storing or assembly or reassembly by the Client, alterations",15,225)
+        doc.text("to the product, misuse, cleaning with wrong methods or materials.",15,230)
+        doc.text("The warranty is not applicable in case an indoor product has been placed outdoors, or used for nondomestic purpose, unless such",15,235)
+        doc.text("use is stated to be permitted and consequential or incidental damages thereto.",15,240)
+        doc.text("The Client will avail the services of other consultants or contractors or vendors for the Project with the prior written approval",15,245)
+        doc.text("of Walnut and at the sole risk and cost of the Client. Walnut shall not be responsible or liable for or in relation thereto for",15,250)
+        doc.text("any reason or in any manner whatsoever.",15,255)
+        doc.text("The warranty is not absolute and is applicable only on products and services delivered by Walnut. Walnut shall not be responsible",15,260)
+        doc.text("for any theft or damage to any item/material/valuables placed on the site during the execution stage. The Client shall make the",15,265)
+        doc.text("relevant provisions to keep such items/materials/valuables in a safe place during the execution phase.",15,270)
+        
+        
+        
+        
+// add page with boder
+function addPage() {
+    doc.addPage();
+    addBorder();
+}
+
+//add border to page
+function addBorder() {
+    doc.setLineWidth(0.5)
+    doc.line(7, 8, 204, 7)
+    doc.line(8, 9, 203, 8)
+
+    doc.line(7, 285, 7, 8)
+    doc.line(8, 284, 8, 9)
+
+    doc.line(204, 285, 204, 7)
+    doc.line(203, 284, 203, 8)
+
+    doc.line(7, 285, 204, 285)
+    doc.line(8, 284, 203, 284)
+}
+
+//functions sub string
+function substringArray(str, len) {
+    var array = (str).split(' ');
+    var count = 0;
+    var tempString = "";
+    var perticularSubString = [];
+    var flag = false;
+    for (var i = 0; i < array.length; i++) {
+        count += (array[i].length) + 1;
+        if (count <= len) {
+            flag = true;
+            tempString += (array[i]) + " ";
+        } else if (count >= len) {
+            perticularSubString.push(tempString);
+            flag = false;
+            tempString = "";
+            tempString = array[i] + " "
+            count = 0;
+        }
+        if (i === array.length - 1) {
+            perticularSubString.push(tempString);
+        }
+    }
+    return (perticularSubString)
+}

@@ -1,8 +1,386 @@
-<div class="container">
-    <div class="row">
-  
-      <div class="col-md-4 text-right">
-        <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
-      </div>
+<div class="container scroll-y">
+  <div class="row">
+
+    <div class="col-md-4 text-right">
+      <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
     </div>
   </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">FOYER</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col center">
+      <label>SL No</label>
+    </div>
+    <div class="col center">
+      <label>PARTICULARS</label>
+    </div>
+    <div class="col center">
+      <label>CORE MATERIAL</label>
+    </div>
+    <div class="col center">
+      <label>FINISH TYPE</label>
+    </div>
+    <div class="col center">
+      <label>AREA/QTY</label>
+    </div>
+    <div class="col center">
+      <label>COST</label>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.foyer; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">LIVING</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.living; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">DINING</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.dining; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">KITCHEN</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.kitchen; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">KBR: KID'S BEDROOM</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.kids_bedroom; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">GBR: GUEST BEDROOM</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.guest_bedroom; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">MBR :MASTER BEDROOM</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div class="row m-tb-30" *ngFor="let item of data.master_bedroom; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <input type="number"/>
+    </div>
+    <div class="col center">
+      <label>TOTAL COSTING</label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col">
+    </div>
+    <div class="col center">
+      <label class="red">SERVICES</label>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <form (ngSubmit)="onSubmit($event)">
+  <div class="row m-tb-30" *ngFor="let item of data.services; index as i;">
+    <div class="col center">
+      <label>{{item.index}}</label>
+    </div>
+    <div class="col center">
+      <input value="" id="servicesPart{{item.index}}" type="text" maxlength="65" minlength="3"/>
+    </div>
+    <div class="col center">
+      <select>
+        <option>Plywoord1</option>
+        <option>Plywoord2</option>
+        <option>Plywoord3</option>
+        <option>Plywoord4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <select>
+        <option>finish type1</option>
+        <option>finish type2</option>
+        <option>finish type3</option>
+        <option>finish type4</option>
+        </select>
+    </div>
+    <div class="col center">
+      <input type="number" value=""/>
+    </div>
+    <div class="col center">
+      <input type="number" value=""/>
+    </div>
+    <div class="col center">
+      <label></label>
+    </div>
+  </div>
+  <button class="mb-120" type="submit">Submit</button>
+</form>
+</div>
