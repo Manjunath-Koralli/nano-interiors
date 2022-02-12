@@ -1,386 +1,547 @@
 <div class="container scroll-y">
-  <div class="row">
-
+  <div class="row m-top-30">
     <div class="col-md-4 text-right">
-      <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
+      <p><b>Customer Details:</b></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-right">
+      <label>Customer Name:</label>
+      <input maxlength="18" type="text" value="" (change)="getCustomerName($event)" />
     </div>
   </div>
 
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">FOYER</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col center">
-      <label>SL No</label>
-    </div>
-    <div class="col center">
-      <label>PARTICULARS</label>
-    </div>
-    <div class="col center">
-      <label>CORE MATERIAL</label>
-    </div>
-    <div class="col center">
-      <label>FINISH TYPE</label>
-    </div>
-    <div class="col center">
-      <label>AREA/QTY</label>
-    </div>
-    <div class="col center">
-      <label>COST</label>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.foyer; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">LIVING</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.living; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">DINING</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.dining; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">KITCHEN</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.kitchen; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">KBR: KID'S BEDROOM</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.kids_bedroom; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">GBR: GUEST BEDROOM</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.guest_bedroom; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">MBR :MASTER BEDROOM</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
-
-  <div class="row m-tb-30" *ngFor="let item of data.master_bedroom; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
-    </div>
-    <div class="col center">
-      <input type="text" maxlength="65" minlength="3"/>
-    </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <input type="number"/>
-    </div>
-    <div class="col center">
-      <label>TOTAL COSTING</label>
-    </div>
-  </div>
-
-  <div class="row m-top-30">
-    <div class="col">
-    </div>
-    <div class="col center">
-      <label class="red">SERVICES</label>
-    </div>
-    <div class="col">
-    </div>
-  </div>
   <form (ngSubmit)="onSubmit($event)">
-  <div class="row m-tb-30" *ngFor="let item of data.services; index as i;">
-    <div class="col center">
-      <label>{{item.index}}</label>
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">FOYER</label>
+      </div>
+      <div class="col">
+      </div>
     </div>
-    <div class="col center">
-      <input value="" id="servicesPart{{item.index}}" type="text" maxlength="65" minlength="3"/>
+
+    <div class="row m-top-30">
+      <div class="col center">
+        <label>SL No</label>
+      </div>
+      <div class="col center">
+        <label>PARTICULARS</label>
+      </div>
+      <div class="col center">
+        <label>CORE MATERIAL</label>
+      </div>
+      <div class="col center">
+        <label>FINISH TYPE</label>
+      </div>
+      <div class="col center">
+        <label>AREA/QTY</label>
+      </div>
+      <div class="col center">
+        <label>COST</label>
+      </div>
+      <div class="col center">
+        <label>TOTAL COSTING</label>
+      </div>
     </div>
-    <div class="col center">
-      <select>
-        <option>Plywoord1</option>
-        <option>Plywoord2</option>
-        <option>Plywoord3</option>
-        <option>Plywoord4</option>
-        </select>
+
+    <div class="row m-tb-30" *ngFor="let item of data.foyer; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'foyer',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'foyer',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
     </div>
-    <div class="col center">
-      <select>
-        <option>finish type1</option>
-        <option>finish type2</option>
-        <option>finish type3</option>
-        <option>finish type4</option>
-        </select>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">LIVING</label>
+      </div>
+      <div class="col">
+      </div>
     </div>
-    <div class="col center">
-      <input type="number" value=""/>
+
+    <div class="row m-tb-30" *ngFor="let item of data.living; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'living',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'living',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
     </div>
-    <div class="col center">
-      <input type="number" value=""/>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">DINING</label>
+      </div>
+      <div class="col">
+      </div>
     </div>
-    <div class="col center">
+
+    <div class="row m-tb-30" *ngFor="let item of data.dining; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'dining',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'dining',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">KITCHEN</label>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="row m-tb-30" *ngFor="let item of data.kitchen; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'kitchen',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'kitchen',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">KBR: KID'S BEDROOM</label>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="row m-tb-30" *ngFor="let item of data.kids_bedroom; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'kids_bedroom',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'kids_bedroom',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">GBR: GUEST BEDROOM</label>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="row m-tb-30" *ngFor="let item of data.guest_bedroom; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'guest_bedroom',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'guest_bedroom',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">MBR :MASTER BEDROOM</label>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="row m-tb-30" *ngFor="let item of data.master_bedroom; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="10" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'master_bedroom',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'master_bedroom',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">SERVICES</label>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="row m-tb-30" *ngFor="let item of data.services; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'services',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'services',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
+    <button class="col-md-4 col-lg-4 col-sm-4 btn btn-success btn-block m-auto" type="submit">Submit</button>
+  </form>
+
+  <div class="row m-top-30">
+    <div class="col-md-12">
+      <p class="font-22"><b>SUMMARY</b></p>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>TOTAL QUOTATION VALUE:</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>{{totalQuatValue}}</label>
+    </div>
+    <div class="col-md-3 text-right">
       <label></label>
     </div>
   </div>
-  <button class="mb-120" type="submit">Submit</button>
-</form>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>DISCOUNT @ </label>
+      <input type="number" (change)="calculateDiscount($event)"/>
+      <label>%</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>{{discount}}</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>SUB TOTAL</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>{{subTotal}}</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>GST @ 18%</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>{{gst}}</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>TOTAL CUSTOMER OUTFLOW</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>{{gst}}</label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-12">
+      <p class="font-22"><b>MATERIAL SPECIFICATIONS</b></p>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Waterproof Ply - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'WaterproofSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Commercial Ply - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'CommercialSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Edgebanding - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'EdgebandingSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Hinges and Channels - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'HingesSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Laminates - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'Laminates')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Kitchen Baskets - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'KitchenSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Locks - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'LocksSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Mirror - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'MirrorSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+  
+  
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>False Ceiling - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'FalseCeilingSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label>Electricals/Lights - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'ElectricalsSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+
+  <div class="row m-top-30">
+    <div class="col-md-3 text-right">
+      <label></label>
+    </div>
+    <div class="col-md-3 text-right">
+      <label> Flooring - </label>
+    </div>
+    <div class="col-md-6 text-left">
+      <input (change)="specification($event,'FlooringSpec')" class="width-350" maxlength="60" type="text" value=""/>
+    </div>
+  </div>
+  
+ <div class="row m-top-30">
+  <div class="col-md-4 col-lg-4 col-sm-4 text-right">
+    <button class="btn btn-success btn-block" disabled="!submitted" (click)="openPDF()">Download PDF</button>
+  </div>
+ </div>
+
+
+
+  <div class="row mb-120">
+  </div>
+  
 </div>
