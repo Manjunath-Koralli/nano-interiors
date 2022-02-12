@@ -13,19 +13,20 @@ export class QuotesComponent implements OnInit {
   foyer1="";
   tempCal1=0.00;
   tempCal2=0.00;
-  totalFoyerAmount = "";
-  totalLivingAmount = "";
-  totalDiningAmount = "";
-  totalKitchenAmount = "";
-  totalServicesAmount = "";
-  totalKidsBedroomAmount = "";
-  totalGuestBedroomAmount = "";
-  totalMasterBedroomAmount = "";
-  totalQuatValue = "";
-  discount = "";
-  subTotal = "";
-  gst = "";
-  customerTotalAmt = "";
+  totalFoyerAmount = "0.00";
+  totalLivingAmount = "0.00";
+  totalDiningAmount = "0.00";
+  totalKitchenAmount = "0.00";
+  totalServicesAmount = "0.00";
+  totalKidsBedroomAmount = "0.00";
+  totalGuestBedroomAmount = "0.00";
+  totalMasterBedroomAmount = "0.00";
+  totalQuatValue = "0.00";
+  discount = "0";
+  discountAmount = "0.00";
+  subTotal = "0.00";
+  gst = "0";
+  customerTotalAmt = "0.00";
 
   name:string = "";
   emailAddress:string = "";
@@ -1754,9 +1755,10 @@ export class QuotesComponent implements OnInit {
   calculateDiscount(event:any){
     const dollarIndianLocale = Intl.NumberFormat('en-IN');
     const discountPercent = parseFloat(event.target.value)/100;
-    this.discount = discountPercent.toString();
+    this.discount = event.target.value !== "" ? event.target.value : 0;
     const tempV = (this.totalQuatValue !==""? parseFloat(this.totalQuatValue.replace(/,/g,"")): 0)
     const tempDisc:number = tempV * discountPercent;
+    this.discountAmount = dollarIndianLocale.format(tempDisc);
     const subTotal:number = tempV - tempDisc;
     this.subTotal = dollarIndianLocale.format(parseFloat((subTotal).toString()));
     this.gst = dollarIndianLocale.format(subTotal * 0.18);
@@ -1935,18 +1937,18 @@ export class QuotesComponent implements OnInit {
         doc.setTextColor(0, 0, 0)
         doc.text("TOTAL QUOTATION", 75, initHeight + space - 57)
         doc.text("VALUE", 75, initHeight + space - 53)
-        doc.text("20,15,151.00", 140, initHeight + space - 57)
-        doc.text("DISCOUNT @ 27%", 75, initHeight + space - 45)
-        doc.text("5,44,090.77", 140, initHeight + space - 45)
+        doc.text(""+this.totalQuatValue, 140, initHeight + space - 57)
+        doc.text("DISCOUNT @ "+this.discount+" %", 75, initHeight + space - 45)
+        doc.text(""+this.discountAmount, 140, initHeight + space - 45)
         doc.line(140, initHeight + space - 44, 155, initHeight + space - 44)
         doc.text("SUB TOTAL", 75, initHeight + space - 38)
-        doc.text("14,71,060.23", 140, initHeight + space - 38)
+        doc.text(""+this.subTotal, 140, initHeight + space - 38)
         doc.text("GST @ 18%", 75, initHeight + space - 30)
-        doc.text("2,64,790.84", 140, initHeight + space - 30)
+        doc.text(""+this.gst, 140, initHeight + space - 30)
         doc.text("TOTAL", 75, initHeight + space - 22)
-        doc.text("17,35,851.07", 140, initHeight + space - 22)
+        doc.text(""+this.customerTotalAmt, 140, initHeight + space - 22)
         doc.text("TOTAL CUSTOMER", 75, initHeight + space - 12)
-        doc.text("17,35,851.07", 140, initHeight + space - 12)
+        doc.text(""+this.customerTotalAmt, 140, initHeight + space - 12)
         doc.line(75, initHeight + space - 20, 157, initHeight + space - 20)
         doc.text("OUTFLOW", 75, initHeight + space - 8)
         doc.line(45, initHeight + space + 10, 160, initHeight + space + 10)
@@ -1958,12 +1960,8 @@ export class QuotesComponent implements OnInit {
         doc.setTextColor(255, 0, 0)
         doc.setFont("Helvetica", "", "bold");
         doc.text(this.summaryObject[i-1].label, 55, initHeight + space + 0.9)
-        // doc.setDrawColor(255, 0, 0)
-        // doc.line(140, initHeight + space, 156, initHeight + space)
-        doc.text(this.summaryObject[i-1].amount, 140, initHeight + space + 0.9)
+        doc.text((this.summaryObject[i-1].amount) !== "" ? (this.summaryObject[i-1].amount) : "0.00", 140, initHeight + space + 0.9)
         doc.setDrawColor(0, 0, 0)
-        doc.setTextColor(255, 200, 0)
-        doc.text(this.summaryObject[i-1].amount, 140, initHeight + space + 6.5)
         doc.line(45, initHeight + space + 10, 160, initHeight + space + 10)
         space = space + 15
       }
@@ -3868,7 +3866,7 @@ export class QuotesComponent implements OnInit {
   }
 
   onSubmit(event: any) {
-    this.submitted =true;
+    this.submitted = true;
     let dollarIndianLocale = Intl.NumberFormat('en-IN');
     let InputDataArray: any = [];
     for (let i = 0; i < 140; i++) {
