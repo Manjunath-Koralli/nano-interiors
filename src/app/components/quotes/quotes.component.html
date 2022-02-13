@@ -27,7 +27,7 @@
         <label>SL No</label>
       </div>
       <div class="col center">
-        <label>Header</label>
+        <label>HEADERS</label>
       </div>
       <div class="col center">
         <label>PARTICULARS</label>
@@ -55,7 +55,15 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.foyer[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.foyer[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
+      
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
       </div>
@@ -92,6 +100,13 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.living[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.living[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
@@ -129,6 +144,13 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.dining[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.dining[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
@@ -166,6 +188,13 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.kitchen[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.kitchen[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
@@ -203,6 +232,13 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.kids_bedroom[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.kids_bedroom[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
@@ -240,6 +276,13 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.guest_bedroom[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.guest_bedroom[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
@@ -277,6 +320,13 @@
       </div>
       <div class="col center">
         <label>{{item.particulars_header}}</label>
+        <div *ngIf="data.master_bedroom[i].dropdown">
+          <select>
+            <option *ngFor="let dropitem of data.master_bedroom[i].dropdown; index as j">
+              {{dropitem}}
+            </option>
+          </select>
+        </div>
       </div>
       <div class="col center">
         <input value="" type="text" maxlength="65" minlength="3" />
@@ -406,7 +456,7 @@
     </div>
   </div>
 
-  
+
   <div class="row m-top-30">
     <div class="col-md-3 text-right">
       <label></label>

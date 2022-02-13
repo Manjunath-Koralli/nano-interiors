@@ -27,6 +27,7 @@ export class QuotesComponent implements OnInit {
   gst = "0";
   customerTotalAmt = "0.00";
 
+
   // Customer details variable
   name:string = "";
   emailAddress:string = "";
@@ -96,7 +97,7 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "5",
-        "particulars_header": "TINTED MIRROR",
+        "particulars_header": "MIRROR",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -107,50 +108,37 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "6",
-        "particulars_header": "TINTED MIRROR",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "7.4",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "7",
-        "particulars_header": "MS FRAME WITH POWDER COATING",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "1",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "8",
-        "particulars_header": "GOLA PROFILE HANDLE",
+        "particulars_header": "HANDLE",
         "particulars_sub_header": "Gola Profile handle",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "2",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "J PROFILE",
+          "G PROFILE",
+          "SOFT PROFILE"
+        ]
       },
       {
-        "index": "9",
-        "particulars_header": "SOFT CLOSING - HINGES",
+        "index": "7",
+        "particulars_header": "CLOSING - HINGES",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "7",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
-        "index": "10",
+        "index": "8",
         "particulars_header": "FALSE CEILING WITH PAINT",
         "particulars_sub_header": "False Ceiling made with gypsum board with paint",
         "code_material": "N/A",
@@ -161,7 +149,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "11",
+        "index": "9",
         "particulars_header": "FALSE CEILING LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -172,7 +160,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "12",
+        "index": "10",
         "particulars_header": "FALSE CEILING LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -183,8 +171,30 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "13",
+        "index": "11",
         "particulars_header": "COVE LIGHT POINT",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "12",
+        "particulars_header": "COVE LIGHT",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "13",
+        "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -195,28 +205,6 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "14",
-        "particulars_header": "COVE LIGHT",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "1",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "15",
-        "particulars_header": "ADAPTER",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "1",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "16",
         "particulars_header": "HANGING LIGHT INSTALLATION",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -227,7 +215,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "17",
+        "index": "15",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -238,7 +226,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "18",
+        "index": "16",
         "particulars_header": "COVE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -249,8 +237,8 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "19",
-        "particulars_header": "CPROFILE (FOR STRIP LIGHT)(2 MTS/STRIP)",
+        "index": "17",
+        "particulars_header": "PROFILE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -260,7 +248,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "20",
+        "index": "18",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -271,6 +259,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       }
     ],
+
     "living": [
       {
         "index": "1",
@@ -296,6 +285,17 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "3",
+        "particulars_header": "TV UNIT UPPER STORAGE",
+        "particulars_sub_header": "Storage unit of selected ply and finish",
+        "code_material": "Plywood",
+        "finish_type": "Laminate",
+        "area_or_quantity": "12.7",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "4",
         "particulars_header": "LEDGE MORE THAN 25MM",
         "particulars_sub_header": "Any Ledge where the width is more than 25mm",
         "code_material": "Plywood",
@@ -306,7 +306,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "4",
+        "index": "5",
         "particulars_header": "DRAWERS",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
@@ -317,9 +317,9 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "5",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
-        "particulars_sub_header": "Hettich",
+        "index": "6",
+        "particulars_header": "RAFTERS",
+        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "4",
@@ -328,8 +328,49 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "6",
-        "particulars_header": " GYPSUM PARTITION WITH PAINTING",
+        "index": "7",
+        "particulars_header": "CLIDING",
+        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "4",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "8",
+        "particulars_header": "CLOSING - CHANNELS",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "4",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "9",
+        "particulars_header": "TELESCOPIC CHANNELS",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "4",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "10",
+        "particulars_header": "WALL DESIGN",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -339,18 +380,18 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "7",
-        "particulars_header": "FALSE CEILING WITH PAINT",
-        "particulars_sub_header": "False Ceiling made with gypsum board with paint",
+        "index": "11",
+        "particulars_header": "PARTITION WITH PAINTING",
+        "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
-        "area_or_quantity": "287",
-        "aq": "Qty",
+        "area_or_quantity": "32.4",
+        "aq": "Area",
         "cost_per_quantity": "",
         "total_costing": ""
       },
       {
-        "index": "8",
+        "index": "12",
         "particulars_header": "FALSE CEILING WITH PAINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -361,7 +402,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "9",
+        "index": "13",
         "particulars_header": "FALSE CEILING LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -372,56 +413,12 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "10",
+        "index": "14",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "3",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "11",
-        "particulars_header": "COVE LIGHT",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "3",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "12",
-        "particulars_header": "GOLA PROFILE HANDLE",
-        "particulars_sub_header": "Gola Profile handle",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "2",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "13",
-        "particulars_header": "ADAPTER",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "3",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "14",
-        "particulars_header": "HANGING LIGHT INSTALLATION",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
         "total_costing": ""
@@ -432,13 +429,62 @@ export class QuotesComponent implements OnInit {
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
-        "area_or_quantity": "1",
+        "area_or_quantity": "3",
         "aq": "Qty",
         "cost_per_quantity": "",
         "total_costing": ""
       },
       {
         "index": "16",
+        "particulars_header": "PROFILE HANDLE",
+        "particulars_sub_header": "Gola Profile handle",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "J PROFILE",
+          "G PROFILE",
+          "GOLA PROFILE"
+        ]
+      },
+      {
+        "index": "17",
+        "particulars_header": "ADAPTER",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "3",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "18",
+        "particulars_header": "HANGING LIGHT INSTALLATION",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "19",
+        "particulars_header": "COVE LIGHT",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "20",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -449,7 +495,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "17",
+        "index": "21",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -460,8 +506,8 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "18",
-        "particulars_header": "PROFILE (FOR STRIP LIGHT)(2 MTS/STRIP)",
+        "index": "22",
+        "particulars_header": "PROFILE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -471,6 +517,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       }
     ],
+
     "dining": [
       {
         "index": "1",
@@ -496,7 +543,7 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "3",
-        "particulars_header": "ROSE GOLD FINISH ALUMINIUM FRAME WITH CLEAR GLASS",
+        "particulars_header": "LACQUERED GLASS",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "Laminate",
@@ -507,17 +554,6 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "4",
-        "particulars_header": "ROSE GOLD FINISH ALUMINIUM FRAME WITH CLEAR GLASS",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "Laminate",
-        "area_or_quantity": "9",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "5",
         "particulars_header": "CROCKERY TALL UNIT",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
@@ -528,18 +564,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "6",
-        "particulars_header": "CROCKERY TALL UNIT",
-        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
-        "code_material": "Plywood",
-        "finish_type": "Laminate",
-        "area_or_quantity": "6.3",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "7",
+        "index": "5",
         "particulars_header": "ADDITIONAL LAMINATE",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -550,7 +575,62 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
+        "index": "6",
+        "particulars_header": "WALL DESIGN",
+        "particulars_sub_header": "",
+        "code_material": "Plywood",
+        "finish_type": "Laminate",
+        "area_or_quantity": "14.6",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "7",
+        "particulars_header": "CUSTOM POOJA UNIT",
+        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+        "code_material": "Plywood",
+        "finish_type": "Laminate",
+        "area_or_quantity": "14.6",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
         "index": "8",
+        "particulars_header": "CNC JALI CUTOUT",
+        "particulars_sub_header": "CNC Jali Cutout",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "9",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "9",
+        "particulars_header": "GOPURAM LEDGES",
+        "particulars_sub_header": "Gopuram Ledges of selected ply and finish",
+        "code_material": "Plywood",
+        "finish_type": "Laminate",
+        "area_or_quantity": "1.7",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "10",
+        "particulars_header": "CUPOLAS ON GOPURAM",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "11",
         "particulars_header": "BEVELLED MIRROR TILES WITH PLY BACKING",
         "particulars_sub_header": "Bevelled Mirror Tiles with Ply Backing",
         "code_material": "Plywood",
@@ -561,29 +641,38 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "9",
-        "particulars_header": "GOLA PROFILE HANDLE",
+        "index": "12",
+        "particulars_header": "HANDLE",
         "particulars_sub_header": "Gola Profile handle",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "2",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "J PROFILE",
+          "G PROFILE",
+          "GOLA PROFILE"
+        ]
       },
       {
-        "index": "10",
-        "particulars_header": "SOFT CLOSING - HINGES",
+        "index": "13",
+        "particulars_header": "CLOSING - HINGES",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "13",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
-        "index": "11",
+        "index": "14",
         "particulars_header": "COVE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -594,7 +683,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "12",
+        "index": "15",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -605,7 +694,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "13",
+        "index": "16",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -616,8 +705,8 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "14",
-        "particulars_header": "PROFILE (FOR STRIP LIGHT)(2 MTS/STRIP)",
+        "index": "17",
+        "particulars_header": "PROFILE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -627,6 +716,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       }
     ],
+
     "kitchen": [
       {
         "index": "1",
@@ -641,7 +731,7 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "2",
-        "particulars_header": "KITCHEN TOP CABINET",
+        "particulars_header": "KITCHEN OVERHEAD CABINET",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
         "finish_type": "Lacquered Glass",
@@ -663,7 +753,7 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "4",
-        "particulars_header": "KITCHEN TOP CABINET",
+        "particulars_header": "KITCHEN OVERHEAD UNIT",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
         "finish_type": "Acrylic Rehau",
@@ -685,7 +775,18 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "6",
-        "particulars_header": "CORNER CAROUSEL(HETTICH)",
+        "particulars_header": "LOFT",
+        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+        "code_material": "Acrylic - Euro- Icore 1mm",
+        "finish_type": "Acrylic Rehau",
+        "area_or_quantity": "23.1",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "7",
+        "particulars_header": "CORNER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -695,7 +796,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "7",
+        "index": "8",
         "particulars_header": "TANDEM BOX",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
@@ -706,7 +807,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "8",
+        "index": "9",
         "particulars_header": "SS FINISH BASKETS(600MM)",
         "particulars_sub_header": "Kitchen Accessory- Hettich",
         "code_material": "N/A",
@@ -717,8 +818,8 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "9",
-        "particulars_header": "ORGA TRAY 440",
+        "index": "10",
+        "particulars_header": "ORGA TRAY",
         "particulars_sub_header": "Kitchen Accessory- Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -728,19 +829,24 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "10",
-        "particulars_header": "GOLA PROFILE HANDLE",
+        "index": "11",
+        "particulars_header": "HANDLE",
         "particulars_sub_header": "Gola Profile handle",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "8",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "J PROFILE",
+          "G PROFILE",
+          "GOLA PROFILE"
+        ]
       },
       {
-        "index": "11",
-        "particulars_header": "BOTTLE PULL OUT 3 TIER",
+        "index": "12",
+        "particulars_header": "BOTTLE PULL OUT",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -750,30 +856,23 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "12",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
+        "index": "13",
+        "particulars_header": "CLOSING - CHANNELS",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "2",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "13",
-        "particulars_header": "SOFT CLOSING - HINGES",
-        "particulars_sub_header": "Hettich",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "10",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
         "index": "14",
-        "particulars_header": "THALI INLET(600MM)",
+        "particulars_header": "THALI TRAY",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -784,14 +883,18 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "15",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
+        "particulars_header": "CLOSING - CHANNELS",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "4",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
         "index": "16",
@@ -806,17 +909,6 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "17",
-        "particulars_header": "CARGO DUO PULLOUT",
-        "particulars_sub_header": "Hettich",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "1",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "18",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -827,7 +919,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "19",
+        "index": "18",
         "particulars_header": "COVE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -838,8 +930,8 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "20",
-        "particulars_header": "PROFILE (FOR STRIP LIGHT)(2 MTS/STRIP)",
+        "index": "19",
+        "particulars_header": "PROFILE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -849,7 +941,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "21",
+        "index": "20",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -860,7 +952,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "22",
+        "index": "21",
         "particulars_header": "HANGING LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -871,7 +963,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "23",
+        "index": "22",
         "particulars_header": "HANGING LIGHT INSTALLATION",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -880,8 +972,163 @@ export class QuotesComponent implements OnInit {
         "aq": "Qty",
         "cost_per_quantity": "",
         "total_costing": ""
-      }
+      },
+      {
+        "index": "23",
+        "particulars_header": "FLAP FITTINGS",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "24",
+        "particulars_header": "GT PT FITTINGS",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "25",
+        "particulars_header": "WICKER BASKET",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "26",
+        "particulars_header": "OVEN INBUILT",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "27",
+        "particulars_header": "DISHWASHER",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "28",
+        "particulars_header": "CHUMNEY",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "29",
+        "particulars_header": "HOBE",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "30",
+        "particulars_header": "KITCHEN WALL TILES",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "31",
+        "particulars_header": "ROLLING SETTER",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "32",
+        "particulars_header": "PROFILE SETTER",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "33",
+        "particulars_header": "TOP SLABE",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "34",
+        "particulars_header": "UTILITY BOX - BASE CABINET",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "35",
+        "particulars_header": "UTILITY BOX - OVERHEAD CABINET",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "36",
+        "particulars_header": "WASHING MACHINE - OVERHEAD CABINET",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
     ],
+
     "kids_bedroom": [
       {
         "index": "1",
@@ -892,7 +1139,12 @@ export class QuotesComponent implements OnInit {
         "area_or_quantity": "52.9",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "ARISTO",
+          "SWING",
+          "SLIDING"
+        ]
       },
       {
         "index": "2",
@@ -918,28 +1170,21 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "4",
-        "particulars_header": "SOFT CLOSING - HINGES",
+        "particulars_header": "CLOSING - HINGES",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "14",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
         "index": "5",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
-        "particulars_sub_header": "Hettich",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "6",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "6",
         "particulars_header": "STUDY BOTTOM STORAGE",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
@@ -950,7 +1195,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "7",
+        "index": "6",
         "particulars_header": "DRAWERS",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
@@ -961,7 +1206,29 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
+        "index": "7",
+        "particulars_header": "DRESSING UNIT",
+        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
         "index": "8",
+        "particulars_header": "WALL DESIGN",
+        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "2",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "9",
         "particulars_header": "STUDY UNIT LEDGE",
         "particulars_sub_header": "Study unit Ledge",
         "code_material": "Plywood",
@@ -972,7 +1239,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "9",
+        "index": "10",
         "particulars_header": "STUDY TABLE TOP STORAGE",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
@@ -983,41 +1250,50 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "10",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
+        "index": "11",
+        "particulars_header": "CLOSING - CHANNELS",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "2",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
-        "index": "11",
-        "particulars_header": "QUEEN SIZE BED WITH HYDRAULIC",
+        "index": "12",
+        "particulars_header": "BED WITH HYDRAULIC",
         "particulars_sub_header": "Made in plywood in selected finish with normal storage, headboard in ply",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "12",
-        "particulars_header": "HYDRAULIC TOP LIFT",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "4",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "QUEEN SIZE",
+          "KING SIZE "
+        ]
       },
       {
         "index": "13",
-        "particulars_header": "SIDE TABLE (2 DRAWERS)",
+        "particulars_header": "TOP LIFT",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "4",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+
+      },
+      {
+        "index": "14",
+        "particulars_header": "SIDE TABLE",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -1027,8 +1303,30 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "14",
-        "particulars_header": "CUSTOM MADE HEADBOARD WITH CUSHION",
+        "index": "15",
+        "particulars_header": "TRACK",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "4",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "16",
+        "particulars_header": "LOCKS",
+        "particulars_sub_header": "N/A",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "4",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "17",
+        "particulars_header": "HEADBOARD",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings with Cushion",
         "code_material": "Plywood",
         "finish_type": "Laminate",
@@ -1038,7 +1336,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "15",
+        "index": "18",
         "particulars_header": "FALSE CEILING WITH PAINT",
         "particulars_sub_header": "False Ceiling made with gypsum board with paint",
         "code_material": "N/A",
@@ -1049,7 +1347,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "16",
+        "index": "19",
         "particulars_header": "FALSE CEILING LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1060,7 +1358,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "17",
+        "index": "20",
         "particulars_header": "FALSE CEILING LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1071,7 +1369,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "18",
+        "index": "21",
         "particulars_header": "COVE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1082,7 +1380,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "19",
+        "index": "22",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1093,7 +1391,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "20",
+        "index": "23",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1104,6 +1402,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       }
     ],
+
     "guest_bedroom": [
       {
         "index": "1",
@@ -1114,7 +1413,12 @@ export class QuotesComponent implements OnInit {
         "area_or_quantity": "58.3",
         "aq": "Area",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "ARISTO",
+          "SWING",
+          "SLIDING"
+        ]
       },
       {
         "index": "2",
@@ -1151,50 +1455,22 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "5",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
+        "particulars_header": "CLOSING - CHANNELS",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "6",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
+      
       {
         "index": "6",
-        "particulars_header": "SOFT CLOSING - HINGES",
-        "particulars_sub_header": "Hettich",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "10",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "7",
-        "particulars_header": "CUSTOM POOJA UNIT",
-        "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
-        "code_material": "Plywood",
-        "finish_type": "Laminate",
-        "area_or_quantity": "14.6",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "8",
-        "particulars_header": "CNC JALI CUTOUT",
-        "particulars_sub_header": "CNC Jali Cutout",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "9",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "9",
         "particulars_header": "DRAWERS",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
@@ -1205,52 +1481,23 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "10",
-        "particulars_header": "GOPURAM LEDGES",
-        "particulars_sub_header": "Gopuram Ledges of selected ply and finish",
-        "code_material": "Plywood",
-        "finish_type": "Laminate",
-        "area_or_quantity": "3.5",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "11",
-        "particulars_header": "GOPURAM LEDGES",
-        "particulars_sub_header": "Gopuram Ledges of selected ply and finish",
-        "code_material": "Plywood",
-        "finish_type": "Laminate",
-        "area_or_quantity": "1.7",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "12",
-        "particulars_header": "CUPOLAS ON GOPURAM",
-        "particulars_sub_header": "N/A",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "2",
-        "aq": "Qty",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "13",
-        "particulars_header": "QUEEN SIZE BED WITH HYDRAULIC",
+        "index": "7",
+        "particulars_header": "BED WITH HYDRAULIC",
         "particulars_sub_header": "Made in plywood in selected finish with normal storage, headboard in ply",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "QUEEN SIZE",
+          "KING SIZE"
+        ]
       },
       {
-        "index": "14",
-        "particulars_header": "CUSTOM MADE HEADBOARD WITH CUSHION",
+        "index": "8",
+        "particulars_header": "HEADBOARD",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings with Cushion",
         "code_material": "Plywood",
         "finish_type": "Laminate",
@@ -1260,8 +1507,19 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "15",
-        "particulars_header": "SIDE TABLE (2 DRAWERS)",
+        "index": "9",
+        "particulars_header": "WALL DESIGN",
+        "particulars_sub_header": "",
+        "code_material": "Plywood",
+        "finish_type": "Laminate",
+        "area_or_quantity": "13.2",
+        "aq": "Area",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "10",
+        "particulars_header": "SIDE TABLE",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -1271,7 +1529,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "16",
+        "index": "11",
         "particulars_header": "FALSE CEILING WITH PAINT",
         "particulars_sub_header": "False Ceiling made with gypsum board with paint",
         "code_material": "N/A",
@@ -1282,7 +1540,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "17",
+        "index": "12",
         "particulars_header": "FALSE CEILING LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1293,7 +1551,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "18",
+        "index": "13",
         "particulars_header": "FALSE CEILING LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1304,7 +1562,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "19",
+        "index": "14",
         "particulars_header": "COVE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1315,7 +1573,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "20",
+        "index": "15",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1326,7 +1584,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "21",
+        "index": "16",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1337,32 +1595,43 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "22",
-        "particulars_header": "G-PROFILE HANDLE",
+        "index": "17",
+        "particulars_header": "HANDLE",
         "particulars_sub_header": "G-Profile handle",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "7",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "G PROFILE",
+          "J PROFILE",
+          "GOLA PROFILE"
+        ]
       }
     ],
+
     "master_bedroom": [
       {
         "index": "1",
-        "particulars_header": "ARISTO WARDROBE CARCASS",
+        "particulars_header": "WARDROBE",
         "particulars_sub_header": "Made in plywood with liner finish & necessary hardware and fittings",
         "code_material": "Plywood",
         "finish_type": "Laminate",
         "area_or_quantity": "76.6",
         "aq": "Area",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "ARISTO",
+          "SWING",
+          "SLIDING"
+        ]
       },
       {
         "index": "2",
-        "particulars_header": "ARISTO SHUTTER",
+        "particulars_header": "SHUTTER",
         "particulars_sub_header": "Lacquered glass shutters with soft close and locks",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -1384,17 +1653,6 @@ export class QuotesComponent implements OnInit {
       },
       {
         "index": "4",
-        "particulars_header": "MOULDINGS",
-        "particulars_sub_header": "Mouldings",
-        "code_material": "N/A",
-        "finish_type": "N/A",
-        "area_or_quantity": "14.4",
-        "aq": "Area",
-        "cost_per_quantity": "",
-        "total_costing": ""
-      },
-      {
-        "index": "5",
         "particulars_header": "STUDY BOTTOM STORAGE",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
@@ -1405,7 +1663,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "6",
+        "index": "5",
         "particulars_header": "STUDY UNIT LEDGE",
         "particulars_sub_header": "Study unit Ledge",
         "code_material": "Plywood",
@@ -1416,7 +1674,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "7",
+        "index": "6",
         "particulars_header": "STUDY TABLE TOP STORAGE",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "Plywood",
@@ -1427,7 +1685,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "8",
+        "index": "7",
         "particulars_header": "STUDY UNIT TALL UNIT",
         "particulars_sub_header": "Study unit Tall unit",
         "code_material": "Plywood",
@@ -1438,7 +1696,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "9",
+        "index": "8",
         "particulars_header": "DRAWERS",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
@@ -1449,41 +1707,128 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "10",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
+        "index": "9",
+        "particulars_header": "CLOSING - CHANNELS",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "3",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
-        "index": "11",
-        "particulars_header": "SOFT CLOSING - HINGES",
+        "index": "10",
+        "particulars_header": "CLOSING - HINGES",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "11",
+        "particulars_header": "TRACK",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
         "index": "12",
-        "particulars_header": "QUEEN SIZE BED WITH HYDRAULIC",
+        "particulars_header": "WALL DESIGN",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "13",
+        "particulars_header": "DRESSING UNIT",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "14",
+        "particulars_header": "CLOSET WARDROBE",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "15",
+        "particulars_header": "FLOORING",
+        "particulars_sub_header": "Hettich",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
+      },
+      {
+        "index": "16",
+        "particulars_header": "BED WITH HYDRAULIC",
         "particulars_sub_header": "Made in plywood in selected finish with normal storage, headboard in ply",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "QUEEN SIZE",
+          "KING SIZE"
+        ]
       },
       {
-        "index": "13",
-        "particulars_header": "SIDE TABLE (2 DRAWERS)",
+        "index": "17",
+        "particulars_header": "SIDE TABLE",
         "particulars_sub_header": "Made in plywood with selected finish & necessary hardware and fittings",
         "code_material": "N/A",
         "finish_type": "N/A",
@@ -1493,18 +1838,22 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "14",
-        "particulars_header": "SOFT CLOSING - CHANNELS",
+        "index": "18",
+        "particulars_header": "CLOSING - CHANNELS",
         "particulars_sub_header": "Hettich",
         "code_material": "N/A",
         "finish_type": "N/A",
         "area_or_quantity": "4",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": ""
+        "total_costing": "",
+        "dropdown":[
+          "BASIC",
+          "SOFT"
+        ]
       },
       {
-        "index": "15",
+        "index": "19",
         "particulars_header": "FALSE CEILING WITH PAINT",
         "particulars_sub_header": "False Ceiling made with gypsum board with paint",
         "code_material": "N/A",
@@ -1515,7 +1864,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "16",
+        "index": "20",
         "particulars_header": "FALSE CEILING LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1526,7 +1875,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "17",
+        "index": "21",
         "particulars_header": "FALSE CEILING LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1537,7 +1886,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "18",
+        "index": "22",
         "particulars_header": "FALSE CEILING COVE LIGHT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1548,7 +1897,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "19",
+        "index": "23",
         "particulars_header": "COVE LIGHT POINT",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1559,7 +1908,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "20",
+        "index": "24",
         "particulars_header": "ADAPTER",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1570,7 +1919,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       },
       {
-        "index": "21",
+        "index": "25",
         "particulars_header": "HANGING LIGHT INSTALLATION",
         "particulars_sub_header": "N/A",
         "code_material": "N/A",
@@ -1581,6 +1930,7 @@ export class QuotesComponent implements OnInit {
         "total_costing": ""
       }
     ],
+
     "services": [
       {
         "index": "1",
@@ -1603,9 +1953,111 @@ export class QuotesComponent implements OnInit {
         "aq": "Qty",
         "cost_per_quantity": "",
         "total_costing": ""
+      },
+      {
+        "index": "3",
+        "particulars_header": "ELECTRICIAN CHARGES",
+        "particulars_sub_header": "electrician charges",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "4",
+        "particulars_header": "PAINTING",
+        "particulars_sub_header": "painting",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "5",
+        "particulars_header": "CIVIL WORK",
+        "particulars_sub_header": "Civil Work",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "6",
+        "particulars_header": "CURTAIN",
+        "particulars_sub_header": "Curtain",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "7",
+        "particulars_header": "GRILL WORK",
+        "particulars_sub_header": "Grill Work",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "8",
+        "particulars_header": "STAIRCASE",
+        "particulars_sub_header": "Staircase",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      }
+    ],
+
+    "balcony": [
+      {
+        "index": "1",
+        "particulars_header": "BANCONY 1",
+        "particulars_sub_header": "Balcony 1",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "2",
+        "particulars_header": "BANCONY 2",
+        "particulars_sub_header": "Balcony 2",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
+      },
+      {
+        "index": "3",
+        "particulars_header": "BANCONY 3",
+        "particulars_sub_header": "Balcony 3",
+        "code_material": "N/A",
+        "finish_type": "N/A",
+        "area_or_quantity": "1",
+        "aq": "Qty",
+        "cost_per_quantity": "",
+        "total_costing": ""
       }
     ]
-  };
+  };  
 
   summaryObject = [
     {
@@ -2568,8 +3020,69 @@ export class QuotesComponent implements OnInit {
         if (i <= 11) {
           doc.line(12.5, 55 + (i * 18), 198, 55 + (i * 18))
         }
-      } else {
+      } else if(i > 12 && i <= 24) {
         let tempI = i - 12;
+        doc.text("" + (i + 1), 15, 22 + (tempI * 18))
+        if ((kitchenArray[i].particulars_header).length > 16) {
+          var sub_he = substringArray(kitchenArray[i].particulars_header, 16)
+          if (sub_he.length > 0) {
+            for (var j = 0; j < sub_he.length; j++) {
+              
+              doc.setFont("Helvetica", "", "bold");
+              doc.setTextColor(255, 0, 0)
+              doc.text("" + sub_he[j], 28, 22 + (j * 3) + ((tempI) * 18))
+              doc.setTextColor(0, 0, 0)
+            }
+          }
+          
+          doc.setFont("Helvetica", "", "normal");
+          var he = substringArray(kitchenArray[i].particulars_sub_header, 24)
+          if (he.length > 0) {
+            for (var j = 0; j < he.length; j++) {
+              
+              doc.setFont("Helvetica", "", "normal");
+              if ((kitchenArray[i].particulars_header).length >= 16 && (kitchenArray[i].particulars_header).length <= 33) {
+                doc.text("" + he[j], 28, 28 + (j * 3) + ((tempI) * 18))
+              } else if ((kitchenArray[i].particulars_header).length < 16) {
+                doc.text("" + he[j], 28, 29 + (j * 3) + ((tempI) * 18))
+              } else {
+                doc.text("" + he[j], 28, 31 + (j * 3) + ((tempI) * 18))
+              }
+            }
+          }
+        } else {
+          
+          doc.setFont("Helvetica", "", "bold");
+          doc.setTextColor(255, 0, 0)
+          doc.text("" + kitchenArray[i].particulars_header, 28, 22 + (tempI * 18))
+          doc.setTextColor(0, 0, 0)
+          
+          doc.setFont("Helvetica", "", "normal");
+          var he = substringArray(kitchenArray[i].particulars_sub_header, 24)
+          if (he.length > 0) {
+            for (var j = 0; j < he.length; j++) {
+              
+              doc.setFont("Helvetica", "", "normal");
+              doc.text("" + he[j], 28, 26 + (j * 3) + ((tempI) * 18))
+            }
+          }
+        }
+        doc.text("" + kitchenArray[i].code_material, 68, 22 + (tempI * 18))
+        doc.text("" + kitchenArray[i].finish_type, 97, 22 + (tempI * 18))
+        doc.text("" + kitchenArray[i].area_or_quantity, 124, 22 + (tempI * 18))
+        doc.text("(" + kitchenArray[i].aq + ")", 124, 25 + (tempI * 18))
+        doc.text("" + kitchenArray[i].cost_per_quantity, 147, 22 + (tempI * 18))
+        doc.text("" + kitchenArray[i].total_costing, 172, 22 + (tempI * 18))
+        doc.line(12.5, 35 + (tempI * 18), 198, 35 + (tempI * 18))
+        if (i === (kitchenArray.length) - 1) {
+          
+          doc.setFont("Helvetica", "", "bold");
+          doc.setFontSize(10)
+          doc.text("KITCHEN TOTAL:", 140, 45 + (tempI * 18))
+          doc.text(""+this.totalKitchenAmount, 172, 45 + (tempI * 18))
+        }
+      } else {
+        let tempI = i - 24;
         doc.text("" + (i + 1), 15, 22 + (tempI * 18))
         if ((kitchenArray[i].particulars_header).length > 16) {
           var sub_he = substringArray(kitchenArray[i].particulars_header, 16)
@@ -3154,9 +3667,8 @@ export class QuotesComponent implements OnInit {
         }
       }
       //adding auto pages and border
-      if (i % 12 === 0 && i >= 12) {
+      if (i % 12 === 0 && i >= 12 && i <24) {
         addPage();
-        
         doc.setFont("Helvetica", "", "bold");
         doc.setFontSize(14)
         doc.setTextColor(255, 0, 0)
@@ -3264,9 +3776,8 @@ export class QuotesComponent implements OnInit {
         if (i <= 0) {
           doc.line(12.5, 54 + (i * 18), 198, 54 + (i * 18))
         } else {
-          doc.line(12.5, 62 + (i * 18), 198, 62 + (i * 18))
+          doc.line(12.5, 54 + (i * 18), 198, 54 + (i * 18))
           if (i === (servicesArray.length) - 1) {
-            
             doc.setFont("Helvetica", "", "bold");
             doc.setFontSize(10)
             doc.text("SERVICES TOTAL:", 140, 70 + (i * 18))
@@ -3276,31 +3787,6 @@ export class QuotesComponent implements OnInit {
 
       }
       //adding auto pages and border
-      if (i % 12 === 0 && i >= 12) {
-        addPage();
-        
-        doc.setFont("Helvetica", "", "bold");
-        doc.setFontSize(14)
-        doc.setTextColor(255, 0, 0)
-        doc.text("SERVICES", 90, 20)
-        doc.setTextColor(0, 0, 0)
-        doc.setFontSize(8)
-        doc.line(12.5, 25, 198, 25)
-        doc.text("S.NO.", 15, 29)
-        doc.text("PARTICULARS", 28, 29)
-        doc.text("CORE MATERIAL", 68, 29)
-        doc.text("FINISH TYPE", 97, 29)
-        doc.text("AREA/QTY", 122, 29)
-        doc.setFontSize(6)
-        doc.text("(In Sq Feet)", 124, 33)
-        doc.setFontSize(8)
-        doc.text("COST", 155, 29)
-        doc.setFontSize(6)
-        doc.text("Per Sq Feet/Qty)", 147, 33)
-        doc.setFontSize(8)
-        doc.text("TOTAL COSTING", 172, 29)
-        doc.line(12.5, 35, 198, 35)
-      }
 
     }
 
@@ -3868,122 +4354,158 @@ export class QuotesComponent implements OnInit {
   }
 
   onSubmit(event: any) {
+    console.log(this.data)
     this.submitted = true;
     let dollarIndianLocale = Intl.NumberFormat('en-IN');
     let InputDataArray: any = [];
-    for (let i = 0; i < 140; i++) {
-      if (i <= 19) {
+    let InputCount = 0;
+    for (let i = 0; i < 167; i++) {
+      if (i <= 17) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp):"0.00";
+        let tempheader = (this.data.foyer[i].particulars_header);
+        if((this.data.foyer[i].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.foyer[i].particulars_header)
+        }
         const foyer: any = {
           "index": i + 1,
-          "particulars_header": (this.data.foyer[i].particulars_header) !== "" ? (this.data.foyer[i].particulars_header) : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? (event.target[i * 5].value) : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? (event.target[(i * 5) + 1].value) : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !=="" ? (event.target[(i * 5) + 2].value) : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)):"0",
+          "particulars_header": (this.data.foyer[i].particulars_header) !== "" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[(i * 5)+InputCount].value) !== "" ? (event.target[(i * 5)+InputCount].value) : "N/A",
+          "code_material": (event.target[(i * 5) + 1 + InputCount].value) !== "" ? (event.target[(i * 5) + 1 + InputCount].value) : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 + InputCount].value) !=="" ? (event.target[(i * 5) + 2 + InputCount].value) : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 + InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 + InputCount].value)):"0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value)!=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)):"0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 + InputCount].value)!=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 + InputCount].value)):"0.00",
           "total_costing": total? total : "0.00"
         }
         InputDataArray.push(foyer)
-
-      } else if (i > 19 && i <= 37) {
+      } else if (i > 17 && i <= 39) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp):"0.00";
+        let tempheader = (this.data.living[i-18].particulars_header);
+        if((this.data.living[i-18].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.living[i-18].particulars_header)
+        }
         const living: any = {
           "index": i + 1,
-          "particulars_header": (this.data.living[i - 20].particulars_header) !== "" ? (this.data.living[i - 20].particulars_header) : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)): "0",
+          "particulars_header": (this.data.living[i - 18].particulars_header) !== "" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[i * 5 + InputCount].value) !== "" ? event.target[i * 5 + InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 + InputCount].value) !== "" ? event.target[(i * 5) + 1 + InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 + InputCount].value) !== "" ? event.target[(i * 5) + 2 + InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 + InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 + InputCount].value)): "0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)): "0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 + InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 + InputCount].value)): "0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(living)
-      } else if (i > 37 && i <= 51) {
+      } else if (i > 39 && i <= 56) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp):"0.00";
+        let tempheader = (this.data.dining[i-40].particulars_header);
+        if((this.data.dining[i-40].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.dining[i-40].particulars_header)
+        }
         const dining: any = {
           "index": i + 1,
-          "particulars_header": (this.data.dining[i - 38].particulars_header) !=="" ? this.data.dining[i - 38].particulars_header : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)):"0",
+          "particulars_header": (this.data.dining[i - 40].particulars_header) !=="" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[(i * 5) + InputCount].value) !== "" ? event.target[(i * 5) + InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 + InputCount].value) !== "" ? event.target[(i * 5) + 1 + InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 + InputCount].value) !== "" ? event.target[(i * 5) + 2 + InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 + InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 + InputCount].value)):"0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)) : "0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 + InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 + InputCount].value)) : "0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(dining)
-      } else if (i > 51 && i <= 74) {
+      } else if (i > 56 && i <= 92) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp): "0.00";
+        let tempheader = (this.data.kitchen[i-57].particulars_header);
+        if((this.data.kitchen[i-57].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.kitchen[i-57].particulars_header)
+        }
         const kitchen: any = {
           "index": i + 1,
-          "particulars_header": (this.data.kitchen[i - 52].particulars_header) !== "" ? this.data.kitchen[i - 52].particulars_header : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? (event.target[(i * 5) + 1].value) : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)): "0",
+          "particulars_header": (this.data.kitchen[i - 57].particulars_header) !== "" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[(i * 5) +InputCount].value) !== "" ? event.target[(i * 5)+ +InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 +InputCount].value) !== "" ? (event.target[(i * 5) + 1 +InputCount].value) : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 +InputCount].value) !== "" ? event.target[(i * 5) + 2 +InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 +InputCount].value)): "0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)): "0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 +InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 +InputCount].value)): "0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(kitchen)
-      } else if (i > 74 && i <= 94) {
+      } else if (i > 92 && i <= 115) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp): "0.00";
+        let tempheader = (this.data.kids_bedroom[i-93].particulars_header);
+        if((this.data.kids_bedroom[i-93].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.kids_bedroom[i-93].particulars_header)
+        }
         const kids_bedroom: any = {
           "index": i + 1,
-          "particulars_header": (this.data.kids_bedroom[i - 75].particulars_header) !== "" ? this.data.kids_bedroom[i - 75].particulars_header : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)): "0",
+          "particulars_header": (this.data.kids_bedroom[i - 93].particulars_header) !== "" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[(i * 5) +InputCount].value) !== "" ? event.target[(i * 5) +InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 +InputCount].value) !== "" ? event.target[(i * 5) + 1 +InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 +InputCount].value) !== "" ? event.target[(i * 5) + 2 +InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 +InputCount].value)): "0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)) : "0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 +InputCount].value)) : "0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(kids_bedroom)
-      } else if (i > 94 && i <= 116) {
+      } else if (i > 115 && i <= 132) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp): "0.00";
+        let tempheader = (this.data.guest_bedroom[i-116].particulars_header);
+        if((this.data.guest_bedroom[i-116].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.guest_bedroom[i-116].particulars_header)
+        }
         const guest_bedroom: any = {
           "index": i + 1,
-          "particulars_header": (this.data.guest_bedroom[i - 95].particulars_header) !== "" ? this.data.guest_bedroom[i - 95].particulars_header : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)): "0",
+          "particulars_header": (this.data.guest_bedroom[i - 116].particulars_header) !== "" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[(i * 5) +InputCount].value) !== "" ? event.target[(i * 5) +InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 +InputCount].value) !== "" ? event.target[(i * 5) + 1 +InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 +InputCount].value) !== "" ? event.target[(i * 5) + 2 +InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 +InputCount].value)): "0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)):"0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 +InputCount].value)):"0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(guest_bedroom)
-      } else if (i > 116 && i <= 137) {
+      } else if (i > 132 && i <= 157) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp) : "0.00";
+        let tempheader = (this.data.master_bedroom[i-133].particulars_header);
+        if((this.data.master_bedroom[i-133].dropdown)){
+          InputCount = InputCount + 1;
+          tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.master_bedroom[i-133].particulars_header)
+        }
         const master_bedroom: any = {
           "index": i + 1,
-          "particulars_header": (this.data.master_bedroom[i - 117].particulars_header) !== "" ? this.data.master_bedroom[i - 117].particulars_header : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? (event.target[(i * 5) + 2].value) : "N/A", 
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)): "0",
+          "particulars_header": (this.data.master_bedroom[i - 133].particulars_header) !== "" ? tempheader : "N/A",
+          "particulars_sub_header": (event.target[(i * 5) +InputCount].value) !== "" ? event.target[(i * 5) +InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 +InputCount].value) !== "" ? event.target[(i * 5) + 1 +InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 +InputCount].value) !== "" ? (event.target[(i * 5) + 2 +InputCount].value) : "N/A", 
+          "area_or_quantity": (event.target[(i * 5) + 3 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 +InputCount].value)): "0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)):"0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 +InputCount].value)):"0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(master_bedroom)
-      } else if (i > 137 && i <= 139) {
+      } else if (i > 157 && i <= 165) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp) : "0.00";
         const services: any = {
           "index": i + 1,
-          "particulars_header": (this.data.services[i - 138].particulars_header) !== "" ? this.data.services[i - 138].particulars_header : "N/A",
+          "particulars_header": (this.data.services[i - 158].particulars_header) !== "" ? this.data.services[i - 158].particulars_header : "N/A",
           "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
           "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
           "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
@@ -3996,14 +4518,15 @@ export class QuotesComponent implements OnInit {
       }
     }
 
-    const foyer = InputDataArray.slice(0, 20);
-    const living = InputDataArray.slice(20, 38);
-    const dining = InputDataArray.slice(38, 52);
-    const kitchen = InputDataArray.slice(52, 75);
-    const kids_bedroom = InputDataArray.slice(75, 95);
-    const guest_bedroom = InputDataArray.slice(95, 117);
-    const master_bedroom = InputDataArray.slice(117, 138);
-    const services = InputDataArray.slice(138, 140);
+    const foyer = InputDataArray.slice(0, 18);
+    const living = InputDataArray.slice(18, 40);
+    const dining = InputDataArray.slice(40, 57);
+    const kitchen = InputDataArray.slice(57, 93);
+    const kids_bedroom = InputDataArray.slice(93, 116);
+    const guest_bedroom = InputDataArray.slice(116, 133);
+    const master_bedroom = InputDataArray.slice(133, 158);
+    const services = InputDataArray.slice(158, 166);
+
     this.finalDataArray.push({ "foyer": foyer });
     this.finalDataArray.push({ "living": living });
     this.finalDataArray.push({ dining: dining });
@@ -4012,8 +4535,9 @@ export class QuotesComponent implements OnInit {
     this.finalDataArray.push({ guest_bedroom: guest_bedroom });
     this.finalDataArray.push({ master_bedroom: master_bedroom });
     this.finalDataArray.push({ services: services });
+    // this.finalDataArray.push({ balcony: balcony });
     // this.data =finalDataArray;
     console.log(this.finalDataArray)
   }
-
+  
 }
