@@ -1806,10 +1806,11 @@ export class QuotesComponent implements OnInit {
 
 
     doc.setFontSize(12)
-    doc.text('+91 8050401092', 165, 35)
-    doc.text('nanointeriors08@gmail.com', 151, 40)
-    doc.text('created by:- ', 151, 45)
-    doc.text('ArunKumar R', 174, 45)
+    doc.text('+91 81509 00099', 163, 35)
+    doc.text('GSTIN: 29AOXPV8796B2ZO', 142, 40)
+    doc.text('nanointeriors8@gmail.com', 145, 45)
+    doc.text('created by:- ', 146, 50)
+    doc.text('ArunKumar R', 170, 50)
 
     doc.setFontSize(13)
     var img = "";
