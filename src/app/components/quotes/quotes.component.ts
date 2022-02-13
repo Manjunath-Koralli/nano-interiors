@@ -10,7 +10,6 @@ export class QuotesComponent implements OnInit {
 
   constructor() { }
   finalDataArray: any = [];
-  foyer1="";
   tempCal1=0.00;
   tempCal2=0.00;
   totalFoyerAmount = "0.00";
