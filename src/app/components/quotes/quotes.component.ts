@@ -17,6 +17,7 @@ export class QuotesComponent implements OnInit {
   totalDiningAmount = "0.00";
   totalKitchenAmount = "0.00";
   totalServicesAmount = "0.00";
+  totalBalconyAmount = "0.00";
   totalKidsBedroomAmount = "0.00";
   totalGuestBedroomAmount = "0.00";
   totalMasterBedroomAmount = "0.00";
@@ -2099,6 +2100,11 @@ export class QuotesComponent implements OnInit {
       index: "8",
       label: "SERVICES",
       amount: ""
+    },
+    {
+      index: "9",
+      label: "BALCONY",
+      amount: ""
     }
   ];
   
@@ -2198,11 +2204,22 @@ export class QuotesComponent implements OnInit {
           totalServicesAmount = parseFloat((totalServicesAmount).toString()) + parseFloat((this.data.services[i].total_costing).replace(/,/g,""));
         }
       }
-      
       this.summaryObject[7].amount = dollarIndianLocale.format(parseFloat(this.totalServicesAmount));
       this.totalServicesAmount = dollarIndianLocale.format(totalServicesAmount);
+    }else if(index === "balcony"){
+      this.data.balcony[parseInt(number)-1].total_costing = dollarIndianLocale.format((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString())));
+      let totalBalconyAmount = 0.00
+      for(let i = 0; i<this.data.balcony.length;i++){
+        if(this.data.balcony[i].total_costing !=="" && this.data.balcony[i].area_or_quantity !==""){
+          totalBalconyAmount = parseFloat((totalBalconyAmount).toString()) + parseFloat((this.data.balcony[i].total_costing).replace(/,/g,""));
+        }
+      }
+      console.log(this.totalBalconyAmount,totalBalconyAmount)
+      this.totalBalconyAmount = dollarIndianLocale.format(totalBalconyAmount);
+      this.summaryObject[8].amount = dollarIndianLocale.format(parseFloat(this.totalBalconyAmount));
+      
     }
-    this.totalQuatValue = dollarIndianLocale.format((this.totalFoyerAmount !==""? (parseFloat(this.totalFoyerAmount.replace(/,/g,""))): 0.00) + (this.totalLivingAmount !==""? (parseFloat((this.totalLivingAmount.replace(/,/g,"")))):0.00) + (this.totalDiningAmount !==""? (parseFloat(this.totalDiningAmount.replace(/,/g,""))):0.00) + (this.totalKitchenAmount !==""? parseFloat(this.totalKitchenAmount.replace(/,/g,"")):0.00) + (this.totalKidsBedroomAmount !==""? parseFloat(this.totalKidsBedroomAmount.replace(/,/g,"")):0.00) + (this.totalGuestBedroomAmount !==""? parseFloat(this.totalGuestBedroomAmount.replace(/,/g,"")):0.00) + (this.totalMasterBedroomAmount !==""? parseFloat(this.totalMasterBedroomAmount.replace(/,/g,"")):0.00) + (this.totalServicesAmount !==""? parseFloat(this.totalServicesAmount.replace(/,/g,"")):0.00));
+    this.totalQuatValue = dollarIndianLocale.format((this.totalFoyerAmount !==""? (parseFloat(this.totalFoyerAmount.replace(/,/g,""))): 0.00) + (this.totalLivingAmount !==""? (parseFloat((this.totalLivingAmount.replace(/,/g,"")))):0.00) + (this.totalDiningAmount !==""? (parseFloat(this.totalDiningAmount.replace(/,/g,""))):0.00) + (this.totalKitchenAmount !==""? parseFloat(this.totalKitchenAmount.replace(/,/g,"")):0.00) + (this.totalKidsBedroomAmount !==""? parseFloat(this.totalKidsBedroomAmount.replace(/,/g,"")):0.00) + (this.totalGuestBedroomAmount !==""? parseFloat(this.totalGuestBedroomAmount.replace(/,/g,"")):0.00) + (this.totalMasterBedroomAmount !==""? parseFloat(this.totalMasterBedroomAmount.replace(/,/g,"")):0.00) + (this.totalServicesAmount !==""? parseFloat(this.totalServicesAmount.replace(/,/g,"")):0.00) + (this.totalBalconyAmount !==""? parseFloat(this.totalBalconyAmount.replace(/,/g,"")):0.00));
   }
 
   calculateDiscount(event:any){
@@ -2377,7 +2394,7 @@ export class QuotesComponent implements OnInit {
     var initHeight = 60;
     var space = 15;
 
-    for (var i = 0; i <= 9; i++) {
+    for (var i = 0; i <= 10; i++) {
 
       if (i === 0) {
         doc.line(45, initHeight, 160, initHeight)
@@ -2386,7 +2403,7 @@ export class QuotesComponent implements OnInit {
         doc.line(160, 60, 160, 265)
         doc.setFontSize(12)
         doc.text("SUMMARY", initHeight + 28, initHeight + 7)
-      } else if (i === 9) {
+      } else if (i === 10) {
         space = space + 60
         doc.setTextColor(0, 0, 0)
         doc.text("TOTAL QUOTATION", 75, initHeight + space - 57)
@@ -2405,7 +2422,7 @@ export class QuotesComponent implements OnInit {
         doc.text(""+this.customerTotalAmt, 140, initHeight + space - 12)
         doc.line(75, initHeight + space - 20, 157, initHeight + space - 20)
         doc.text("OUTFLOW", 75, initHeight + space - 8)
-        doc.line(45, initHeight + space + 10, 160, initHeight + space + 10)
+        doc.line(45, initHeight + space - 5, 160, initHeight + space - 5)
       } else {
         doc.setFontSize(9)
         doc.setFont("Helvetica", "", "normal");
@@ -3790,6 +3807,105 @@ export class QuotesComponent implements OnInit {
 
     }
 
+
+
+///BALCONY page
+
+    addPage();
+
+    doc.setFontSize(14)
+    doc.setTextColor(255, 0, 0)
+    
+    doc.setFont("Helvetica", "", "bold");
+    doc.text("BALCONY", 90, 20)
+    doc.setTextColor(0, 0, 0)
+    doc.setFontSize(8)
+    doc.line(12.5, 25, 198, 25)
+    doc.text("S.NO.", 15, 29)
+    doc.text("PARTICULARS", 28, 29)
+    doc.text("CORE MATERIAL", 63, 29)
+    doc.text("FINISH TYPE", 95, 29)
+    doc.text("AREA/QTY", 122, 29)
+    doc.setFontSize(6)
+    doc.text("(In Sq Feet)", 124, 33)
+    doc.setFontSize(8)
+    doc.text("COST", 155, 29)
+    doc.setFontSize(6)
+    doc.text("Per Sq Feet/Qty)", 147, 33)
+    doc.setFontSize(8)
+    doc.text("TOTAL COSTING", 172, 29)
+    doc.line(12.5, 35, 198, 35)
+
+    const balconyArray = this.finalDataArray[8].balcony ;
+    console.log(balconyArray)
+    for (var i = 0; i < balconyArray.length; i++) {
+      if (i <= 12) {
+        doc.text("" + (i + 1), 15, 40 + (i * 18))
+        if ((balconyArray[i].particulars_header).length > 16) {
+          var sub_he = substringArray(balconyArray[i].particulars_header, 16)
+          if (sub_he.length > 0) {
+            for (var j = 0; j < sub_he.length; j++) {
+              
+              doc.setFont("Helvetica", "", "bold");
+              doc.setTextColor(255, 0, 0)
+              doc.text("" + sub_he[j], 28, 40 + (j * 3) + ((i) * 18))
+              doc.setTextColor(0, 0, 0)
+            }
+          }
+          
+          doc.setFont("Helvetica", "", "normal");
+          var he = substringArray(balconyArray[i].particulars_sub_header, 24)
+          if (he.length > 0) {
+            for (var j = 0; j < he.length; j++) {
+              
+              doc.setFont("Helvetica", "", "normal");
+              if ((balconyArray[i].particulars_header).length <= 33) {
+                doc.text("" + he[j], 28, 47 + (j * 3) + ((i) * 18))
+              } else if ((balconyArray[i].particulars_header).length > 33) {
+                doc.text("" + he[j], 28, 52 + (j * 3) + ((i) * 18))
+              }
+            }
+          }
+        } else {
+          
+          doc.setFont("Helvetica", "", "bold");
+          doc.setTextColor(255, 0, 0)
+          doc.text("" + balconyArray[i].particulars_header, 28, 40 + (i * 18))
+          doc.setTextColor(0, 0, 0)
+          
+          doc.setFont("Helvetica", "", "normal");
+          var he = substringArray(balconyArray[i].particulars_sub_header, 24)
+          if (he.length > 0) {
+            for (var j = 0; j < he.length; j++) {
+              
+              doc.setFont("Helvetica", "", "normal");
+              doc.text("" + he[j], 28, 44 + (j * 3) + ((i) * 18))
+            }
+          }
+        }
+        doc.text("" + balconyArray[i].code_material, 68, 40 + (i * 18))
+        doc.text("" + balconyArray[i].finish_type, 97, 40 + (i * 18))
+        doc.text("" + balconyArray[i].area_or_quantity, 124, 40 + (i * 18))
+        doc.text("(" + balconyArray[i].aq + ")", 124, 43 + (i * 18))
+        doc.text("" + balconyArray[i].cost_per_quantity, 147, 40 + (i * 18))
+        doc.text("" + balconyArray[i].total_costing, 172, 40 + (i * 18))
+        if (i <= 0) {
+          doc.line(12.5, 54 + (i * 18), 198, 54 + (i * 18))
+        } else {
+          doc.line(12.5, 54 + (i * 18), 198, 54 + (i * 18))
+          if (i === (balconyArray.length) - 1) {
+            doc.setFont("Helvetica", "", "bold");
+            doc.setFontSize(10)
+            doc.text("BALCONY TOTAL:", 140, 70 + (i * 18))
+            doc.text(""+this.totalBalconyAmount, 172, 70 + (i * 18))
+          }
+        }
+
+      }
+      //adding auto pages and border
+
+    }
+
     //////////////////////////////////////////// TERMS and CONDTIONS ////////////////////////////////
 
 
@@ -4359,7 +4475,7 @@ export class QuotesComponent implements OnInit {
     let dollarIndianLocale = Intl.NumberFormat('en-IN');
     let InputDataArray: any = [];
     let InputCount = 0;
-    for (let i = 0; i < 167; i++) {
+    for (let i = 0; i < 169; i++) {
       if (i <= 17) {
         const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
         const total = temp ? dollarIndianLocale.format(temp):"0.00";
@@ -4506,18 +4622,33 @@ export class QuotesComponent implements OnInit {
         const services: any = {
           "index": i + 1,
           "particulars_header": (this.data.services[i - 158].particulars_header) !== "" ? this.data.services[i - 158].particulars_header : "N/A",
-          "particulars_sub_header": (event.target[i * 5].value) !== "" ? event.target[i * 5].value : "N/A",
-          "code_material": (event.target[(i * 5) + 1].value) !== "" ? event.target[(i * 5) + 1].value : "N/A",
-          "finish_type": (event.target[(i * 5) + 2].value) !== "" ? event.target[(i * 5) + 2].value : "N/A",
-          "area_or_quantity": (event.target[(i * 5) + 3].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3].value)) : "0",
+          "particulars_sub_header": (event.target[(i * 5) +InputCount].value) !== "" ? event.target[(i * 5) +InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 +InputCount].value) !== "" ? event.target[(i * 5) + 1 +InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 +InputCount].value) !== "" ? event.target[(i * 5) + 2 +InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 +InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 +InputCount].value)) : "0",
           "aq": "Area",
-          "cost_per_quantity": (event.target[(i * 5) + 4].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4].value)):"0.00",
+          "cost_per_quantity": (event.target[(i * 5) + 4 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 +InputCount].value)):"0.00",
           "total_costing":  total? total : ""
         }
         InputDataArray.push(services)
+      } else if (i > 165 && i <= 168) {
+        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
+        const total = temp ? dollarIndianLocale.format(temp) : "0.00";
+        const balcony: any = {
+          "index": i + 1,
+          "particulars_header": (this.data.balcony[i - 166].particulars_header) !== "" ? this.data.balcony[i - 166].particulars_header : "N/A",
+          "particulars_sub_header": (event.target[(i * 5) +InputCount].value) !== "" ? event.target[(i * 5) +InputCount].value : "N/A",
+          "code_material": (event.target[(i * 5) + 1 +InputCount].value) !== "" ? event.target[(i * 5) + 1 +InputCount].value : "N/A",
+          "finish_type": (event.target[(i * 5) + 2 +InputCount].value) !== "" ? event.target[(i * 5) + 2 +InputCount].value : "N/A",
+          "area_or_quantity": (event.target[(i * 5) + 3 +InputCount].value) !=="" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 3 +InputCount].value)) : "0",
+          "aq": "Area",
+          "cost_per_quantity": (event.target[(i * 5) + 4 +InputCount].value) !== "" ? dollarIndianLocale.format(parseFloat(event.target[(i * 5) + 4 +InputCount].value)):"0.00",
+          "total_costing":  total? total : ""
+        }
+        InputDataArray.push(balcony)
       }
     }
-
+    console.log(InputDataArray)
     const foyer = InputDataArray.slice(0, 18);
     const living = InputDataArray.slice(18, 40);
     const dining = InputDataArray.slice(40, 57);
@@ -4526,6 +4657,7 @@ export class QuotesComponent implements OnInit {
     const guest_bedroom = InputDataArray.slice(116, 133);
     const master_bedroom = InputDataArray.slice(133, 158);
     const services = InputDataArray.slice(158, 166);
+    const balcony = InputDataArray.slice(166, 169);
 
     this.finalDataArray.push({ "foyer": foyer });
     this.finalDataArray.push({ "living": living });
@@ -4535,7 +4667,7 @@ export class QuotesComponent implements OnInit {
     this.finalDataArray.push({ guest_bedroom: guest_bedroom });
     this.finalDataArray.push({ master_bedroom: master_bedroom });
     this.finalDataArray.push({ services: services });
-    // this.finalDataArray.push({ balcony: balcony });
+    this.finalDataArray.push({ balcony: balcony });
     // this.data =finalDataArray;
     console.log(this.finalDataArray)
   }

@@ -385,6 +385,43 @@
       </div>
     </div>
 
+    <div class="row m-top-30">
+      <div class="col">
+      </div>
+      <div class="col center">
+        <label class="red">BALCONY</label>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="row m-tb-30" *ngFor="let item of data.balcony; index as i;">
+      <div class="col center">
+        <label>{{item.index}}</label>
+      </div>
+      <div class="col center">
+        <label>{{item.particulars_header}}</label>
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input value="" type="text" maxlength="65" minlength="3" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmount($event,'balcony',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <input (change)="calculateAmountSecond($event,'balcony',item.index)" type="number" />
+      </div>
+      <div class="col center">
+        <label>{{item.total_costing}}</label>
+      </div>
+    </div>
+
     <button class="col-md-4 col-lg-4 col-sm-4 btn btn-success btn-block m-auto" type="submit">Submit</button>
   </form>
 
