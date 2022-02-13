@@ -27,11 +27,13 @@ export class QuotesComponent implements OnInit {
   gst = "0";
   customerTotalAmt = "0.00";
 
+  // Customer details variable
   name:string = "";
   emailAddress:string = "";
   phone:string = "";
   date:string = new Date().getDate()+"/"+new Date().getMonth()+"/"+new Date().getFullYear();
 
+  // Customer details variable
   waterproofSpec:string = "";
   commercialSpec:string = "";
   edgebandingSpec:string = "";
