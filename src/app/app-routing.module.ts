@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'projects/premium/gallery', component: GalleryComponent }, 
   { path: 'projects/budget/gallery', component: GalleryComponent }, 
   { path: 'home', component: Home1Component },
-  { path: 'quotes', component: QuotesComponent },
+  { path: 'get-quotes', component: QuotesComponent },
   { path : 'reviews', component : CustomerReviewsComponent },
   { path : 'projects/videos', component : VideosComponent },
   { path:'', redirectTo:'/home', pathMatch:'full'},
