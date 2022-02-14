@@ -1746,11 +1746,7 @@ export class QuotesComponent implements OnInit {
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": "",
-        "dropdown":[
-          "BASIC",
-          "SOFT"
-        ]
+        "total_costing": ""
       },
       {
         "index": "12",
@@ -1761,11 +1757,7 @@ export class QuotesComponent implements OnInit {
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": "",
-        "dropdown":[
-          "BASIC",
-          "SOFT"
-        ]
+        "total_costing": ""
       },
       {
         "index": "13",
@@ -1776,11 +1768,7 @@ export class QuotesComponent implements OnInit {
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": "",
-        "dropdown":[
-          "BASIC",
-          "SOFT"
-        ]
+        "total_costing": ""
       },
       {
         "index": "14",
@@ -1793,8 +1781,9 @@ export class QuotesComponent implements OnInit {
         "cost_per_quantity": "",
         "total_costing": "",
         "dropdown":[
-          "BASIC",
-          "SOFT"
+          "ARISTO",
+          "SWING",
+          "SLIDING"
         ]
       },
       {
@@ -1806,11 +1795,7 @@ export class QuotesComponent implements OnInit {
         "area_or_quantity": "1",
         "aq": "Qty",
         "cost_per_quantity": "",
-        "total_costing": "",
-        "dropdown":[
-          "BASIC",
-          "SOFT"
-        ]
+        "total_costing": ""
       },
       {
         "index": "16",
@@ -2125,7 +2110,7 @@ export class QuotesComponent implements OnInit {
     const dollarIndianLocale = Intl.NumberFormat('en-IN');
     this.tempCal2 = event.target.value;
     if(index === "foyer"){
-      this.data.foyer[parseInt(number)-1].total_costing = ((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()))).toString();
+      console.log(this.tempCal1,this.tempCal2)
       let totalFoyerAmount = 0.00
       for(let i = 0; i<this.data.foyer.length;i++){
         if(this.data.foyer[i].total_costing !=="" && this.data.foyer[i].area_or_quantity !==""){
@@ -2136,7 +2121,6 @@ export class QuotesComponent implements OnInit {
       this.summaryObject[0].amount = dollarIndianLocale.format(parseFloat((this.totalFoyerAmount).replace(/,/g,"")));
       this.data.foyer[parseInt(number)-1].total_costing = dollarIndianLocale.format((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString())));
     }else if(index === "living"){
-      this.data.living[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
       let totalLivingAmount = 0.00
       for(let i = 0; i<this.data.living.length;i++){
         if(this.data.living[i].total_costing !=="" && this.data.living[i].area_or_quantity !==""){
@@ -2145,6 +2129,7 @@ export class QuotesComponent implements OnInit {
       }
       this.totalLivingAmount = dollarIndianLocale.format(totalLivingAmount);
       this.summaryObject[1].amount = dollarIndianLocale.format(parseFloat((this.totalLivingAmount).replace(/,/g,"")));
+      this.data.living[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
     }else if(index === "dining"){
       this.data.dining[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
       let totalDiningAmount = 0.00
@@ -4476,13 +4461,13 @@ export class QuotesComponent implements OnInit {
     let InputCount = 0;
     for (let i = 0; i < 169; i++) {
       if (i <= 17) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp):"0.00";
         let tempheader = (this.data.foyer[i].particulars_header);
         if((this.data.foyer[i].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.foyer[i].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3 + InputCount)].value) * parseFloat(event.target[(i * 5) + (4 + InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp):"0.00";
         const foyer: any = {
           "index": i + 1,
           "particulars_header": (this.data.foyer[i].particulars_header) !== "" ? tempheader : "N/A",
@@ -4496,13 +4481,13 @@ export class QuotesComponent implements OnInit {
         }
         InputDataArray.push(foyer)
       } else if (i > 17 && i <= 39) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp):"0.00";
         let tempheader = (this.data.living[i-18].particulars_header);
         if((this.data.living[i-18].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.living[i-18].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3 + InputCount)].value) * parseFloat(event.target[(i * 5) + (4 + InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp):"0.00";
         const living: any = {
           "index": i + 1,
           "particulars_header": (this.data.living[i - 18].particulars_header) !== "" ? tempheader : "N/A",
@@ -4516,13 +4501,13 @@ export class QuotesComponent implements OnInit {
         }
         InputDataArray.push(living)
       } else if (i > 39 && i <= 56) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp):"0.00";
         let tempheader = (this.data.dining[i-40].particulars_header);
         if((this.data.dining[i-40].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.dining[i-40].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3+InputCount)].value) * parseFloat(event.target[(i * 5) + (4+InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp):"0.00";
         const dining: any = {
           "index": i + 1,
           "particulars_header": (this.data.dining[i - 40].particulars_header) !=="" ? tempheader : "N/A",
@@ -4536,13 +4521,13 @@ export class QuotesComponent implements OnInit {
         }
         InputDataArray.push(dining)
       } else if (i > 56 && i <= 92) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp): "0.00";
         let tempheader = (this.data.kitchen[i-57].particulars_header);
         if((this.data.kitchen[i-57].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.kitchen[i-57].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3+InputCount)].value) * parseFloat(event.target[(i * 5) + (4+InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp): "0.00";
         const kitchen: any = {
           "index": i + 1,
           "particulars_header": (this.data.kitchen[i - 57].particulars_header) !== "" ? tempheader : "N/A",
@@ -4556,13 +4541,13 @@ export class QuotesComponent implements OnInit {
         }
         InputDataArray.push(kitchen)
       } else if (i > 92 && i <= 115) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp): "0.00";
         let tempheader = (this.data.kids_bedroom[i-93].particulars_header);
         if((this.data.kids_bedroom[i-93].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.kids_bedroom[i-93].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3+InputCount)].value) * parseFloat(event.target[(i * 5) + (4+InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp): "0.00";
         const kids_bedroom: any = {
           "index": i + 1,
           "particulars_header": (this.data.kids_bedroom[i - 93].particulars_header) !== "" ? tempheader : "N/A",
@@ -4576,13 +4561,13 @@ export class QuotesComponent implements OnInit {
         }
         InputDataArray.push(kids_bedroom)
       } else if (i > 115 && i <= 132) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp): "0.00";
         let tempheader = (this.data.guest_bedroom[i-116].particulars_header);
         if((this.data.guest_bedroom[i-116].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.guest_bedroom[i-116].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3+InputCount)].value) * parseFloat(event.target[(i * 5) + (4+InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp): "0.00";
         const guest_bedroom: any = {
           "index": i + 1,
           "particulars_header": (this.data.guest_bedroom[i - 116].particulars_header) !== "" ? tempheader : "N/A",
@@ -4596,13 +4581,13 @@ export class QuotesComponent implements OnInit {
         }
         InputDataArray.push(guest_bedroom)
       } else if (i > 132 && i <= 157) {
-        const temp = parseFloat(event.target[(i * 5) + 3].value) * parseFloat(event.target[(i * 5) + 4].value);
-        const total = temp ? dollarIndianLocale.format(temp) : "0.00";
         let tempheader = (this.data.master_bedroom[i-133].particulars_header);
         if((this.data.master_bedroom[i-133].dropdown)){
           InputCount = InputCount + 1;
           tempheader = (event.target[(i * 5)+ (InputCount-1)].value)+ " " +(this.data.master_bedroom[i-133].particulars_header)
         }
+        const temp = parseFloat(event.target[(i * 5) + (3+InputCount)].value) * parseFloat(event.target[(i * 5) + (4+InputCount)].value);
+        const total = temp ? dollarIndianLocale.format(temp) : "0.00";
         const master_bedroom: any = {
           "index": i + 1,
           "particulars_header": (this.data.master_bedroom[i - 133].particulars_header) !== "" ? tempheader : "N/A",
