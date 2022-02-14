@@ -2132,9 +2132,8 @@ export class QuotesComponent implements OnInit {
           totalFoyerAmount = (parseFloat(totalFoyerAmount.toString()) + parseFloat((this.data.foyer[i].total_costing).replace(/,/g,"")));
         }
       }
-      console.log(this.data.foyer.length+"----"+totalFoyerAmount)
-      this.summaryObject[0].amount = dollarIndianLocale.format(totalFoyerAmount);
       this.totalFoyerAmount = dollarIndianLocale.format(totalFoyerAmount);
+      this.summaryObject[0].amount = dollarIndianLocale.format(parseFloat((this.totalFoyerAmount).replace(/,/g,"")));
       this.data.foyer[parseInt(number)-1].total_costing = dollarIndianLocale.format((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString())));
     }else if(index === "living"){
       this.data.living[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
@@ -2144,8 +2143,8 @@ export class QuotesComponent implements OnInit {
           totalLivingAmount = parseFloat((totalLivingAmount).toString()) + parseFloat((this.data.living[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[1].amount = dollarIndianLocale.format((totalLivingAmount));
       this.totalLivingAmount = dollarIndianLocale.format(totalLivingAmount);
+      this.summaryObject[1].amount = dollarIndianLocale.format(parseFloat((this.totalLivingAmount).replace(/,/g,"")));
     }else if(index === "dining"){
       this.data.dining[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
       let totalDiningAmount = 0.00
@@ -2154,8 +2153,8 @@ export class QuotesComponent implements OnInit {
           totalDiningAmount = parseFloat((totalDiningAmount).toString()) + parseFloat((this.data.dining[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[2].amount = dollarIndianLocale.format(parseFloat(this.totalDiningAmount));
       this.totalDiningAmount = dollarIndianLocale.format(totalDiningAmount);
+      this.summaryObject[2].amount = dollarIndianLocale.format(parseFloat((this.totalDiningAmount).replace(/,/g,"")));
     }else if(index === "kitchen"){
       this.data.kitchen[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
       let totalKitchenAmount = 0.00
@@ -2164,8 +2163,8 @@ export class QuotesComponent implements OnInit {
           totalKitchenAmount = parseFloat((totalKitchenAmount).toString()) + parseFloat((this.data.kitchen[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[3].amount = dollarIndianLocale.format(parseFloat(this.totalKitchenAmount));
       this.totalKitchenAmount = dollarIndianLocale.format(totalKitchenAmount);
+      this.summaryObject[3].amount = dollarIndianLocale.format(parseFloat((this.totalKitchenAmount).replace(/,/g,"")));
     }else if(index === "kids_bedroom"){
       this.data.kids_bedroom[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
       let totalKidsBedroomAmount = 0.00
@@ -2174,8 +2173,8 @@ export class QuotesComponent implements OnInit {
           totalKidsBedroomAmount = parseFloat((totalKidsBedroomAmount).toString()) + parseFloat((this.data.kids_bedroom[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[4].amount = dollarIndianLocale.format(parseFloat(this.totalKidsBedroomAmount));
       this.totalKidsBedroomAmount = dollarIndianLocale.format(totalKidsBedroomAmount);
+      this.summaryObject[4].amount = dollarIndianLocale.format(parseFloat((this.totalKidsBedroomAmount).replace(/,/g,"")));
     }else if(index === "guest_bedroom"){
       this.data.guest_bedroom[parseInt(number)-1].total_costing = dollarIndianLocale.format(parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString()));
       let totalGuestBedroomAmount = 0.00
@@ -2184,8 +2183,8 @@ export class QuotesComponent implements OnInit {
           totalGuestBedroomAmount = parseFloat((totalGuestBedroomAmount).toString()) + parseFloat((this.data.guest_bedroom[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[5].amount = dollarIndianLocale.format(parseFloat(this.totalGuestBedroomAmount));
       this.totalGuestBedroomAmount = dollarIndianLocale.format(totalGuestBedroomAmount);
+      this.summaryObject[5].amount = dollarIndianLocale.format(parseFloat((this.totalGuestBedroomAmount).replace(/,/g,"")));
     }else if(index === "master_bedroom"){
       this.data.master_bedroom[parseInt(number)-1].total_costing = dollarIndianLocale.format((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString())));
       let totalMasterBedroomAmount = 0.00
@@ -2194,8 +2193,8 @@ export class QuotesComponent implements OnInit {
           totalMasterBedroomAmount = parseFloat((totalMasterBedroomAmount).toString()) + parseFloat((this.data.master_bedroom[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[6].amount = dollarIndianLocale.format(parseFloat(this.totalMasterBedroomAmount));
       this.totalMasterBedroomAmount = dollarIndianLocale.format(totalMasterBedroomAmount);
+      this.summaryObject[6].amount = dollarIndianLocale.format(parseFloat((this.totalMasterBedroomAmount).replace(/,/g,"")));
     }else if(index === "services"){
       this.data.services[parseInt(number)-1].total_costing = dollarIndianLocale.format((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString())));
       let totalServicesAmount = 0.00
@@ -2204,8 +2203,8 @@ export class QuotesComponent implements OnInit {
           totalServicesAmount = parseFloat((totalServicesAmount).toString()) + parseFloat((this.data.services[i].total_costing).replace(/,/g,""));
         }
       }
-      this.summaryObject[7].amount = dollarIndianLocale.format(parseFloat(this.totalServicesAmount));
       this.totalServicesAmount = dollarIndianLocale.format(totalServicesAmount);
+      this.summaryObject[7].amount = dollarIndianLocale.format(parseFloat((this.totalServicesAmount).replace(/,/g,"")));
     }else if(index === "balcony"){
       this.data.balcony[parseInt(number)-1].total_costing = dollarIndianLocale.format((parseFloat((this.tempCal1).toString()) * parseFloat((this.tempCal2).toString())));
       let totalBalconyAmount = 0.00
@@ -2216,7 +2215,7 @@ export class QuotesComponent implements OnInit {
       }
       console.log(this.totalBalconyAmount,totalBalconyAmount)
       this.totalBalconyAmount = dollarIndianLocale.format(totalBalconyAmount);
-      this.summaryObject[8].amount = dollarIndianLocale.format(parseFloat(this.totalBalconyAmount));
+      this.summaryObject[8].amount = dollarIndianLocale.format(parseFloat((this.totalBalconyAmount).replace(/,/g,"")));
       
     }
     this.totalQuatValue = dollarIndianLocale.format((this.totalFoyerAmount !==""? (parseFloat(this.totalFoyerAmount.replace(/,/g,""))): 0.00) + (this.totalLivingAmount !==""? (parseFloat((this.totalLivingAmount.replace(/,/g,"")))):0.00) + (this.totalDiningAmount !==""? (parseFloat(this.totalDiningAmount.replace(/,/g,""))):0.00) + (this.totalKitchenAmount !==""? parseFloat(this.totalKitchenAmount.replace(/,/g,"")):0.00) + (this.totalKidsBedroomAmount !==""? parseFloat(this.totalKidsBedroomAmount.replace(/,/g,"")):0.00) + (this.totalGuestBedroomAmount !==""? parseFloat(this.totalGuestBedroomAmount.replace(/,/g,"")):0.00) + (this.totalMasterBedroomAmount !==""? parseFloat(this.totalMasterBedroomAmount.replace(/,/g,"")):0.00) + (this.totalServicesAmount !==""? parseFloat(this.totalServicesAmount.replace(/,/g,"")):0.00) + (this.totalBalconyAmount !==""? parseFloat(this.totalBalconyAmount.replace(/,/g,"")):0.00));
@@ -4470,8 +4469,8 @@ export class QuotesComponent implements OnInit {
   }
 
   onSubmit(event: any) {
-    console.log(this.data)
-    this.submitted = true;
+    this.finalDataArray = [];
+      this.submitted = true;
     let dollarIndianLocale = Intl.NumberFormat('en-IN');
     let InputDataArray: any = [];
     let InputCount = 0;
@@ -4648,7 +4647,6 @@ export class QuotesComponent implements OnInit {
         InputDataArray.push(balcony)
       }
     }
-    console.log(InputDataArray)
     const foyer = InputDataArray.slice(0, 18);
     const living = InputDataArray.slice(18, 40);
     const dining = InputDataArray.slice(40, 57);
@@ -4659,7 +4657,7 @@ export class QuotesComponent implements OnInit {
     const services = InputDataArray.slice(158, 166);
     const balcony = InputDataArray.slice(166, 169);
 
-    this.finalDataArray.push({ "foyer": foyer });
+    this.finalDataArray.push({ "foyer": foyer }); 
     this.finalDataArray.push({ "living": living });
     this.finalDataArray.push({ dining: dining });
     this.finalDataArray.push({ kitchen: kitchen });
@@ -4668,7 +4666,6 @@ export class QuotesComponent implements OnInit {
     this.finalDataArray.push({ master_bedroom: master_bedroom });
     this.finalDataArray.push({ services: services });
     this.finalDataArray.push({ balcony: balcony });
-    // this.data =finalDataArray;
     console.log(this.finalDataArray)
   }
   
